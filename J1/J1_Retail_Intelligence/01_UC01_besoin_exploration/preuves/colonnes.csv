@@ -1,0 +1,492 @@
+﻿lot;table;position;colonne;statut_nom;type_observe;nb_vides;pct_vides;nb_distinct;distinct_sur;min;max;exemple
+data;customer_demographics;1;cd_demo_sk;Deduit (schema TPCx-BB);entier;0;0.0;1920800;fichier complet;0;1920799;0
+data;customer_demographics;2;cd_gender;Deduit (schema TPCx-BB);texte;486;0.03;2;fichier complet;;;F
+data;customer_demographics;3;cd_marital_status;Deduit (schema TPCx-BB);texte;485;0.03;5;fichier complet;;;U
+data;customer_demographics;4;cd_education_status;Deduit (schema TPCx-BB);texte;506;0.03;7;fichier complet;;;Primary
+data;customer_demographics;5;cd_purchase_estimate;Deduit (schema TPCx-BB);entier;507;0.03;20;fichier complet;500.0;10000.0;6000
+data;customer_demographics;6;cd_credit_rating;Deduit (schema TPCx-BB);texte;506;0.03;4;fichier complet;;;Good
+data;customer_demographics;7;cd_dep_count;Deduit (schema TPCx-BB);entier;544;0.03;10;fichier complet;0.0;9.0;0
+data;customer_demographics;8;cd_dep_employed_count;Deduit (schema TPCx-BB);entier;488;0.03;10;fichier complet;0.0;9.0;5
+data;customer_demographics;9;cd_dep_college_count;Deduit (schema TPCx-BB);entier;500;0.03;10;fichier complet;0.0;9.0;0
+data;date_dim;1;d_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;109573;fichier complet;0;109572;0
+data;date_dim;2;d_date_id;Deduit (schema TPCx-BB);texte;0;0.0;109573;fichier complet;;;AAAAAAAAAAAAAAAA
+data;date_dim;3;d_date;Deduit (schema TPCx-BB);date;0;0.0;109573;fichier complet;1900-01-01;2199-12-31;1900-01-01
+data;date_dim;4;d_month_seq;Deduit (schema TPCx-BB);entier;0;0.0;3600;fichier complet;0;3599;0
+data;date_dim;5;d_week_seq;Deduit (schema TPCx-BB);entier;0;0.0;15654;fichier complet;0;15653;0
+data;date_dim;6;d_quarter_seq;Deduit (schema TPCx-BB);entier;0;0.0;1200;fichier complet;0;1199;0
+data;date_dim;7;d_year;Deduit (schema TPCx-BB);entier;0;0.0;300;fichier complet;1900;2199;1900
+data;date_dim;8;d_dow;Deduit (schema TPCx-BB);entier;0;0.0;7;fichier complet;1;7;1
+data;date_dim;9;d_moy;Deduit (schema TPCx-BB);entier;0;0.0;12;fichier complet;1;12;1
+data;date_dim;10;d_dom;Deduit (schema TPCx-BB);entier;0;0.0;31;fichier complet;1;31;1
+data;date_dim;11;d_qoy;Deduit (schema TPCx-BB);entier;0;0.0;4;fichier complet;1;4;1
+data;date_dim;12;d_fy_year;Deduit (schema TPCx-BB);entier;0;0.0;300;fichier complet;1900;2199;1900
+data;date_dim;13;d_fy_quarter_seq;Deduit (schema TPCx-BB);entier;0;0.0;1200;fichier complet;0;1199;0
+data;date_dim;14;d_fy_week_seq;Deduit (schema TPCx-BB);entier;0;0.0;15654;fichier complet;0;15653;0
+data;date_dim;15;d_day_name;Deduit (schema TPCx-BB);texte;0;0.0;7;fichier complet;;;Monday
+data;date_dim;16;d_quarter_name;Deduit (schema TPCx-BB);texte;0;0.0;1200;fichier complet;;;1900Q1
+data;date_dim;17;d_holiday;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;1;fichier complet;;;Y
+data;date_dim;18;d_weekend;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;2;fichier complet;;;N
+data;date_dim;19;d_following_holiday;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;2;fichier complet;;;N
+data;date_dim;20;d_first_dom;Deduit (schema TPCx-BB);entier;0;0.0;56753;fichier complet;2415021;2488069;2448812
+data;date_dim;21;d_last_dom;Deduit (schema TPCx-BB);entier;0;0.0;56970;fichier complet;2415020;2488370;2458802
+data;date_dim;22;d_same_day_ly;Deduit (schema TPCx-BB);entier;0;0.0;56725;fichier complet;2414657;2487705;2472542
+data;date_dim;23;d_same_day_lq;Deduit (schema TPCx-BB);entier;0;0.0;56778;fichier complet;2414930;2487977;2420941
+data;date_dim;24;d_current_day;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;2;fichier complet;;;N
+data;date_dim;25;d_current_week;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;2;fichier complet;;;N
+data;date_dim;26;d_current_month;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;2;fichier complet;;;N
+data;date_dim;27;d_current_quarter;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;2;fichier complet;;;N
+data;date_dim;28;d_current_year;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;2;fichier complet;;;N
+data;household_demographics;1;hd_demo_sk;Deduit (schema TPCx-BB);entier;0;0.0;7200;fichier complet;0;7199;0
+data;household_demographics;2;hd_income_band_sk;Deduit (schema TPCx-BB);entier;2;0.03;20;fichier complet;0.0;19.0;3
+data;household_demographics;3;hd_buy_potential;Deduit (schema TPCx-BB);texte;1;0.01;6;fichier complet;;;1001-5000
+data;household_demographics;4;hd_dep_count;Deduit (schema TPCx-BB);entier;2;0.03;10;fichier complet;0.0;9.0;0
+data;household_demographics;5;hd_vehicle_count;Deduit (schema TPCx-BB);entier;2;0.03;6;fichier complet;-1.0;4.0;0
+data;income_band;1;ib_income_band_sk;Deduit (schema TPCx-BB);entier;0;0.0;20;fichier complet;0;19;0
+data;income_band;2;ib_lower_bound;Deduit (schema TPCx-BB);entier;0;0.0;20;fichier complet;1;190001;1
+data;income_band;3;ib_upper_bound;Deduit (schema TPCx-BB);entier;0;0.0;20;fichier complet;10000;200000;10000
+data;inventory;1;inv_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;23;1er bloc 1M lignes;36890;38696;36890
+data;inventory;2;inv_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;18000;1er bloc 1M lignes;0;17999;0
+data;inventory;3;inv_warehouse_sk;Deduit (schema TPCx-BB);entier;0;0.0;5;1er bloc 1M lignes;0;4;0
+data;inventory;4;inv_quantity_on_hand;Deduit (schema TPCx-BB);entier;5999;0.03;1001;1er bloc 1M lignes;0.0;1000.0;503
+data;item;1;i_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;17820;fichier complet;0;17819;0
+data;item;2;i_item_id;Deduit (schema TPCx-BB);texte;0;0.0;17820;fichier complet;;;AAAAAAAAAAAAAAAA
+data;item;3;i_rec_start_date;Deduit (schema TPCx-BB);date;0;0.0;364;fichier complet;2000-01-03;2000-12-31;2000-01-14
+data;item;4;i_rec_end_date;Deduit (schema TPCx-BB);vide;17820;100.0;0;fichier complet;;;
+data;item;5;i_item_desc;Deduit (schema TPCx-BB);texte;4;0.02;17816;fichier complet;;;quickly even dinos beneath the frays must have to boost bold
+data;item;6;i_current_price;Deduit (schema TPCx-BB);decimal;0;0.0;8343;fichier complet;0.1;99.98;72.29
+data;item;7;i_wholesale_cost;Deduit (schema TPCx-BB);decimal;0;0.0;7598;fichier complet;0.02;87.35;64.96
+data;item;8;i_brand_id;Deduit (schema TPCx-BB);entier;8;0.04;17797;fichier complet;1001703.0;10015586.0;3898712
+data;item;9;i_brand;Deduit (schema TPCx-BB);texte;6;0.03;17554;fichier complet;;;71TS7NSbvH1YbdiQMG6ttBHKAljiNoIRB
+data;item;10;i_class_id;Deduit (schema TPCx-BB);entier;0;0.0;16;fichier complet;1;16;1
+data;item;11;i_class;Deduit (schema TPCx-BB);texte;0;0.0;74;fichier complet;;;Fan Shop
+data;item;12;i_category_id;Deduit (schema TPCx-BB);entier;0;0.0;9;fichier complet;1;9;9
+data;item;13;i_category;Deduit (schema TPCx-BB);texte;0;0.0;9;fichier complet;;;Sports & Outdoors
+data;item;14;i_manufact_id;Deduit (schema TPCx-BB);entier;0;0.0;1000;fichier complet;1;1000;995
+data;item;15;i_manufact;Deduit (schema TPCx-BB);texte;0;0.0;17481;fichier complet;;;2VOxvrIWwlJQTSk6
+data;item;16;i_size;Deduit (schema TPCx-BB);texte;0;0.0;7;fichier complet;;;small
+data;item;17;i_formulation;Deduit (schema TPCx-BB);texte;0;0.0;16916;fichier complet;;;99Ee1r6uFbZSSClAX3
+data;item;18;i_color;Deduit (schema TPCx-BB);texte;0;0.0;92;fichier complet;;;dodger
+data;item;19;i_units;Deduit (schema TPCx-BB);texte;0;0.0;21;fichier complet;;;Oz
+data;item;20;i_container;Deduit (schema TPCx-BB);texte;0;0.0;1;fichier complet;;;Unknown
+data;item;21;i_manager_id;Deduit (schema TPCx-BB);entier;0;0.0;100;fichier complet;1;100;18
+data;item;22;i_product_name;Deduit (schema TPCx-BB);texte;0;0.0;17820;fichier complet;;;8m9n5Q7T33DNWidoA6nWlg6ydmpA1SKOoOJLXiLVb
+data;item_marketprices;1;imp_sk;Deduit (schema TPCx-BB);entier;0;0.0;89100;fichier complet;0;89099;0
+data;item_marketprices;2;imp_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;17820;fichier complet;0;17819;5810
+data;item_marketprices;3;imp_competitor;Deduit (schema TPCx-BB);texte;0;0.0;1000;fichier complet;;;AAAAAAAAAAAAAANN
+data;item_marketprices;4;imp_competitor_price;Deduit (schema TPCx-BB);decimal;29;0.03;9989;fichier complet;0.09;99.98;95.41
+data;item_marketprices;5;imp_start_date;Deduit (schema TPCx-BB);entier;0;0.0;1808;fichier complet;36890;38697;36890
+data;item_marketprices;6;imp_end_date;Deduit (schema TPCx-BB);entier;30;0.03;1794;fichier complet;36897.0;38717.0;38405
+data;product_reviews;1;pr_review_sk;Deduit (schema TPCx-BB);entier;0;0.0;89991;fichier complet;0;89990;0
+data;product_reviews;2;pr_review_date;Deduit (schema TPCx-BB);date;0;0.0;1827;fichier complet;2001-01-01;2006-01-01;2002-08-06
+data;product_reviews;3;pr_review_time;Deduit (schema TPCx-BB);heure;0;0.0;10100;fichier complet;00:00:00;23:59:51;09:16:45
+data;product_reviews;4;pr_review_rating;Deduit (schema TPCx-BB);entier;0;0.0;5;fichier complet;1;5;5
+data;product_reviews;5;pr_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;16742;fichier complet;0;17819;8612
+data;product_reviews;6;pr_user_sk;Deduit (schema TPCx-BB);entier;0;0.0;39376;fichier complet;2;98998;20019
+data;product_reviews;7;pr_order_sk;Deduit (schema TPCx-BB);entier;0;0.0;89098;fichier complet;0;89097;62441
+data;product_reviews;8;pr_review_content;Deduit (schema TPCx-BB);texte;5;0.01;83138;fichier complet;;;Catch Without Arms, Zebraskin, Tanbark, Planting Seeds, and 
+data;promotion;1;p_promo_sk;Deduit (schema TPCx-BB);entier;0;0.0;300;fichier complet;0;299;0
+data;promotion;2;p_promo_id;Deduit (schema TPCx-BB);texte;0;0.0;300;fichier complet;;;AAAAAAAAAAAAAAAA
+data;promotion;3;p_start_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;300;fichier complet;560;109404;61336
+data;promotion;4;p_end_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;299;fichier complet;2268;109558;94523
+data;promotion;5;p_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;298;fichier complet;9;17812;14434
+data;promotion;6;p_cost;Deduit (schema TPCx-BB);decimal;0;0.0;298;fichier complet;12.63;995.16;445.17
+data;promotion;7;p_response_target;Deduit (schema TPCx-BB);entier;0;0.0;1;fichier complet;1;1;1
+data;promotion;8;p_promo_name;Deduit (schema TPCx-BB);texte;0;0.0;9;fichier complet;;;pri
+data;promotion;9;p_channel_dmail;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;2;fichier complet;;;Y
+data;promotion;10;p_channel_email;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;2;fichier complet;;;N
+data;promotion;11;p_channel_catalog;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;2;fichier complet;;;N
+data;promotion;12;p_channel_tv;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;2;fichier complet;;;N
+data;promotion;13;p_channel_radio;Deduit (schema TPCx-BB);booleen (Y/N);1;0.33;2;fichier complet;;;N
+data;promotion;14;p_channel_press;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;2;fichier complet;;;N
+data;promotion;15;p_channel_event;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;2;fichier complet;;;N
+data;promotion;16;p_channel_demo;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;2;fichier complet;;;N
+data;promotion;17;p_channel_details;Deduit (schema TPCx-BB);texte;0;0.0;300;fichier complet;;;always bold warthogs despite the dugouts will play closely
+data;promotion;18;p_purpose;Deduit (schema TPCx-BB);texte;0;0.0;1;fichier complet;;;Unknown
+data;promotion;19;p_discount_active;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;2;fichier complet;;;N
+data;reason;1;r_reason_sk;Deduit (schema TPCx-BB);entier;0;0.0;35;fichier complet;0;34;0
+data;reason;2;r_reason_id;Deduit (schema TPCx-BB);texte;0;0.0;35;fichier complet;;;59h3KawhwK
+data;reason;3;r_reason_desc;Deduit (schema TPCx-BB);texte;0;0.0;35;fichier complet;;;slyly thin dugouts on the ironically enticing realms woul
+data;ship_mode;1;sm_ship_mode_sk;Deduit (schema TPCx-BB);entier;0;0.0;20;fichier complet;0;19;0
+data;ship_mode;2;sm_ship_mode_id;Deduit (schema TPCx-BB);texte;0;0.0;20;fichier complet;;;GX9qF2bN
+data;ship_mode;3;sm_type;Deduit (schema TPCx-BB);texte;0;0.0;20;fichier complet;;;0k0a5LMf
+data;ship_mode;4;sm_code;Deduit (schema TPCx-BB);texte;0;0.0;20;fichier complet;;;9DPuF6E
+data;ship_mode;5;sm_carrier;Deduit (schema TPCx-BB);texte;0;0.0;20;fichier complet;;;JpQUqCDAHAO5n7I
+data;ship_mode;6;sm_contract;Deduit (schema TPCx-BB);texte;0;0.0;20;fichier complet;;;86kCyujyVunz3EGDYCRE
+data;store;1;s_store_sk;Deduit (schema TPCx-BB);entier;0;0.0;12;fichier complet;0;11;0
+data;store;2;s_store_id;Deduit (schema TPCx-BB);texte;0;0.0;12;fichier complet;;;AAAAAAAAAAAAAAAA
+data;store;3;s_rec_start_date;Deduit (schema TPCx-BB);date;0;0.0;7;fichier complet;2000-01-03;2000-11-01;2000-08-02
+data;store;4;s_rec_end_date;Deduit (schema TPCx-BB);vide;12;100.0;0;fichier complet;;;
+data;store;5;s_closed_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;12;fichier complet;6235;88139;71238
+data;store;6;s_store_name;Deduit (schema TPCx-BB);texte;0;0.0;12;fichier complet;;;Forest
+data;store;7;s_number_employees;Deduit (schema TPCx-BB);entier;0;0.0;9;fichier complet;213;298;217
+data;store;8;s_floor_space;Deduit (schema TPCx-BB);entier;0;0.0;12;fichier complet;5777026;8891512;8891512
+data;store;9;s_hours;Deduit (schema TPCx-BB);texte;0;0.0;3;fichier complet;;;8AM-12AM
+data;store;10;s_manager;Deduit (schema TPCx-BB);texte;0;0.0;12;fichier complet;;;Joshua Watson
+data;store;11;s_market_id;Deduit (schema TPCx-BB);entier;0;0.0;6;fichier complet;2;8;6
+data;store;12;s_geography_class;Deduit (schema TPCx-BB);texte;0;0.0;1;fichier complet;;;Unknown
+data;store;13;s_market_desc;Deduit (schema TPCx-BB);texte;0;0.0;12;fichier complet;;;"realms sublate quickly outside the epitaphs; evenly silent p"
+data;store;14;s_market_manager;Deduit (schema TPCx-BB);texte;0;0.0;12;fichier complet;;;Randy King
+data;store;15;s_division_id;Deduit (schema TPCx-BB);entier;0;0.0;1;fichier complet;1;1;1
+data;store;16;s_division_name;Deduit (schema TPCx-BB);texte;0;0.0;1;fichier complet;;;Unknown
+data;store;17;s_company_id;Deduit (schema TPCx-BB);entier;0;0.0;1;fichier complet;1;1;1
+data;store;18;s_company_name;Deduit (schema TPCx-BB);texte;0;0.0;1;fichier complet;;;Unknown
+data;store;19;s_street_number;Deduit (schema TPCx-BB);entier;0;0.0;12;fichier complet;132;993;916
+data;store;20;s_street_name;Deduit (schema TPCx-BB);texte;0;0.0;12;fichier complet;;;1st
+data;store;21;s_street_type;Deduit (schema TPCx-BB);texte;0;0.0;12;fichier complet;;;Boulevard
+data;store;22;s_suite_number;Deduit (schema TPCx-BB);texte;0;0.0;12;fichier complet;;;XF
+data;store;23;s_city;Deduit (schema TPCx-BB);texte;0;0.0;12;fichier complet;;;Post Oak
+data;store;24;s_county;Deduit (schema TPCx-BB);texte;0;0.0;12;fichier complet;;;Hinsdale County
+data;store;25;s_state;Deduit (schema TPCx-BB);texte;0;0.0;8;fichier complet;;;CO
+data;store;26;s_zip;Deduit (schema TPCx-BB);entier;0;0.0;12;fichier complet;40988;97832;47562
+data;store;27;s_country;Deduit (schema TPCx-BB);texte;0;0.0;1;fichier complet;;;United States
+data;store;28;s_gmt_offset;Deduit (schema TPCx-BB);entier;0;0.0;4;fichier complet;-8;-5;-7
+data;store;29;s_tax_precentage;Deduit (schema TPCx-BB);decimal;0;0.0;7;fichier complet;0.03;0.1;0.06
+data;store_returns;1;sr_returned_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;2221;fichier complet;36914;39398;38806
+data;store_returns;2;sr_return_time_sk;Deduit (schema TPCx-BB);entier;0;0.0;30697;fichier complet;2;86399;37121
+data;store_returns;3;sr_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;12551;fichier complet;0;17819;15784
+data;store_returns;4;sr_customer_sk;Deduit (schema TPCx-BB);entier;0;0.0;6226;fichier complet;2;98991;5206
+data;store_returns;5;sr_cdemo_sk;Deduit (schema TPCx-BB);entier;21;0.06;6277;fichier complet;226.0;1920352.0;647228
+data;store_returns;6;sr_hdemo_sk;Deduit (schema TPCx-BB);entier;15;0.04;4215;fichier complet;1.0;7197.0;4483
+data;store_returns;7;sr_addr_sk;Deduit (schema TPCx-BB);entier;42;0.11;5913;fichier complet;8.0;49493.0;7207
+data;store_returns;8;sr_store_sk;Deduit (schema TPCx-BB);entier;0;0.0;12;fichier complet;0;11;5
+data;store_returns;9;sr_reason_sk;Deduit (schema TPCx-BB);entier;11;0.03;35;fichier complet;0.0;34.0;17
+data;store_returns;10;sr_ticket_number;Deduit (schema TPCx-BB);entier;0;0.0;8910;fichier complet;7;89096;64537
+data;store_returns;11;sr_return_quantity;Deduit (schema TPCx-BB);entier;0;0.0;100;fichier complet;1;100;9
+data;store_returns;12;sr_return_amt;Deduit (schema TPCx-BB);decimal;0;0.0;29163;fichier complet;0.0;15441.3;142.38
+data;store_returns;13;sr_return_tax;Deduit (schema TPCx-BB);decimal;0;0.0;11617;fichier complet;0.0;1159.19;2.85
+data;store_returns;14;sr_return_amt_inc_tax;Deduit (schema TPCx-BB);decimal;0;0.0;32024;fichier complet;0.0;16522.19;145.23
+data;store_returns;15;sr_fee;Deduit (schema TPCx-BB);decimal;0;0.0;9712;fichier complet;0.5;100.0;39.94
+data;store_returns;16;sr_return_ship_cost;Deduit (schema TPCx-BB);decimal;0;0.0;32264;fichier complet;0.0;15089.41;554.44
+data;store_returns;17;sr_refunded_cash;Deduit (schema TPCx-BB);decimal;0;0.0;26912;fichier complet;0.0;12818.84;101.09
+data;store_returns;18;sr_reversed_charge;Deduit (schema TPCx-BB);decimal;0;0.0;21080;fichier complet;0.0;7473.37;8.26
+data;store_returns;19;sr_store_credit;Deduit (schema TPCx-BB);decimal;0;0.0;20717;fichier complet;0.0;8846.21;33.03
+data;store_returns;20;sr_net_loss;Deduit (schema TPCx-BB);decimal;0;0.0;32952;fichier complet;0.0;15089.41;560.14
+data;store_sales;1;ss_sold_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;1808;fichier complet;36890;38697;36890
+data;store_sales;2;ss_sold_time_sk;Deduit (schema TPCx-BB);entier;0;0.0;55645;fichier complet;0;86399;71480
+data;store_sales;3;ss_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;17820;fichier complet;0;17819;10001
+data;store_sales;4;ss_customer_sk;Deduit (schema TPCx-BB);entier;0;0.0;37336;fichier complet;2;98999;44404
+data;store_sales;5;ss_cdemo_sk;Deduit (schema TPCx-BB);entier;238;0.04;36953;fichier complet;18.0;1920742.0;493944
+data;store_sales;6;ss_hdemo_sk;Deduit (schema TPCx-BB);entier;295;0.04;7161;fichier complet;0.0;7199.0;2898
+data;store_sales;7;ss_addr_sk;Deduit (schema TPCx-BB);entier;448;0.07;26286;fichier complet;0.0;49499.0;44093
+data;store_sales;8;ss_store_sk;Deduit (schema TPCx-BB);entier;0;0.0;12;fichier complet;0;11;10
+data;store_sales;9;ss_promo_sk;Deduit (schema TPCx-BB);entier;158;0.02;300;fichier complet;0.0;299.0;294
+data;store_sales;10;ss_ticket_number;Deduit (schema TPCx-BB);entier;0;0.0;89100;fichier complet;0;89099;0
+data;store_sales;11;ss_quantity;Deduit (schema TPCx-BB);entier;0;0.0;100;fichier complet;1;100;31
+data;store_sales;12;ss_wholesale_cost;Deduit (schema TPCx-BB);decimal;0;0.0;9901;fichier complet;1.0;100.0;18.00
+data;store_sales;13;ss_list_price;Deduit (schema TPCx-BB);decimal;0;0.0;19524;fichier complet;1.0;200.0;30.78
+data;store_sales;14;ss_sales_price;Deduit (schema TPCx-BB);decimal;0;0.0;17199;fichier complet;0.0;199.3;23.08
+data;store_sales;15;ss_ext_discount_amt;Deduit (schema TPCx-BB);decimal;0;0.0;238093;fichier complet;0.0;18984.0;238.70
+data;store_sales;16;ss_ext_sales_price;Deduit (schema TPCx-BB);decimal;0;0.0;237770;fichier complet;0.0;18745.0;715.48
+data;store_sales;17;ss_ext_wholesale_cost;Deduit (schema TPCx-BB);decimal;0;0.0;264513;fichier complet;1.0;9997.0;558.00
+data;store_sales;18;ss_ext_list_price;Deduit (schema TPCx-BB);decimal;0;0.0;328908;fichier complet;1.2;19814.0;954.18
+data;store_sales;19;ss_ext_tax;Deduit (schema TPCx-BB);decimal;0;0.0;53387;fichier complet;0.0;1637.8;21.46
+data;store_sales;20;ss_coupon_amt;Deduit (schema TPCx-BB);decimal;0;0.0;87123;fichier complet;0.0;14371.66;0.00
+data;store_sales;21;ss_net_paid;Deduit (schema TPCx-BB);decimal;0;0.0;255026;fichier complet;0.0;18745.0;715.48
+data;store_sales;22;ss_net_paid_inc_tax;Deduit (schema TPCx-BB);decimal;0;0.0;315642;fichier complet;0.0;19869.7;736.94
+data;store_sales;23;ss_net_profit;Deduit (schema TPCx-BB);decimal;0;0.0;288874;fichier complet;-9866.6;9134.0;157.48
+data;time_dim;1;t_time_sk;Deduit (schema TPCx-BB);entier;0;0.0;86400;fichier complet;0;86399;0
+data;time_dim;2;t_time_id;Deduit (schema TPCx-BB);texte;0;0.0;86400;fichier complet;;;AAAAAAAAAAAAAAAA
+data;time_dim;3;t_time;Deduit (schema TPCx-BB);entier;0;0.0;86400;fichier complet;0;86399;0
+data;time_dim;4;t_hour;Deduit (schema TPCx-BB);entier;0;0.0;24;fichier complet;0;23;0
+data;time_dim;5;t_minute;Deduit (schema TPCx-BB);entier;0;0.0;60;fichier complet;0;59;0
+data;time_dim;6;t_second;Deduit (schema TPCx-BB);entier;0;0.0;60;fichier complet;0;59;0
+data;time_dim;7;t_am_pm;Deduit (schema TPCx-BB);texte;0;0.0;2;fichier complet;;;AM
+data;time_dim;8;t_shift;Deduit (schema TPCx-BB);texte;0;0.0;3;fichier complet;;;third
+data;time_dim;9;t_sub_shift;Deduit (schema TPCx-BB);texte;0;0.0;4;fichier complet;;;night
+data;time_dim;10;t_meal_time;Deduit (schema TPCx-BB);texte;50400;58.33;3;fichier complet;;;breakfast
+data;warehouse;1;w_warehouse_sk;Deduit (schema TPCx-BB);entier;0;0.0;5;fichier complet;0;4;0
+data;warehouse;2;w_warehouse_id;Deduit (schema TPCx-BB);texte;0;0.0;5;fichier complet;;;AAAAAAAAAAAAAAAA
+data;warehouse;3;w_warehouse_name;Deduit (schema TPCx-BB);texte;0;0.0;5;fichier complet;;;somas between the ho
+data;warehouse;4;w_warehouse_sq_ft;Deduit (schema TPCx-BB);entier;0;0.0;5;fichier complet;339122;845707;467315
+data;warehouse;5;w_street_number;Deduit (schema TPCx-BB);entier;0;0.0;5;fichier complet;181;738;738
+data;warehouse;6;w_street_name;Deduit (schema TPCx-BB);texte;0;0.0;5;fichier complet;;;Main Smith
+data;warehouse;7;w_street_type;Deduit (schema TPCx-BB);texte;0;0.0;5;fichier complet;;;Cir.
+data;warehouse;8;w_suite_number;Deduit (schema TPCx-BB);texte;0;0.0;5;fichier complet;;;Y5
+data;warehouse;9;w_city;Deduit (schema TPCx-BB);texte;0;0.0;5;fichier complet;;;Bethel
+data;warehouse;10;w_county;Deduit (schema TPCx-BB);texte;0;0.0;5;fichier complet;;;Scott County
+data;warehouse;11;w_state;Deduit (schema TPCx-BB);texte;0;0.0;5;fichier complet;;;KY
+data;warehouse;12;w_zip;Deduit (schema TPCx-BB);entier;0;0.0;5;fichier complet;16496;87891;52585
+data;warehouse;13;w_country;Deduit (schema TPCx-BB);texte;0;0.0;1;fichier complet;;;United States
+data;warehouse;14;w_gmt_offset;Deduit (schema TPCx-BB);entier;0;0.0;3;fichier complet;-7;-5;-5
+data;web_clickstreams;1;wcs_click_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;534;1er bloc 1M lignes;36890;38697;36890
+data;web_clickstreams;2;wcs_click_time_sk;Deduit (schema TPCx-BB);entier;0;0.0;86400;1er bloc 1M lignes;0;86399;71470
+data;web_clickstreams;3;wcs_sales_sk;Deduit (schema TPCx-BB);entier;6102498;90.13;26313;1er bloc 1M lignes;0.0;89099.0;0
+data;web_clickstreams;4;wcs_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;17820;1er bloc 1M lignes;0;17819;4867
+data;web_clickstreams;5;wcs_web_page_sk;Deduit (schema TPCx-BB);entier;164;0.0;60;1er bloc 1M lignes;0.0;59.0;28
+data;web_clickstreams;6;wcs_user_sk;Deduit (schema TPCx-BB);entier;2853461;42.15;49027;1er bloc 1M lignes;0.0;98998.0;85457
+data;web_page;1;wp_web_page_sk;Deduit (schema TPCx-BB);entier;0;0.0;60;fichier complet;0;59;0
+data;web_page;2;wp_web_page_id;Deduit (schema TPCx-BB);texte;0;0.0;60;fichier complet;;;AAAAAAAAAAAAAAAA
+data;web_page;3;wp_rec_start_date;Deduit (schema TPCx-BB);date;0;0.0;36;fichier complet;2000-01-09;2000-12-25;2000-08-14
+data;web_page;4;wp_rec_end_date;Deduit (schema TPCx-BB);vide;60;100.0;0;fichier complet;;;
+data;web_page;5;wp_creation_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;60;fichier complet;764;105025;103908
+data;web_page;6;wp_access_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;60;fichier complet;22445;109285;107243
+data;web_page;7;wp_autogen_flag;Deduit (schema TPCx-BB);entier;0;0.0;2;fichier complet;0;1;0
+data;web_page;8;wp_customer_sk;Deduit (schema TPCx-BB);entier;0;0.0;60;fichier complet;534;97275;57966
+data;web_page;9;wp_url;Deduit (schema TPCx-BB);texte;0;0.0;60;fichier complet;;;http://www.jDgp6pYGC9UBr6t3N4eNKgz66QFWyeH1DvSTGhtMwDGoLjyzm
+data;web_page;10;wp_type;Deduit (schema TPCx-BB);texte;0;0.0;8;fichier complet;;;review
+data;web_page;11;wp_char_count;Deduit (schema TPCx-BB);entier;0;0.0;59;fichier complet;610;7968;2405
+data;web_page;12;wp_link_count;Deduit (schema TPCx-BB);entier;0;0.0;22;fichier complet;2;25;10
+data;web_page;13;wp_image_count;Deduit (schema TPCx-BB);entier;0;0.0;7;fichier complet;1;7;7
+data;web_page;14;wp_max_ad_count;Deduit (schema TPCx-BB);entier;0;0.0;5;fichier complet;0;4;3
+data;web_returns;1;wr_returned_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;2492;fichier complet;36915;39523;38952
+data;web_returns;2;wr_returned_time_sk;Deduit (schema TPCx-BB);entier;0;0.0;30996;fichier complet;0;86393;68126
+data;web_returns;3;wr_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;12601;fichier complet;1;17818;9590
+data;web_returns;4;wr_refunded_customer_sk;Deduit (schema TPCx-BB);entier;0;0.0;6437;fichier complet;2;98989;52948
+data;web_returns;5;wr_refunded_cdemo_sk;Deduit (schema TPCx-BB);entier;40;0.1;6424;fichier complet;226.0;1920652.0;893223
+data;web_returns;6;wr_refunded_hdemo_sk;Deduit (schema TPCx-BB);entier;19;0.05;4285;fichier complet;1.0;7196.0;2020
+data;web_returns;7;wr_refunded_addr_sk;Deduit (schema TPCx-BB);entier;42;0.11;6012;fichier complet;9.0;49499.0;6942
+data;web_returns;8;wr_returning_customer_sk;Deduit (schema TPCx-BB);entier;0;0.0;6437;fichier complet;2;98989;52948
+data;web_returns;9;wr_returning_cdemo_sk;Deduit (schema TPCx-BB);entier;63;0.16;6422;fichier complet;226.0;1920652.0;893223
+data;web_returns;10;wr_returning_hdemo_sk;Deduit (schema TPCx-BB);entier;33;0.09;4285;fichier complet;1.0;7196.0;2020
+data;web_returns;11;wr_returning_addr_sk;Deduit (schema TPCx-BB);entier;57;0.15;6010;fichier complet;9.0;49499.0;6942
+data;web_returns;12;wr_web_page_sk;Deduit (schema TPCx-BB);entier;10;0.03;60;fichier complet;0.0;59.0;32
+data;web_returns;13;wr_reason_sk;Deduit (schema TPCx-BB);entier;7;0.02;35;fichier complet;0.0;34.0;13
+data;web_returns;14;wr_order_number;Deduit (schema TPCx-BB);entier;0;0.0;8910;fichier complet;6;89092;63444
+data;web_returns;15;wr_return_quantity;Deduit (schema TPCx-BB);entier;0;0.0;100;fichier complet;1;100;33
+data;web_returns;16;wr_return_amt;Deduit (schema TPCx-BB);decimal;0;0.0;31025;fichier complet;0.0;21944.16;626.01
+data;web_returns;17;wr_return_tax;Deduit (schema TPCx-BB);decimal;0;0.0;13473;fichier complet;0.0;1603.38;25.04
+data;web_returns;18;wr_return_amt_inc_tax;Deduit (schema TPCx-BB);decimal;0;0.0;33563;fichier complet;0.0;23041.37;651.05
+data;web_returns;19;wr_fee;Deduit (schema TPCx-BB);decimal;0;0.0;9735;fichier complet;0.5;100.0;18.74
+data;web_returns;20;wr_return_ship_cost;Deduit (schema TPCx-BB);decimal;0;0.0;33640;fichier complet;0.0;22251.64;958.40
+data;web_returns;21;wr_refunded_cash;Deduit (schema TPCx-BB);decimal;0;0.0;28703;fichier complet;0.0;17605.44;244.14
+data;web_returns;22;wr_reversed_charge;Deduit (schema TPCx-BB);decimal;0;0.0;23037;fichier complet;0.0;13448.48;286.40
+data;web_returns;23;wr_account_credit;Deduit (schema TPCx-BB);decimal;0;0.0;22664;fichier complet;0.0;14338.32;95.47
+data;web_returns;24;wr_net_loss;Deduit (schema TPCx-BB);decimal;0;0.0;34439;fichier complet;0.0;23511.98;1008.48
+data;web_sales;1;ws_sold_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;1808;fichier complet;36890;38697;36890
+data;web_sales;2;ws_sold_time_sk;Deduit (schema TPCx-BB);entier;0;0.0;55563;fichier complet;0;86398;26789
+data;web_sales;3;ws_ship_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;1927;fichier complet;36891;38817;36993
+data;web_sales;4;ws_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;17820;fichier complet;0;17819;794
+data;web_sales;5;ws_bill_customer_sk;Deduit (schema TPCx-BB);entier;0;0.0;37367;fichier complet;2;98998;85457
+data;web_sales;6;ws_bill_cdemo_sk;Deduit (schema TPCx-BB);entier;309;0.05;36985;fichier complet;18.0;1920793.0;380790
+data;web_sales;7;ws_bill_hdemo_sk;Deduit (schema TPCx-BB);entier;288;0.04;7152;fichier complet;0.0;7199.0;2436
+data;web_sales;8;ws_bill_addr_sk;Deduit (schema TPCx-BB);entier;272;0.04;26208;fichier complet;0.0;49499.0;42649
+data;web_sales;9;ws_ship_customer_sk;Deduit (schema TPCx-BB);entier;0;0.0;39377;fichier complet;2;98998;29934
+data;web_sales;10;ws_ship_cdemo_sk;Deduit (schema TPCx-BB);entier;492;0.07;38952;fichier complet;18.0;1920793.0;1583844
+data;web_sales;11;ws_ship_hdemo_sk;Deduit (schema TPCx-BB);entier;495;0.07;7166;fichier complet;0.0;7199.0;5251
+data;web_sales;12;ws_ship_addr_sk;Deduit (schema TPCx-BB);entier;398;0.06;27154;fichier complet;0.0;49499.0;525
+data;web_sales;13;ws_web_page_sk;Deduit (schema TPCx-BB);entier;164;0.02;60;fichier complet;0.0;59.0;2
+data;web_sales;14;ws_web_site_sk;Deduit (schema TPCx-BB);entier;154;0.02;30;fichier complet;0.0;29.0;14
+data;web_sales;15;ws_ship_mode_sk;Deduit (schema TPCx-BB);entier;170;0.03;20;fichier complet;0.0;19.0;1
+data;web_sales;16;ws_warehouse_sk;Deduit (schema TPCx-BB);entier;158;0.02;5;fichier complet;0.0;4.0;3
+data;web_sales;17;ws_promo_sk;Deduit (schema TPCx-BB);entier;121;0.02;300;fichier complet;0.0;299.0;120
+data;web_sales;18;ws_order_number;Deduit (schema TPCx-BB);entier;0;0.0;89100;fichier complet;0;89099;0
+data;web_sales;19;ws_quantity;Deduit (schema TPCx-BB);entier;0;0.0;100;fichier complet;1;100;93
+data;web_sales;20;ws_wholesale_cost;Deduit (schema TPCx-BB);decimal;0;0.0;9901;fichier complet;1.0;100.0;32.62
+data;web_sales;21;ws_list_price;Deduit (schema TPCx-BB);decimal;0;0.0;28932;fichier complet;1.03;299.82;81.22
+data;web_sales;22;ws_sales_price;Deduit (schema TPCx-BB);decimal;0;0.0;24334;fichier complet;0.0;299.67;59.29
+data;web_sales;23;ws_ext_discount_amt;Deduit (schema TPCx-BB);decimal;0;0.0;273369;fichier complet;0.0;29682.18;2039.49
+data;web_sales;24;ws_ext_sales_price;Deduit (schema TPCx-BB);decimal;0;0.0;272379;fichier complet;0.0;28808.01;5513.97
+data;web_sales;25;ws_ext_wholesale_cost;Deduit (schema TPCx-BB);decimal;0;0.0;264108;fichier complet;1.01;9998.0;3033.66
+data;web_sales;26;ws_ext_list_price;Deduit (schema TPCx-BB);decimal;0;0.0;371439;fichier complet;1.28;29858.0;7553.46
+data;web_sales;27;ws_ext_tax;Deduit (schema TPCx-BB);decimal;0;0.0;65792;fichier complet;0.0;2421.72;330.84
+data;web_sales;28;ws_coupon_amt;Deduit (schema TPCx-BB);decimal;0;0.0;93607;fichier complet;0.0;27569.64;0.00
+data;web_sales;29;ws_ext_ship_cost;Deduit (schema TPCx-BB);decimal;0;0.0;277674;fichier complet;0.0;14216.37;1661.76
+data;web_sales;30;ws_net_paid;Deduit (schema TPCx-BB);decimal;0;0.0;289544;fichier complet;0.0;28808.01;5513.97
+data;web_sales;31;ws_net_paid_inc_tax;Deduit (schema TPCx-BB);decimal;0;0.0;351954;fichier complet;0.0;30248.41;5844.81
+data;web_sales;32;ws_net_paid_inc_ship;Deduit (schema TPCx-BB);decimal;0;0.0;436619;fichier complet;0.0;38975.5;7175.73
+data;web_sales;33;ws_net_paid_inc_ship_tax;Deduit (schema TPCx-BB);decimal;0;0.0;441575;fichier complet;0.0;41246.72;7506.57
+data;web_sales;34;ws_net_profit;Deduit (schema TPCx-BB);decimal;0;0.0;322066;fichier complet;-9894.06;18977.31;2480.31
+data;web_site;1;web_site_sk;Deduit (schema TPCx-BB);entier;0;0.0;30;fichier complet;0;29;0
+data;web_site;2;web_site_id;Deduit (schema TPCx-BB);texte;0;0.0;30;fichier complet;;;AAAAAAAAAAAAAAAA
+data;web_site;3;web_rec_start_date;Deduit (schema TPCx-BB);date;0;0.0;18;fichier complet;2000-04-09;2003-11-17;2002-01-03
+data;web_site;4;web_rec_end_date;Deduit (schema TPCx-BB);vide;30;100.0;0;fichier complet;;;
+data;web_site;5;web_name;Deduit (schema TPCx-BB);texte;0;0.0;5;fichier complet;;;site_0
+data;web_site;6;web_open_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;30;fichier complet;132;108774;12694
+data;web_site;7;web_close_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;30;fichier complet;14930;109009;77464
+data;web_site;8;web_class;Deduit (schema TPCx-BB);texte;0;0.0;1;fichier complet;;;Unknown
+data;web_site;9;web_manager;Deduit (schema TPCx-BB);texte;0;0.0;30;fichier complet;;;Robert Stewart
+data;web_site;10;web_mkt_id;Deduit (schema TPCx-BB);entier;0;0.0;6;fichier complet;1;6;1
+data;web_site;11;web_mkt_class;Deduit (schema TPCx-BB);texte;0;0.0;30;fichier complet;;;even ruthless multipliers should have to mai
+data;web_site;12;web_mkt_desc;Deduit (schema TPCx-BB);texte;0;0.0;30;fichier complet;;;ruthless bold notornis doubt: closely quiet hockey players b
+data;web_site;13;web_market_manager;Deduit (schema TPCx-BB);texte;0;0.0;30;fichier complet;;;James Feliciano
+data;web_site;14;web_company_id;Deduit (schema TPCx-BB);entier;0;0.0;6;fichier complet;1;6;3
+data;web_site;15;web_company_name;Deduit (schema TPCx-BB);texte;0;0.0;9;fichier complet;;;bar
+data;web_site;16;web_street_number;Deduit (schema TPCx-BB);entier;0;0.0;29;fichier complet;17;968;625
+data;web_site;17;web_street_name;Deduit (schema TPCx-BB);texte;0;0.0;28;fichier complet;;;1st
+data;web_site;18;web_street_type;Deduit (schema TPCx-BB);texte;0;0.0;15;fichier complet;;;Lane
+data;web_site;19;web_suite_number;Deduit (schema TPCx-BB);texte;0;0.0;30;fichier complet;;;FGa6
+data;web_site;20;web_city;Deduit (schema TPCx-BB);texte;0;0.0;30;fichier complet;;;Bolton
+data;web_site;21;web_county;Deduit (schema TPCx-BB);texte;0;0.0;28;fichier complet;;;Cumberland County
+data;web_site;22;web_state;Deduit (schema TPCx-BB);texte;0;0.0;19;fichier complet;;;NJ
+data;web_site;23;web_zip;Deduit (schema TPCx-BB);entier;0;0.0;30;fichier complet;12092;96546;68675
+data;web_site;24;web_country;Deduit (schema TPCx-BB);texte;0;0.0;1;fichier complet;;;United States
+data;web_site;25;web_gmt_offset;Deduit (schema TPCx-BB);entier;0;0.0;3;fichier complet;-7;-5;-5
+data;web_site;26;web_tax_percentage;Deduit (schema TPCx-BB);decimal;0;0.0;10;fichier complet;0.01;0.11;0.04
+data_refresh;customer;1;c_customer_sk;Deduit (schema TPCx-BB);entier;0;0.0;1000;fichier complet;99000;99999;99000
+data_refresh;customer;2;c_customer_id;Deduit (schema TPCx-BB);texte;0;0.0;1000;fichier complet;;;AAAAAAAAAAAAFQLS
+data_refresh;customer;3;c_current_cdemo_sk;Deduit (schema TPCx-BB);entier;0;0.0;1000;fichier complet;7171;1919420;1743789
+data_refresh;customer;4;c_current_hdemo_sk;Deduit (schema TPCx-BB);entier;0;0.0;943;fichier complet;13;7182;2912
+data_refresh;customer;5;c_current_addr_sk;Deduit (schema TPCx-BB);entier;0;0.0;988;fichier complet;23;49997;15817
+data_refresh;customer;6;c_first_shipto_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;999;fichier complet;300;109511;12124
+data_refresh;customer;7;c_first_sales_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;996;fichier complet;119;109471;46820
+data_refresh;customer;8;c_salutation;Deduit (schema TPCx-BB);texte;0;0.0;6;fichier complet;;;Mr.
+data_refresh;customer;9;c_first_name;Deduit (schema TPCx-BB);texte;0;0.0;503;fichier complet;;;Michael
+data_refresh;customer;10;c_last_name;Deduit (schema TPCx-BB);texte;0;0.0;650;fichier complet;;;Broyles
+data_refresh;customer;11;c_preferred_cust_flag;Deduit (schema TPCx-BB);booleen (Y/N);0;0.0;2;fichier complet;;;N
+data_refresh;customer;12;c_birth_day;Deduit (schema TPCx-BB);entier;0;0.0;31;fichier complet;1;31;30
+data_refresh;customer;13;c_birth_month;Deduit (schema TPCx-BB);entier;0;0.0;12;fichier complet;1;12;8
+data_refresh;customer;14;c_birth_year;Deduit (schema TPCx-BB);entier;0;0.0;69;fichier complet;1924;1992;1961
+data_refresh;customer;15;c_birth_country;Deduit (schema TPCx-BB);texte;0;0.0;212;fichier complet;;;LATVIA
+data_refresh;customer;16;c_login;Deduit (schema TPCx-BB);texte;0;0.0;955;fichier complet;;;vtJOqYQQJ7
+data_refresh;customer;17;c_email_address;Deduit (schema TPCx-BB);texte;0;0.0;1000;fichier complet;;;Michael.Broyles@peacemail.com
+data_refresh;customer;18;c_last_review_date;Deduit (schema TPCx-BB);texte;0;0.0;954;fichier complet;;;0ka0ymX
+data_refresh;customer_address;1;ca_address_sk;Deduit (schema TPCx-BB);entier;0;0.0;500;fichier complet;49500;49999;49500
+data_refresh;customer_address;2;ca_address_id;Deduit (schema TPCx-BB);texte;0;0.0;500;fichier complet;;;AAAAAAAAAAAACVFW
+data_refresh;customer_address;3;ca_street_number;Deduit (schema TPCx-BB);entier;0;0.0;397;fichier complet;1;1000;575
+data_refresh;customer_address;4;ca_street_name;Deduit (schema TPCx-BB);texte;0;0.0;325;fichier complet;;;Pine
+data_refresh;customer_address;5;ca_street_type;Deduit (schema TPCx-BB);texte;0;0.0;20;fichier complet;;;Pkwy
+data_refresh;customer_address;6;ca_suite_number;Deduit (schema TPCx-BB);texte;0;0.0;482;fichier complet;;;JcbRPPJch
+data_refresh;customer_address;7;ca_city;Deduit (schema TPCx-BB);texte;0;0.0;368;fichier complet;;;Decatur
+data_refresh;customer_address;8;ca_county;Deduit (schema TPCx-BB);texte;0;0.0;384;fichier complet;;;Meade County
+data_refresh;customer_address;9;ca_state;Deduit (schema TPCx-BB);texte;0;0.0;48;fichier complet;;;KS
+data_refresh;customer_address;10;ca_zip;Deduit (schema TPCx-BB);entier;0;0.0;499;fichier complet;10072;99759;70585
+data_refresh;customer_address;11;ca_country;Deduit (schema TPCx-BB);texte;0;0.0;1;fichier complet;;;United States
+data_refresh;customer_address;12;ca_gmt_offset;Deduit (schema TPCx-BB);entier;0;0.0;6;fichier complet;-10;-5;-6
+data_refresh;customer_address;13;ca_location_type;Deduit (schema TPCx-BB);texte;0;0.0;3;fichier complet;;;condo
+data_refresh;inventory;1;inv_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;3;fichier complet;38696;38710;38696
+data_refresh;inventory;2;inv_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;18000;fichier complet;0;17999;17100
+data_refresh;inventory;3;inv_warehouse_sk;Deduit (schema TPCx-BB);entier;0;0.0;5;fichier complet;0;4;1
+data_refresh;inventory;4;inv_quantity_on_hand;Deduit (schema TPCx-BB);entier;63;0.03;1001;fichier complet;0.0;1000.0;24
+data_refresh;item;1;i_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;180;fichier complet;17820;17999;17820
+data_refresh;item;2;i_item_id;Deduit (schema TPCx-BB);texte;0;0.0;180;fichier complet;;;AAAAAAAAAAAABAJK
+data_refresh;item;3;i_rec_start_date;Deduit (schema TPCx-BB);date;0;0.0;142;fichier complet;2000-01-05;2000-12-31;2000-07-09
+data_refresh;item;4;i_rec_end_date;Deduit (schema TPCx-BB);vide;180;100.0;0;fichier complet;;;
+data_refresh;item;5;i_item_desc;Deduit (schema TPCx-BB);texte;0;0.0;180;fichier complet;;;regular somas past the fluffy braids engage upon the thin id
+data_refresh;item;6;i_current_price;Deduit (schema TPCx-BB);decimal;0;0.0;178;fichier complet;0.19;99.85;74.53
+data_refresh;item;7;i_wholesale_cost;Deduit (schema TPCx-BB);decimal;0;0.0;178;fichier complet;0.21;87.29;47.52
+data_refresh;item;8;i_brand_id;Deduit (schema TPCx-BB);entier;0;0.0;180;fichier complet;1015113;9959565;3413837
+data_refresh;item;9;i_brand;Deduit (schema TPCx-BB);texte;0;0.0;180;fichier complet;;;FAmZ5OQp19b6YnHEIGowTI
+data_refresh;item;10;i_class_id;Deduit (schema TPCx-BB);entier;0;0.0;15;fichier complet;1;15;10
+data_refresh;item;11;i_class;Deduit (schema TPCx-BB);texte;0;0.0;38;fichier complet;;;Country
+data_refresh;item;12;i_category_id;Deduit (schema TPCx-BB);entier;0;0.0;9;fichier complet;1;9;2
+data_refresh;item;13;i_category;Deduit (schema TPCx-BB);texte;0;0.0;9;fichier complet;;;Music
+data_refresh;item;14;i_manufact_id;Deduit (schema TPCx-BB);entier;0;0.0;158;fichier complet;2;1000;91
+data_refresh;item;15;i_manufact;Deduit (schema TPCx-BB);texte;0;0.0;180;fichier complet;;;7aJWxd7IChKqW4JLUki5m0wrvRn8YHTM0xZNoWu
+data_refresh;item;16;i_size;Deduit (schema TPCx-BB);texte;0;0.0;7;fichier complet;;;extra large
+data_refresh;item;17;i_formulation;Deduit (schema TPCx-BB);texte;0;0.0;179;fichier complet;;;UbhvWihafwtRfWepd
+data_refresh;item;18;i_color;Deduit (schema TPCx-BB);texte;0;0.0;83;fichier complet;;;cyan
+data_refresh;item;19;i_units;Deduit (schema TPCx-BB);texte;0;0.0;21;fichier complet;;;Oz
+data_refresh;item;20;i_container;Deduit (schema TPCx-BB);texte;0;0.0;1;fichier complet;;;Unknown
+data_refresh;item;21;i_manager_id;Deduit (schema TPCx-BB);entier;0;0.0;84;fichier complet;1;100;57
+data_refresh;item;22;i_product_name;Deduit (schema TPCx-BB);texte;0;0.0;180;fichier complet;;;8MJdS2aYdSydZ9Zw6llsXatytb6AUrj42owNPSpbbr0ARL
+data_refresh;item_marketprices;1;imp_sk;Deduit (schema TPCx-BB);entier;0;0.0;900;fichier complet;89100;89999;89100
+data_refresh;item_marketprices;2;imp_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;882;fichier complet;7;17997;9103
+data_refresh;item_marketprices;3;imp_competitor;Deduit (schema TPCx-BB);texte;0;0.0;583;fichier complet;;;AAAAAAAAAAAAABII
+data_refresh;item_marketprices;4;imp_competitor_price;Deduit (schema TPCx-BB);decimal;0;0.0;862;fichier complet;0.12;99.93;72.13
+data_refresh;item_marketprices;5;imp_start_date;Deduit (schema TPCx-BB);entier;0;0.0;19;fichier complet;38697;38715;38697
+data_refresh;item_marketprices;6;imp_end_date;Deduit (schema TPCx-BB);entier;0;0.0;20;fichier complet;38698;38717;38717
+data_refresh;product_reviews;1;pr_review_sk;Deduit (schema TPCx-BB);entier;0;0.0;909;fichier complet;89991;90899;89991
+data_refresh;product_reviews;2;pr_review_date;Deduit (schema TPCx-BB);date;0;0.0;720;fichier complet;2001-01-05;2006-01-01;2001-04-30
+data_refresh;product_reviews;3;pr_review_time;Deduit (schema TPCx-BB);heure;0;0.0;858;fichier complet;00:01:59;23:59:17;17:36:54
+data_refresh;product_reviews;4;pr_review_rating;Deduit (schema TPCx-BB);entier;0;0.0;5;fichier complet;1;5;5
+data_refresh;product_reviews;5;pr_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;685;fichier complet;2;17985;679
+data_refresh;product_reviews;6;pr_user_sk;Deduit (schema TPCx-BB);entier;0;0.0;846;fichier complet;48;99834;7611
+data_refresh;product_reviews;7;pr_order_sk;Deduit (schema TPCx-BB);entier;0;0.0;909;fichier complet;93;89968;55550
+data_refresh;product_reviews;8;pr_review_content;Deduit (schema TPCx-BB);texte;0;0.0;905;fichier complet;;;My acid reflux onset by my pregnancy.At first tried it and d
+data_refresh;store_returns;1;sr_returned_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;89;fichier complet;37125;39233;37587
+data_refresh;store_returns;2;sr_return_time_sk;Deduit (schema TPCx-BB);entier;0;0.0;425;fichier complet;138;86396;32662
+data_refresh;store_returns;3;sr_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;361;fichier complet;78;17937;10095
+data_refresh;store_returns;4;sr_customer_sk;Deduit (schema TPCx-BB);entier;0;0.0;89;fichier complet;1273;97967;1273
+data_refresh;store_returns;5;sr_cdemo_sk;Deduit (schema TPCx-BB);entier;0;0.0;89;fichier complet;24440;1887950;1878036
+data_refresh;store_returns;6;sr_hdemo_sk;Deduit (schema TPCx-BB);entier;0;0.0;89;fichier complet;166;7182;6392
+data_refresh;store_returns;7;sr_addr_sk;Deduit (schema TPCx-BB);entier;0;0.0;89;fichier complet;1047;49893;38601
+data_refresh;store_returns;8;sr_store_sk;Deduit (schema TPCx-BB);entier;0;0.0;12;fichier complet;0;11;5
+data_refresh;store_returns;9;sr_reason_sk;Deduit (schema TPCx-BB);entier;0;0.0;35;fichier complet;0;34;27
+data_refresh;store_returns;10;sr_ticket_number;Deduit (schema TPCx-BB);entier;0;0.0;90;fichier complet;245;88624;3483
+data_refresh;store_returns;11;sr_return_quantity;Deduit (schema TPCx-BB);entier;0;0.0;82;fichier complet;1;94;17
+data_refresh;store_returns;12;sr_return_amt;Deduit (schema TPCx-BB);decimal;0;0.0;422;fichier complet;0.0;9991.2;151.64
+data_refresh;store_returns;13;sr_return_tax;Deduit (schema TPCx-BB);decimal;0;0.0;377;fichier complet;0.0;799.3;13.65
+data_refresh;store_returns;14;sr_return_amt_inc_tax;Deduit (schema TPCx-BB);decimal;0;0.0;424;fichier complet;0.0;10790.5;165.29
+data_refresh;store_returns;15;sr_fee;Deduit (schema TPCx-BB);decimal;0;0.0;411;fichier complet;0.86;99.6;73.86
+data_refresh;store_returns;16;sr_return_ship_cost;Deduit (schema TPCx-BB);decimal;0;0.0;426;fichier complet;2.26;8817.44;392.93
+data_refresh;store_returns;17;sr_refunded_cash;Deduit (schema TPCx-BB);decimal;0;0.0;423;fichier complet;0.0;6993.84;122.83
+data_refresh;store_returns;18;sr_reversed_charge;Deduit (schema TPCx-BB);decimal;0;0.0;415;fichier complet;0.0;4390.85;17.86
+data_refresh;store_returns;19;sr_store_credit;Deduit (schema TPCx-BB);decimal;0;0.0;414;fichier complet;0.0;2732.33;10.95
+data_refresh;store_returns;20;sr_net_loss;Deduit (schema TPCx-BB);decimal;0;0.0;425;fichier complet;4.76;9188.68;420.23
+data_refresh;store_sales;1;ss_sold_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;19;fichier complet;38697;38715;38697
+data_refresh;store_sales;2;ss_sold_time_sk;Deduit (schema TPCx-BB);entier;0;0.0;896;fichier complet;80;86215;21281
+data_refresh;store_sales;3;ss_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;3536;fichier complet;3;17989;12731
+data_refresh;store_sales;4;ss_customer_sk;Deduit (schema TPCx-BB);entier;0;0.0;827;fichier complet;66;99894;54531
+data_refresh;store_sales;5;ss_cdemo_sk;Deduit (schema TPCx-BB);entier;12;0.18;825;fichier complet;1339.0;1920675.0;1475324
+data_refresh;store_sales;6;ss_hdemo_sk;Deduit (schema TPCx-BB);entier;13;0.2;767;fichier complet;4.0;7188.0;178
+data_refresh;store_sales;7;ss_addr_sk;Deduit (schema TPCx-BB);entier;14;0.21;822;fichier complet;22.0;49930.0;47932
+data_refresh;store_sales;8;ss_store_sk;Deduit (schema TPCx-BB);entier;0;0.0;12;fichier complet;0;11;11
+data_refresh;store_sales;9;ss_promo_sk;Deduit (schema TPCx-BB);entier;1;0.02;300;fichier complet;0.0;299.0;210
+data_refresh;store_sales;10;ss_ticket_number;Deduit (schema TPCx-BB);entier;0;0.0;900;fichier complet;89100;89999;89100
+data_refresh;store_sales;11;ss_quantity;Deduit (schema TPCx-BB);entier;0;0.0;100;fichier complet;1;100;52
+data_refresh;store_sales;12;ss_wholesale_cost;Deduit (schema TPCx-BB);decimal;0;0.0;4806;fichier complet;1.0;99.98;49.36
+data_refresh;store_sales;13;ss_list_price;Deduit (schema TPCx-BB);decimal;0;0.0;5503;fichier complet;1.07;193.97;60.22
+data_refresh;store_sales;14;ss_sales_price;Deduit (schema TPCx-BB);decimal;0;0.0;4621;fichier complet;0.0;187.08;24.09
+data_refresh;store_sales;15;ss_ext_discount_amt;Deduit (schema TPCx-BB);decimal;0;0.0;6369;fichier complet;0.0;16024.14;1878.76
+data_refresh;store_sales;16;ss_ext_sales_price;Deduit (schema TPCx-BB);decimal;0;0.0;6415;fichier complet;0.0;18520.92;1252.68
+data_refresh;store_sales;17;ss_ext_wholesale_cost;Deduit (schema TPCx-BB);decimal;0;0.0;6517;fichier complet;1.69;9974.0;2566.72
+data_refresh;store_sales;18;ss_ext_list_price;Deduit (schema TPCx-BB);decimal;0;0.0;6535;fichier complet;2.38;19093.14;3131.44
+data_refresh;store_sales;19;ss_ext_tax;Deduit (schema TPCx-BB);decimal;0;0.0;4722;fichier complet;0.0;1666.88;19.92
+data_refresh;store_sales;20;ss_coupon_amt;Deduit (schema TPCx-BB);decimal;0;0.0;1331;fichier complet;0.0;10876.33;588.76
+data_refresh;store_sales;21;ss_net_paid;Deduit (schema TPCx-BB);decimal;0;0.0;6442;fichier complet;0.0;18520.92;663.92
+data_refresh;store_sales;22;ss_net_paid_inc_tax;Deduit (schema TPCx-BB);decimal;0;0.0;6483;fichier complet;0.0;20187.8;683.84
+data_refresh;store_sales;23;ss_net_profit;Deduit (schema TPCx-BB);decimal;0;0.0;6484;fichier complet;-8585.28;9022.86;-1902.80
+data_refresh;web_clickstreams;1;wcs_click_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;19;fichier complet;38697;38715;38697
+data_refresh;web_clickstreams;2;wcs_click_time_sk;Deduit (schema TPCx-BB);entier;0;0.0;44840;fichier complet;2;86398;11222
+data_refresh;web_clickstreams;3;wcs_sales_sk;Deduit (schema TPCx-BB);entier;62109;90.03;900;fichier complet;89100.0;89999.0;89100
+data_refresh;web_clickstreams;4;wcs_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;17553;fichier complet;0;17999;9912
+data_refresh;web_clickstreams;5;wcs_web_page_sk;Deduit (schema TPCx-BB);entier;2;0.0;60;fichier complet;0.0;59.0;32
+data_refresh;web_clickstreams;6;wcs_user_sk;Deduit (schema TPCx-BB);entier;29167;42.28;2603;fichier complet;9.0;99945.0;63997
+data_refresh;web_returns;1;wr_returned_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;365;fichier complet;36994;39429;38953
+data_refresh;web_returns;2;wr_returned_time_sk;Deduit (schema TPCx-BB);entier;0;0.0;400;fichier complet;165;85931;75847
+data_refresh;web_returns;3;wr_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;328;fichier complet;19;17900;1898
+data_refresh;web_returns;4;wr_refunded_customer_sk;Deduit (schema TPCx-BB);entier;0;0.0;90;fichier complet;1543;98738;77591
+data_refresh;web_returns;5;wr_refunded_cdemo_sk;Deduit (schema TPCx-BB);entier;0;0.0;90;fichier complet;16857;1913824;1380176
+data_refresh;web_returns;6;wr_refunded_hdemo_sk;Deduit (schema TPCx-BB);entier;0;0.0;88;fichier complet;4;7146;3351
+data_refresh;web_returns;7;wr_refunded_addr_sk;Deduit (schema TPCx-BB);entier;0;0.0;90;fichier complet;266;49918;40932
+data_refresh;web_returns;8;wr_returning_customer_sk;Deduit (schema TPCx-BB);entier;0;0.0;90;fichier complet;1543;98738;77591
+data_refresh;web_returns;9;wr_returning_cdemo_sk;Deduit (schema TPCx-BB);entier;0;0.0;90;fichier complet;16857;1913824;1380176
+data_refresh;web_returns;10;wr_returning_hdemo_sk;Deduit (schema TPCx-BB);entier;0;0.0;88;fichier complet;4;7146;3351
+data_refresh;web_returns;11;wr_returning_addr_sk;Deduit (schema TPCx-BB);entier;0;0.0;90;fichier complet;266;49918;40932
+data_refresh;web_returns;12;wr_web_page_sk;Deduit (schema TPCx-BB);entier;0;0.0;60;fichier complet;0;59;42
+data_refresh;web_returns;13;wr_reason_sk;Deduit (schema TPCx-BB);entier;0;0.0;35;fichier complet;0;34;22
+data_refresh;web_returns;14;wr_order_number;Deduit (schema TPCx-BB);entier;0;0.0;90;fichier complet;718;89967;85134
+data_refresh;web_returns;15;wr_return_quantity;Deduit (schema TPCx-BB);entier;0;0.0;81;fichier complet;1;96;15
+data_refresh;web_returns;16;wr_return_amt;Deduit (schema TPCx-BB);decimal;0;0.0;397;fichier complet;0.0;11358.72;20.70
+data_refresh;web_returns;17;wr_return_tax;Deduit (schema TPCx-BB);decimal;0;0.0;348;fichier complet;0.0;1022.28;1.45
+data_refresh;web_returns;18;wr_return_amt_inc_tax;Deduit (schema TPCx-BB);decimal;0;0.0;399;fichier complet;0.0;12381.0;22.15
+data_refresh;web_returns;19;wr_fee;Deduit (schema TPCx-BB);decimal;0;0.0;382;fichier complet;0.85;99.72;9.49
+data_refresh;web_returns;20;wr_return_ship_cost;Deduit (schema TPCx-BB);decimal;0;0.0;400;fichier complet;0.75;17824.64;114.05
+data_refresh;web_returns;21;wr_refunded_cash;Deduit (schema TPCx-BB);decimal;0;0.0;399;fichier complet;0.0;9541.32;14.70
+data_refresh;web_returns;22;wr_reversed_charge;Deduit (schema TPCx-BB);decimal;0;0.0;396;fichier complet;0.0;5415.23;5.94
+data_refresh;web_returns;23;wr_account_credit;Deduit (schema TPCx-BB);decimal;0;0.0;390;fichier complet;0.0;4503.98;0.06
+data_refresh;web_returns;24;wr_net_loss;Deduit (schema TPCx-BB);decimal;0;0.0;400;fichier complet;0.93;17824.64;116.95
+data_refresh;web_sales;1;ws_sold_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;19;fichier complet;38697;38715;38697
+data_refresh;web_sales;2;ws_sold_time_sk;Deduit (schema TPCx-BB);entier;0;0.0;895;fichier complet;32;86315;38598
+data_refresh;web_sales;3;ws_ship_date_sk;Deduit (schema TPCx-BB);entier;0;0.0;137;fichier complet;38699;38835;38806
+data_refresh;web_sales;4;ws_item_sk;Deduit (schema TPCx-BB);entier;0;0.0;3692;fichier complet;0;17998;17861
+data_refresh;web_sales;5;ws_bill_customer_sk;Deduit (schema TPCx-BB);entier;0;0.0;847;fichier complet;9;99945;95479
+data_refresh;web_sales;6;ws_bill_cdemo_sk;Deduit (schema TPCx-BB);entier;0;0.0;847;fichier complet;1099;1919911;481076
+data_refresh;web_sales;7;ws_bill_hdemo_sk;Deduit (schema TPCx-BB);entier;13;0.19;795;fichier complet;3.0;7191.0;5618
+data_refresh;web_sales;8;ws_bill_addr_sk;Deduit (schema TPCx-BB);entier;10;0.15;837;fichier complet;18.0;49937.0;14580
+data_refresh;web_sales;9;ws_ship_customer_sk;Deduit (schema TPCx-BB);entier;0;0.0;854;fichier complet;145;99945;95479
+data_refresh;web_sales;10;ws_ship_cdemo_sk;Deduit (schema TPCx-BB);entier;0;0.0;854;fichier complet;1099;1919911;481076
+data_refresh;web_sales;11;ws_ship_hdemo_sk;Deduit (schema TPCx-BB);entier;13;0.19;803;fichier complet;3.0;7191.0;5618
+data_refresh;web_sales;12;ws_ship_addr_sk;Deduit (schema TPCx-BB);entier;10;0.15;844;fichier complet;18.0;49937.0;14580
+data_refresh;web_sales;13;ws_web_page_sk;Deduit (schema TPCx-BB);entier;2;0.03;60;fichier complet;0.0;59.0;58
+data_refresh;web_sales;14;ws_web_site_sk;Deduit (schema TPCx-BB);entier;3;0.04;30;fichier complet;0.0;29.0;22
+data_refresh;web_sales;15;ws_ship_mode_sk;Deduit (schema TPCx-BB);entier;1;0.01;20;fichier complet;0.0;19.0;4
+data_refresh;web_sales;16;ws_warehouse_sk;Deduit (schema TPCx-BB);entier;2;0.03;5;fichier complet;0.0;4.0;1
+data_refresh;web_sales;17;ws_promo_sk;Deduit (schema TPCx-BB);entier;2;0.03;300;fichier complet;0.0;299.0;118
+data_refresh;web_sales;18;ws_order_number;Deduit (schema TPCx-BB);entier;0;0.0;900;fichier complet;89100;89999;89100
+data_refresh;web_sales;19;ws_quantity;Deduit (schema TPCx-BB);entier;0;0.0;100;fichier complet;1;100;44
+data_refresh;web_sales;20;ws_wholesale_cost;Deduit (schema TPCx-BB);decimal;0;0.0;5024;fichier complet;1.01;99.99;27.96
+data_refresh;web_sales;21;ws_list_price;Deduit (schema TPCx-BB);decimal;0;0.0;5940;fichier complet;1.28;296.16;67.66
+data_refresh;web_sales;22;ws_sales_price;Deduit (schema TPCx-BB);decimal;0;0.0;5081;fichier complet;0.0;276.11;41.27
+data_refresh;web_sales;23;ws_ext_discount_amt;Deduit (schema TPCx-BB);decimal;0;0.0;6657;fichier complet;0.0;23960.64;1161.16
+data_refresh;web_sales;24;ws_ext_sales_price;Deduit (schema TPCx-BB);decimal;0;0.0;6678;fichier complet;0.0;23944.0;1815.88
+data_refresh;web_sales;25;ws_ext_wholesale_cost;Deduit (schema TPCx-BB);decimal;0;0.0;6753;fichier complet;2.14;9733.36;1230.24
+data_refresh;web_sales;26;ws_ext_list_price;Deduit (schema TPCx-BB);decimal;0;0.0;6806;fichier complet;4.58;28845.0;2977.04
+data_refresh;web_sales;27;ws_ext_tax;Deduit (schema TPCx-BB);decimal;0;0.0;5153;fichier complet;0.0;2035.49;63.19
+data_refresh;web_sales;28;ws_coupon_amt;Deduit (schema TPCx-BB);decimal;0;0.0;1418;fichier complet;0.0;19178.36;762.67
+data_refresh;web_sales;29;ws_ext_ship_cost;Deduit (schema TPCx-BB);decimal;0;0.0;6668;fichier complet;0.0;11858.68;774.03
+data_refresh;web_sales;30;ws_net_paid;Deduit (schema TPCx-BB);decimal;0;0.0;6698;fichier complet;0.0;23944.0;1053.21
+data_refresh;web_sales;31;ws_net_paid_inc_tax;Deduit (schema TPCx-BB);decimal;0;0.0;6755;fichier complet;0.0;24662.32;1116.40
+data_refresh;web_sales;32;ws_net_paid_inc_ship;Deduit (schema TPCx-BB);decimal;0;0.0;6840;fichier complet;1.3;33368.64;1827.24
+data_refresh;web_sales;33;ws_net_paid_inc_ship_tax;Deduit (schema TPCx-BB);decimal;0;0.0;6844;fichier complet;1.33;34086.96;1890.43
+data_refresh;web_sales;34;ws_net_profit;Deduit (schema TPCx-BB);decimal;0;0.0;6758;fichier complet;-9397.56;14510.0;-177.03

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 740" font-family="Segoe UI, Arial" font-size="12">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8795a1"/></marker></defs>
+<text x="110.0" y="30" text-anchor="middle" font-weight="bold" font-size="14" fill="#1b3550">Utilisateurs metier</text>
+<text x="390.0" y="30" text-anchor="middle" font-weight="bold" font-size="14" fill="#1b3550">Questions decisionnelles</text>
+<text x="670.0" y="30" text-anchor="middle" font-weight="bold" font-size="14" fill="#1b3550">Indicateurs (KPI)</text>
+<text x="950.0" y="30" text-anchor="middle" font-weight="bold" font-size="14" fill="#1b3550">Domaines / fichiers observes</text>
+<path d="M210,111.66666666666666 C250.0,111.66666666666666 250.0,104.28571428571428 288,104.28571428571428" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M210,111.66666666666666 C250.0,111.66666666666666 250.0,370.0 288,370.0" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M210,214.99999999999997 C250.0,214.99999999999997 250.0,192.85714285714283 288,192.85714285714283" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M210,214.99999999999997 C250.0,214.99999999999997 250.0,547.1428571428571 288,547.1428571428571" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M210,318.3333333333333 C250.0,318.3333333333333 250.0,281.42857142857144 288,281.42857142857144" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M210,318.3333333333333 C250.0,318.3333333333333 250.0,458.57142857142856 288,458.57142857142856" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M210,421.6666666666667 C250.0,421.6666666666667 250.0,192.85714285714283 288,192.85714285714283" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M210,421.6666666666667 C250.0,421.6666666666667 250.0,458.57142857142856 288,458.57142857142856" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M210,525.0 C250.0,525.0 250.0,635.7142857142858 288,635.7142857142858" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M490,104.28571428571428 C530.0,104.28571428571428 530.0,111.66666666666666 568,111.66666666666666" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M490,192.85714285714283 C530.0,192.85714285714283 530.0,111.66666666666666 568,111.66666666666666" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M490,192.85714285714283 C530.0,192.85714285714283 530.0,214.99999999999997 568,214.99999999999997" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M490,192.85714285714283 C530.0,192.85714285714283 530.0,318.3333333333333 568,318.3333333333333" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M490,281.42857142857144 C530.0,281.42857142857144 530.0,111.66666666666666 568,111.66666666666666" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M490,281.42857142857144 C530.0,281.42857142857144 530.0,214.99999999999997 568,214.99999999999997" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M490,370.0 C530.0,370.0 530.0,111.66666666666666 568,111.66666666666666" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M490,370.0 C530.0,370.0 530.0,214.99999999999997 568,214.99999999999997" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M490,458.57142857142856 C530.0,458.57142857142856 530.0,421.6666666666667 568,421.6666666666667" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M490,547.1428571428571 C530.0,547.1428571428571 530.0,525.0 568,525.0" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M490,635.7142857142858 C530.0,635.7142857142858 530.0,628.3333333333333 568,628.3333333333333" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M770,111.66666666666666 C810.0,111.66666666666666 810.0,94.44444444444444 848,94.44444444444444" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M770,111.66666666666666 C810.0,111.66666666666666 810.0,163.33333333333331 848,163.33333333333331" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M770,111.66666666666666 C810.0,111.66666666666666 810.0,232.22222222222223 848,232.22222222222223" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M770,111.66666666666666 C810.0,111.66666666666666 810.0,301.1111111111111 848,301.1111111111111" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M770,214.99999999999997 C810.0,214.99999999999997 810.0,94.44444444444444 848,94.44444444444444" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M770,214.99999999999997 C810.0,214.99999999999997 810.0,301.1111111111111 848,301.1111111111111" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M770,318.3333333333333 C810.0,318.3333333333333 810.0,94.44444444444444 848,94.44444444444444" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M770,318.3333333333333 C810.0,318.3333333333333 810.0,163.33333333333331 848,163.33333333333331" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M770,421.6666666666667 C810.0,421.6666666666667 810.0,370.0 848,370.0" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M770,421.6666666666667 C810.0,421.6666666666667 810.0,94.44444444444444 848,94.44444444444444" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M770,525.0 C810.0,525.0 810.0,438.8888888888889 848,438.8888888888889" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M770,525.0 C810.0,525.0 810.0,507.77777777777777 848,507.77777777777777" fill="none" stroke="#8795a1" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#a)"/>
+<path d="M770,525.0 C810.0,525.0 810.0,645.5555555555555 848,645.5555555555555" fill="none" stroke="#8795a1" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#a)"/>
+<path d="M770,628.3333333333333 C810.0,628.3333333333333 810.0,576.6666666666666 848,576.6666666666666" fill="none" stroke="#8795a1" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M770,628.3333333333333 C810.0,628.3333333333333 810.0,645.5555555555555 848,645.5555555555555" fill="none" stroke="#8795a1" stroke-width="1.2" stroke-dasharray="5,4" marker-end="url(#a)"/>
+<rect x="10" y="91.66666666666666" width="200" height="40" rx="6" fill="#1b3550" stroke="#1b3550" stroke-width="2"/>
+<text x="110.0" y="115.66666666666666" text-anchor="middle" fill="#ffffff">Direction generale</text>
+<rect x="10" y="194.99999999999997" width="200" height="40" rx="6" fill="#1b3550" stroke="#1b3550" stroke-width="2"/>
+<text x="110.0" y="218.99999999999997" text-anchor="middle" fill="#ffffff">Direction commerciale</text>
+<rect x="10" y="298.3333333333333" width="200" height="40" rx="6" fill="#1b3550" stroke="#1b3550" stroke-width="2"/>
+<text x="110.0" y="322.3333333333333" text-anchor="middle" fill="#ffffff">Responsable magasin</text>
+<rect x="10" y="401.6666666666667" width="200" height="40" rx="6" fill="#1b3550" stroke="#1b3550" stroke-width="2"/>
+<text x="110.0" y="425.6666666666667" text-anchor="middle" fill="#ffffff">Controleur de gestion</text>
+<rect x="10" y="505.0" width="200" height="40" rx="6" fill="#1b3550" stroke="#1b3550" stroke-width="2"/>
+<text x="110.0" y="529.0" text-anchor="middle" fill="#ffffff">Responsable stocks</text>
+<rect x="10" y="608.3333333333333" width="200" height="40" rx="6" fill="#1b3550" stroke="#1b3550" stroke-width="2"/>
+<text x="110.0" y="632.3333333333333" text-anchor="middle" fill="#ffffff">Equipe Data (transverse)</text>
+<rect x="290" y="84.28571428571428" width="200" height="40" rx="6" fill="#1d8a8a" stroke="#1d8a8a" stroke-width="2"/>
+<text x="390.0" y="108.28571428571428" text-anchor="middle" fill="#ffffff">Evolution de l'activite</text>
+<rect x="290" y="172.85714285714283" width="200" height="40" rx="6" fill="#1d8a8a" stroke="#1d8a8a" stroke-width="2"/>
+<text x="390.0" y="196.85714285714283" text-anchor="middle" fill="#ffffff">Performance produits</text>
+<rect x="290" y="261.42857142857144" width="200" height="40" rx="6" fill="#1d8a8a" stroke="#1d8a8a" stroke-width="2"/>
+<text x="390.0" y="285.42857142857144" text-anchor="middle" fill="#ffffff">Performance magasins</text>
+<rect x="290" y="350.0" width="200" height="40" rx="6" fill="#1d8a8a" stroke="#1d8a8a" stroke-width="2"/>
+<text x="390.0" y="374.0" text-anchor="middle" fill="#ffffff">Ventes par canal</text>
+<rect x="290" y="438.57142857142856" width="200" height="40" rx="6" fill="#1d8a8a" stroke="#1d8a8a" stroke-width="2"/>
+<text x="390.0" y="462.57142857142856" text-anchor="middle" fill="#ffffff">Retours produits</text>
+<rect x="290" y="527.1428571428571" width="200" height="40" rx="6" fill="#1d8a8a" stroke="#1d8a8a" stroke-width="2"/>
+<text x="390.0" y="551.1428571428571" text-anchor="middle" fill="#ffffff">Connaissance client</text>
+<rect x="290" y="615.7142857142858" width="200" height="40" rx="6" fill="#1d8a8a" stroke="#1d8a8a" stroke-width="2"/>
+<text x="390.0" y="639.7142857142858" text-anchor="middle" fill="#ffffff">Niveaux de stock</text>
+<rect x="570" y="91.66666666666666" width="200" height="40" rx="6" fill="#4a5e8c" stroke="#4a5e8c" stroke-width="2"/>
+<text x="670.0" y="115.66666666666666" text-anchor="middle" fill="#ffffff">KPI-01/06 CA, evolution</text>
+<rect x="570" y="194.99999999999997" width="200" height="40" rx="6" fill="#4a5e8c" stroke="#4a5e8c" stroke-width="2"/>
+<text x="670.0" y="218.99999999999997" text-anchor="middle" fill="#ffffff">KPI-02/03/04 Transac., panier, qte</text>
+<rect x="570" y="298.3333333333333" width="200" height="40" rx="6" fill="#4a5e8c" stroke="#4a5e8c" stroke-width="2"/>
+<text x="670.0" y="322.3333333333333" text-anchor="middle" fill="#ffffff">KPI-05 Taux de remise</text>
+<rect x="570" y="401.6666666666667" width="200" height="40" rx="6" fill="#4a5e8c" stroke="#4a5e8c" stroke-width="2"/>
+<text x="670.0" y="425.6666666666667" text-anchor="middle" fill="#ffffff">KPI-07 Taux de retour</text>
+<rect x="570" y="505.0" width="200" height="40" rx="6" fill="#4a5e8c" stroke="#4a5e8c" stroke-width="2"/>
+<text x="670.0" y="529.0" text-anchor="middle" fill="#ffffff">CA par profil demographique</text>
+<rect x="570" y="608.3333333333333" width="200" height="40" rx="6" fill="#4a5e8c" stroke="#4a5e8c" stroke-width="2"/>
+<text x="670.0" y="632.3333333333333" text-anchor="middle" fill="#ffffff">KPI-08 Stock moyen</text>
+<rect x="850" y="74.44444444444444" width="200" height="40" rx="6" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+<text x="950.0" y="98.44444444444444" text-anchor="middle" fill="#2e7d32" font-size="11">Ventes : store_sales, web_sales</text>
+<rect x="850" y="143.33333333333331" width="200" height="40" rx="6" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+<text x="950.0" y="167.33333333333331" text-anchor="middle" fill="#2e7d32" font-size="11">Produits : item, item_marketprices</text>
+<rect x="850" y="212.22222222222223" width="200" height="40" rx="6" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+<text x="950.0" y="236.22222222222223" text-anchor="middle" fill="#2e7d32" font-size="11">Magasins : store</text>
+<rect x="850" y="281.1111111111111" width="200" height="40" rx="6" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+<text x="950.0" y="305.1111111111111" text-anchor="middle" fill="#2e7d32" font-size="11">Dates : date_dim, time_dim</text>
+<rect x="850" y="350.0" width="200" height="40" rx="6" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+<text x="950.0" y="374.0" text-anchor="middle" fill="#2e7d32" font-size="11">Retours : store/web_returns, reason</text>
+<rect x="850" y="418.8888888888889" width="200" height="40" rx="6" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+<text x="950.0" y="442.8888888888889" text-anchor="middle" fill="#2e7d32" font-size="11">Demographie : cdemo, hdemo, income</text>
+<rect x="850" y="487.77777777777777" width="200" height="40" rx="6" fill="#ffffff" stroke="#c77700" stroke-width="2" stroke-dasharray="6,3"/>
+<text x="950.0" y="511.77777777777777" text-anchor="middle" fill="#c77700" font-size="11">Clients : customer (refresh seul.)</text>
+<rect x="850" y="556.6666666666666" width="200" height="40" rx="6" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+<text x="950.0" y="580.6666666666666" text-anchor="middle" fill="#2e7d32" font-size="11">Stocks : inventory, warehouse</text>
+<rect x="850" y="625.5555555555555" width="200" height="40" rx="6" fill="#ffffff" stroke="#b3261e" stroke-width="2" stroke-dasharray="6,3"/>
+<text x="950.0" y="649.5555555555555" text-anchor="middle" fill="#b3261e" font-size="11">Stock magasin, CRM complet</text>
+<rect x="20" y="710" width="26" height="14" rx="3" fill="#fff" stroke="#2e7d32" stroke-width="2"/>
+<text x="54" y="722" fill="#1b2733">Source verifiee (observee, jointures controlees)</text>
+<rect x="380" y="710" width="26" height="14" rx="3" fill="#fff" stroke="#c77700" stroke-width="2" stroke-dasharray="6,3"/>
+<text x="414" y="722" fill="#1b2733">Source partielle (presente mais incomplete)</text>
+<rect x="740" y="710" width="26" height="14" rx="3" fill="#fff" stroke="#b3261e" stroke-width="2" stroke-dasharray="6,3"/>
+<text x="774" y="722" fill="#1b2733">Source souhaitee, absente du kit</text>
+</svg>

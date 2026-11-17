@@ -1,0 +1,109 @@
+﻿lot;table;controle;valeur;total;pct;commentaire
+data;store_sales;Lignes (granularite : 1 ligne = 1 article d'un ticket);667579;;;
+data;store_sales;Tickets distincts (ss_ticket_number);89100;;;Base du nombre de transactions
+data;store_sales;Lignes par ticket (moyenne);7.49;;;
+data;store_sales;Doublons (ticket, article);4136;667579;0.62;
+data;store_sales;Quantite vide;0;667579;0.0;
+data;store_sales;Quantite <= 0;0;667579;0.0;
+data;store_sales;Prix de vente vide;0;667579;0.0;
+data;store_sales;Prix de vente > prix catalogue;0;667579;0.0;
+data;store_sales;ext_sales_price != sales_price x quantite;0;667579;0.0;Coherence interne du montant de ligne
+data;store_sales;Marge nette negative (ss_net_profit < 0);495971;667579;74.294;Possible (remise, coupon) : a interpreter, pas une erreur
+data;store_sales;CA total ss_ext_sales_price;1277224004.61;;;Unite monetaire non documentee
+data;store_sales;CA total ss_net_paid;1150529586.37;;;
+data;store_sales;Remises totales ss_ext_discount_amt;1276714271.73;;;
+data;store_sales;Ventes sans client (ss_customer_sk vide);0;667579;0.0;
+data;web_sales;Lignes (granularite : 1 ligne = 1 article d'une commande);668052;;;
+data;web_sales;Commandes distinctes (ws_order_number);89100;;;
+data;web_sales;Lignes par commande (moyenne);7.5;;;
+data;web_sales;Doublons (commande, article);4076;668052;0.61;
+data;web_sales;Quantite vide;0;668052;0.0;
+data;web_sales;Quantite <= 0;0;668052;0.0;
+data;web_sales;Prix de vente > prix catalogue;0;668052;0.0;
+data;web_sales;ext_sales_price != sales_price x quantite;0;668052;0.0;
+data;web_sales;Expedition avant vente (ship_date < sold_date);0;668052;0.0;
+data;web_sales;Marge nette negative;407163;668052;60.948;
+data;web_sales;CA total ws_ext_sales_price;1704242774.48;;;
+data;web_sales;CA total ws_net_paid;1535374825.67;;;
+data;web_sales;Ventes sans client (ws_bill_customer_sk vide);0;668052;0.0;
+data;store_returns;Lignes;37902;;;
+data;store_returns;Quantite retournee <= 0;0;37902;0.0;
+data;store_returns;Doublons (ticket/commande, article);158;37902;0.417;
+data;store_returns;Retour sans vente correspondante dans store_sales (data+refresh);0;37902;0.0;Jointure (sr_ticket_number,sr_item_sk) -> (ss_ticket_number,ss_item_sk)
+data;web_returns;Lignes;38487;;;
+data;web_returns;Quantite retournee <= 0;0;38487;0.0;
+data;web_returns;Doublons (ticket/commande, article);150;38487;0.39;
+data;web_returns;Retour sans vente correspondante dans web_sales (data+refresh);0;38487;0.0;Jointure (wr_order_number,wr_item_sk) -> (ws_order_number,ws_item_sk)
+data;inventory;Lignes (granularite : date x article x entrepot);23255100;;;
+data;inventory;Quantite en stock vide;5999;23255100;0.026;
+data;inventory;Quantite en stock < 0;0;23255100;0.0;
+data;inventory;Dates d'inventaire distinctes;259;;;Photos de stock periodiques (pas des mouvements)
+data;inventory;Ecart le plus frequent entre 2 dates (jours);7;;;
+data;inventory;Doublons (date, article, entrepot);0;23255100;0.0;
+data;web_clickstreams;Clics;6770550;;;
+data;web_clickstreams;Clics lies a une vente (wcs_sales_sk renseigne);668052;6770550;9.867;Seuls ces clics peuvent etre relies a un achat
+data;web_clickstreams;Clics anonymes (wcs_user_sk vide);2853461;6770550;42.145;
+data;web_clickstreams;Clics sans article (wcs_item_sk vide);0;6770550;0.0;
+data;web_clickstreams;wcs_sales_sk absent de ws_order_number (hypothese de jointure);0;668052;0.0;Hypothese : wcs_sales_sk = ws_order_number
+data;product_reviews;Avis;89991;;;
+data;product_reviews;"Note hors [1;5]";0;89991;0.0;
+data;product_reviews;Avis sans utilisateur;0;89991;0.0;
+data_refresh;store_sales;Lignes (granularite : 1 ligne = 1 article d'un ticket);6632;;;
+data_refresh;store_sales;Tickets distincts (ss_ticket_number);900;;;Base du nombre de transactions
+data_refresh;store_sales;Lignes par ticket (moyenne);7.37;;;
+data_refresh;store_sales;Doublons (ticket, article);46;6632;0.694;
+data_refresh;store_sales;Quantite vide;0;6632;0.0;
+data_refresh;store_sales;Quantite <= 0;0;6632;0.0;
+data_refresh;store_sales;Prix de vente vide;0;6632;0.0;
+data_refresh;store_sales;Prix de vente > prix catalogue;0;6632;0.0;
+data_refresh;store_sales;ext_sales_price != sales_price x quantite;0;6632;0.0;Coherence interne du montant de ligne
+data_refresh;store_sales;Marge nette negative (ss_net_profit < 0);4918;6632;74.156;Possible (remise, coupon) : a interpreter, pas une erreur
+data_refresh;store_sales;CA total ss_ext_sales_price;12842337.6;;;Unite monetaire non documentee
+data_refresh;store_sales;CA total ss_net_paid;11544261.51;;;
+data_refresh;store_sales;Remises totales ss_ext_discount_amt;12558902.56;;;
+data_refresh;store_sales;Ventes sans client (ss_customer_sk vide);0;6632;0.0;
+data_refresh;web_sales;Lignes (granularite : 1 ligne = 1 article d'une commande);6879;;;
+data_refresh;web_sales;Commandes distinctes (ws_order_number);900;;;
+data_refresh;web_sales;Lignes par commande (moyenne);7.64;;;
+data_refresh;web_sales;Doublons (commande, article);39;6879;0.567;
+data_refresh;web_sales;Quantite vide;0;6879;0.0;
+data_refresh;web_sales;Quantite <= 0;0;6879;0.0;
+data_refresh;web_sales;Prix de vente > prix catalogue;0;6879;0.0;
+data_refresh;web_sales;ext_sales_price != sales_price x quantite;0;6879;0.0;
+data_refresh;web_sales;Expedition avant vente (ship_date < sold_date);0;6879;0.0;
+data_refresh;web_sales;Marge nette negative;4175;6879;60.692;
+data_refresh;web_sales;CA total ws_ext_sales_price;17583831.67;;;
+data_refresh;web_sales;CA total ws_net_paid;15764416.32;;;
+data_refresh;web_sales;Ventes sans client (ws_bill_customer_sk vide);0;6879;0.0;
+data_refresh;store_returns;Lignes;426;;;
+data_refresh;store_returns;Quantite retournee <= 0;0;426;0.0;
+data_refresh;store_returns;Doublons (ticket/commande, article);0;426;0.0;
+data_refresh;store_returns;Retour sans vente correspondante dans store_sales (data+refresh);407;426;95.54;Jointure (sr_ticket_number,sr_item_sk) -> (ss_ticket_number,ss_item_sk)
+data_refresh;web_returns;Lignes;400;;;
+data_refresh;web_returns;Quantite retournee <= 0;0;400;0.0;
+data_refresh;web_returns;Doublons (ticket/commande, article);1;400;0.25;
+data_refresh;web_returns;Retour sans vente correspondante dans web_sales (data+refresh);371;400;92.75;Jointure (wr_order_number,wr_item_sk) -> (ws_order_number,ws_item_sk)
+data_refresh;inventory;Lignes (granularite : date x article x entrepot);234900;;;
+data_refresh;inventory;Quantite en stock vide;63;234900;0.027;
+data_refresh;inventory;Quantite en stock < 0;0;234900;0.0;
+data_refresh;inventory;Dates d'inventaire distinctes;3;;;Photos de stock periodiques (pas des mouvements)
+data_refresh;inventory;Ecart le plus frequent entre 2 dates (jours);7;;;
+data_refresh;inventory;Doublons (date, article, entrepot);0;234900;0.0;
+data_refresh;web_clickstreams;Clics;68988;;;
+data_refresh;web_clickstreams;Clics lies a une vente (wcs_sales_sk renseigne);6879;68988;9.971;Seuls ces clics peuvent etre relies a un achat
+data_refresh;web_clickstreams;Clics anonymes (wcs_user_sk vide);29167;68988;42.278;
+data_refresh;web_clickstreams;Clics sans article (wcs_item_sk vide);0;68988;0.0;
+data_refresh;web_clickstreams;wcs_sales_sk absent de ws_order_number (hypothese de jointure);0;6879;0.0;Hypothese : wcs_sales_sk = ws_order_number
+data_refresh;product_reviews;Avis;909;;;
+data_refresh;product_reviews;"Note hors [1;5]";0;909;0.0;
+data_refresh;product_reviews;Avis sans utilisateur;0;909;0.0;
+data + data_refresh;item;Articles (i_item_sk);18000;;;
+data + data_refresh;item;Identifiants metier distincts (i_item_id);18000;;;Si < nb de sk : plusieurs versions d'un meme article (historisation)
+data + data_refresh;item;Versions fermees (i_rec_end_date renseigne);0;18000;0.0;
+data + data_refresh;item;Categorie vide;0;18000;0.0;
+data + data_refresh;item;Categories distinctes;9;;;Books, Clothing & Accessories, Electronics, Home & Kitchen, Movies & TV, Music, Sports & Outdoors, Tools & Home Improvement, Toys & Games
+data + data_refresh;item;Prix courant vide;0;18000;0.0;
+data;store;Magasins (lignes);12;;;
+data;store;Identifiants metier distincts (s_store_id);12;;;
+data;store;Etats distincts (s_state);8;;;CA, CO, IN, KS, KY, TN, TX, WV
+data;store;Magasins fermes (s_closed_date_sk renseigne);12;12;100.0;

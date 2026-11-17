@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1090 372" font-family="Segoe UI, Arial" font-size="11"><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5a6b7b"/></marker></defs>
+<text x="225.0" y="22" text-anchor="middle" font-weight="bold" fill="#1b3550">Source (.dat)</text>
+<text x="387.0" y="22" text-anchor="middle" font-weight="bold" fill="#1b3550">NiFi</text>
+<text x="519.0" y="22" text-anchor="middle" font-weight="bold" fill="#1b3550">Bronze HDFS</text>
+<text x="656.0" y="22" text-anchor="middle" font-weight="bold" fill="#1b3550">Spark -> Silver</text>
+<text x="813.0" y="22" text-anchor="middle" font-weight="bold" fill="#1b3550">Gold</text>
+<text x="982.5" y="22" text-anchor="middle" font-weight="bold" fill="#1b3550">Usage</text>
+<text x="8" y="60" font-weight="bold" fill="#1b3550">F1 Ventes</text>
+<rect x="140" y="38" width="170" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="225.0" y="59" text-anchor="middle" fill="#1b2733" font-size="10">store_sales, web_sales</text>
+<line x1="310" y1="55" x2="332" y2="55" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="332" y="38" width="110" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="387.0" y="59" text-anchor="middle" fill="#1b2733" font-size="10">GetFile -&gt; PutHDFS</text>
+<line x1="442" y1="55" x2="464" y2="55" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="464" y="38" width="110" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="519.0" y="59" text-anchor="middle" fill="#1b2733" font-size="10">brut + manifeste</text>
+<line x1="574" y1="55" x2="596" y2="55" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="596" y="38" width="120" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="656.0" y="59" text-anchor="middle" fill="#1b2733" font-size="10">typage, controles</text>
+<line x1="716" y1="55" x2="738" y2="55" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="738" y="38" width="150" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="813.0" y="59" text-anchor="middle" fill="#1b2733" font-size="10">fait_ventes</text>
+<line x1="888" y1="55" x2="910" y2="55" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="910" y="38" width="145" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="982.5" y="59" text-anchor="middle" fill="#1b2733" font-size="10">CA, transactions, panier</text>
+<text x="8" y="112" font-weight="bold" fill="#1b3550">F2 Retours</text>
+<rect x="140" y="90" width="170" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="225.0" y="111" text-anchor="middle" fill="#1b2733" font-size="10">store_returns, web_returns</text>
+<line x1="310" y1="107" x2="332" y2="107" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="332" y="90" width="110" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="387.0" y="111" text-anchor="middle" fill="#1b2733" font-size="10">GetFile -&gt; PutHDFS</text>
+<line x1="442" y1="107" x2="464" y2="107" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="464" y="90" width="110" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="519.0" y="111" text-anchor="middle" fill="#1b2733" font-size="10">brut + manifeste</text>
+<line x1="574" y1="107" x2="596" y2="107" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="596" y="90" width="120" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="656.0" y="111" text-anchor="middle" fill="#1b2733" font-size="10">typage, controles</text>
+<line x1="716" y1="107" x2="738" y2="107" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="738" y="90" width="150" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="813.0" y="111" text-anchor="middle" fill="#1b2733" font-size="10">fait_retours</text>
+<line x1="888" y1="107" x2="910" y2="107" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="910" y="90" width="145" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="982.5" y="111" text-anchor="middle" fill="#1b2733" font-size="10">Taux de retour</text>
+<text x="8" y="164" font-weight="bold" fill="#1b3550">F3 Stocks</text>
+<rect x="140" y="142" width="170" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="225.0" y="163" text-anchor="middle" fill="#1b2733" font-size="10">inventory</text>
+<line x1="310" y1="159" x2="332" y2="159" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="332" y="142" width="110" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="387.0" y="163" text-anchor="middle" fill="#1b2733" font-size="10">GetFile -&gt; PutHDFS</text>
+<line x1="442" y1="159" x2="464" y2="159" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="464" y="142" width="110" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="519.0" y="163" text-anchor="middle" fill="#1b2733" font-size="10">brut + manifeste</text>
+<line x1="574" y1="159" x2="596" y2="159" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="596" y="142" width="120" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="656.0" y="163" text-anchor="middle" fill="#1b2733" font-size="10">typage, controles</text>
+<line x1="716" y1="159" x2="738" y2="159" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="738" y="142" width="150" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="813.0" y="163" text-anchor="middle" fill="#1b2733" font-size="10">fait_stock</text>
+<line x1="888" y1="159" x2="910" y2="159" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="910" y="142" width="145" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="982.5" y="163" text-anchor="middle" fill="#1b2733" font-size="10">Stock moyen</text>
+<text x="8" y="216" font-weight="bold" fill="#1b3550">F4 Referentiels</text>
+<rect x="140" y="194" width="170" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="225.0" y="215" text-anchor="middle" fill="#1b2733" font-size="10">item, store, date_dim...</text>
+<line x1="310" y1="211" x2="332" y2="211" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="332" y="194" width="110" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="387.0" y="215" text-anchor="middle" fill="#1b2733" font-size="10">GetFile -&gt; PutHDFS</text>
+<line x1="442" y1="211" x2="464" y2="211" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="464" y="194" width="110" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="519.0" y="215" text-anchor="middle" fill="#1b2733" font-size="10">brut + manifeste</text>
+<line x1="574" y1="211" x2="596" y2="211" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="596" y="194" width="120" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="656.0" y="215" text-anchor="middle" fill="#1b2733" font-size="10">typage, controles</text>
+<line x1="716" y1="211" x2="738" y2="211" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="738" y="194" width="150" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="813.0" y="215" text-anchor="middle" fill="#1b2733" font-size="10">dimensions</text>
+<line x1="888" y1="211" x2="910" y2="211" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="910" y="194" width="145" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="982.5" y="215" text-anchor="middle" fill="#1b2733" font-size="10">Axes d'analyse</text>
+<text x="8" y="268" font-weight="bold" fill="#1b3550">F5 Clients (refresh)</text>
+<rect x="140" y="246" width="170" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="225.0" y="267" text-anchor="middle" fill="#1b2733" font-size="10">customer, customer_address</text>
+<line x1="310" y1="263" x2="332" y2="263" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="332" y="246" width="110" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="387.0" y="267" text-anchor="middle" fill="#1b2733" font-size="10">GetFile -&gt; PutHDFS</text>
+<line x1="442" y1="263" x2="464" y2="263" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="464" y="246" width="110" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="519.0" y="267" text-anchor="middle" fill="#1b2733" font-size="10">brut + manifeste</text>
+<line x1="574" y1="263" x2="596" y2="263" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="596" y="246" width="120" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="656.0" y="267" text-anchor="middle" fill="#1b2733" font-size="10">typage, controles</text>
+<line x1="716" y1="263" x2="738" y2="263" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="738" y="246" width="150" height="34" rx="6" fill="#f3f6f8" stroke="#8795a1" stroke-dasharray="5,3"/>
+<text x="813.0" y="267" text-anchor="middle" fill="#1b2733" font-size="10">dim_client (protegee)</text>
+<line x1="888" y1="263" x2="910" y2="263" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="910" y="246" width="145" height="34" rx="6" fill="#f3f6f8" stroke="#8795a1" stroke-dasharray="5,3"/>
+<text x="982.5" y="267" text-anchor="middle" fill="#1b2733" font-size="10">Pseudonymise</text>
+<text x="8" y="320" font-weight="bold" fill="#1b3550">F6 Navigation / avis</text>
+<rect x="140" y="298" width="170" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="225.0" y="319" text-anchor="middle" fill="#1b2733" font-size="10">clickstreams, reviews</text>
+<line x1="310" y1="315" x2="332" y2="315" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="332" y="298" width="110" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="387.0" y="319" text-anchor="middle" fill="#1b2733" font-size="10">GetFile -&gt; PutHDFS</text>
+<line x1="442" y1="315" x2="464" y2="315" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="464" y="298" width="110" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="519.0" y="319" text-anchor="middle" fill="#1b2733" font-size="10">brut + manifeste</text>
+<line x1="574" y1="315" x2="596" y2="315" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="596" y="298" width="120" height="34" rx="6" fill="#f3f6f8" stroke="#4a5e8c"/>
+<text x="656.0" y="319" text-anchor="middle" fill="#1b2733" font-size="10">typage, controles</text>
+<line x1="716" y1="315" x2="738" y2="315" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="738" y="298" width="150" height="34" rx="6" fill="#f3f6f8" stroke="#8795a1" stroke-dasharray="5,3"/>
+<text x="813.0" y="319" text-anchor="middle" fill="#1b2733" font-size="10">Silver seulement</text>
+<line x1="888" y1="315" x2="910" y2="315" stroke="#5a6b7b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="910" y="298" width="145" height="34" rx="6" fill="#f3f6f8" stroke="#8795a1" stroke-dasharray="5,3"/>
+<text x="982.5" y="319" text-anchor="middle" fill="#1b2733" font-size="10">Exploration</text>
+</svg>

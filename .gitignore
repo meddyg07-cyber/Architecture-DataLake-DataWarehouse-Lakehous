@@ -1,0 +1,13 @@
+# Données brutes (~1 Go)
+retail_project/
+*.dat
+
+# Supports du formateur
+Cours*.pdf
+TP*.pdf
+
+# Fichiers temporaires
+.edge_profile/
+__pycache__/
+*.pyc
+.vscode/

@@ -1,0 +1,38 @@
+﻿lot;table;cle;lignes;nulls;distinct;doublons;min;max;unique
+data;date_dim;d_date_sk;109573;0;109573;0;0.0;109572.0;oui
+data + data_refresh;date_dim;d_date_sk;109573;0;109573;0;0.0;109572.0;oui
+data;time_dim;t_time_sk;86400;0;86400;0;0.0;86399.0;oui
+data + data_refresh;time_dim;t_time_sk;86400;0;86400;0;0.0;86399.0;oui
+data;item;i_item_sk;17820;0;17820;0;0.0;17819.0;oui
+data_refresh;item;i_item_sk;180;0;180;0;17820.0;17999.0;oui
+data + data_refresh;item;i_item_sk;18000;0;18000;0;0.0;17999.0;oui
+data;store;s_store_sk;12;0;12;0;0.0;11.0;oui
+data + data_refresh;store;s_store_sk;12;0;12;0;0.0;11.0;oui
+data_refresh;customer;c_customer_sk;1000;0;1000;0;99000.0;99999.0;oui
+data + data_refresh;customer;c_customer_sk;1000;0;1000;0;99000.0;99999.0;oui
+data_refresh;customer_address;ca_address_sk;500;0;500;0;49500.0;49999.0;oui
+data + data_refresh;customer_address;ca_address_sk;500;0;500;0;49500.0;49999.0;oui
+data;customer_demographics;cd_demo_sk;1920800;0;1920800;0;0.0;1920799.0;oui
+data + data_refresh;customer_demographics;cd_demo_sk;1920800;0;1920800;0;0.0;1920799.0;oui
+data;household_demographics;hd_demo_sk;7200;0;7200;0;0.0;7199.0;oui
+data + data_refresh;household_demographics;hd_demo_sk;7200;0;7200;0;0.0;7199.0;oui
+data;income_band;ib_income_band_sk;20;0;20;0;0.0;19.0;oui
+data + data_refresh;income_band;ib_income_band_sk;20;0;20;0;0.0;19.0;oui
+data;promotion;p_promo_sk;300;0;300;0;0.0;299.0;oui
+data + data_refresh;promotion;p_promo_sk;300;0;300;0;0.0;299.0;oui
+data;reason;r_reason_sk;35;0;35;0;0.0;34.0;oui
+data + data_refresh;reason;r_reason_sk;35;0;35;0;0.0;34.0;oui
+data;ship_mode;sm_ship_mode_sk;20;0;20;0;0.0;19.0;oui
+data + data_refresh;ship_mode;sm_ship_mode_sk;20;0;20;0;0.0;19.0;oui
+data;warehouse;w_warehouse_sk;5;0;5;0;0.0;4.0;oui
+data + data_refresh;warehouse;w_warehouse_sk;5;0;5;0;0.0;4.0;oui
+data;web_page;wp_web_page_sk;60;0;60;0;0.0;59.0;oui
+data + data_refresh;web_page;wp_web_page_sk;60;0;60;0;0.0;59.0;oui
+data;web_site;web_site_sk;30;0;30;0;0.0;29.0;oui
+data + data_refresh;web_site;web_site_sk;30;0;30;0;0.0;29.0;oui
+data;item_marketprices;imp_sk;89100;0;89100;0;0.0;89099.0;oui
+data_refresh;item_marketprices;imp_sk;900;0;900;0;89100.0;89999.0;oui
+data + data_refresh;item_marketprices;imp_sk;90000;0;90000;0;0.0;89999.0;oui
+data;product_reviews;pr_review_sk;89991;0;89991;0;0.0;89990.0;oui
+data_refresh;product_reviews;pr_review_sk;909;0;909;0;89991.0;90899.0;oui
+data + data_refresh;product_reviews;pr_review_sk;90900;0;90900;0;0.0;90899.0;oui

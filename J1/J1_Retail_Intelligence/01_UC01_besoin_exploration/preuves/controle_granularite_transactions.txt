@@ -1,0 +1,6 @@
+Controle : un ticket / une commande correspond-il a une seule transaction ?
+store_sales : 89100 tickets distincts
+  tickets avec >1 magasin : 0  >1 date : 0  >1 client : 0  >1 heure : 0
+web_sales : 89100 commandes distinctes
+  commandes avec >1 date : 0  >1 client : 0
+Conclusion : ss_ticket_number et ws_order_number identifient chacun une transaction (statut Verifie).

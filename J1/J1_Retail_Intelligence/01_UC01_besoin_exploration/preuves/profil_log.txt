@@ -1,0 +1,53 @@
+[14:43:47] 34 fichiers trouves
+[14:43:59] data\customer_demographics\customer_demographics.dat: 1920800 lignes, 9 col, champs={9: 1920800}, schema_ok=True, 12.4s
+[14:44:02] data\date_dim\date_dim.dat: 109573 lignes, 28 col, champs={28: 109573}, schema_ok=True, 3.0s
+[14:44:02] data\household_demographics\household_demographics.dat: 7200 lignes, 5 col, champs={5: 7200}, schema_ok=True, 0.1s
+[14:44:02] data\income_band\income_band.dat: 20 lignes, 3 col, champs={3: 20}, schema_ok=True, 0.0s
+[14:45:09] data\inventory\inventory.dat: 23255100 lignes, 4 col, champs={4: 23255100}, schema_ok=True, 66.1s
+[14:45:09] data\item\item.dat: 17820 lignes, 22 col, champs={22: 17820}, schema_ok=True, 0.5s
+[14:45:09] data\item_marketprices\item_marketprices.dat: 89100 lignes, 6 col, champs={6: 89100}, schema_ok=True, 0.5s
+[14:45:11] data\product_reviews\product_reviews.dat: 89991 lignes, 8 col, champs={8: 89991}, schema_ok=True, 1.6s
+[14:45:11] data\promotion\promotion.dat: 300 lignes, 19 col, champs={19: 300}, schema_ok=True, 0.1s
+[14:45:11] data\reason\reason.dat: 35 lignes, 3 col, champs={3: 35}, schema_ok=True, 0.0s
+[14:45:11] data\ship_mode\ship_mode.dat: 20 lignes, 6 col, champs={6: 20}, schema_ok=True, 0.0s
+[14:45:11] data\store\store.dat: 12 lignes, 29 col, champs={29: 12}, schema_ok=True, 0.0s
+[14:45:12] data\store_returns\store_returns.dat: 37902 lignes, 20 col, champs={20: 37902}, schema_ok=True, 0.9s
+[14:45:24] data\store_sales\store_sales.dat: 667579 lignes, 23 col, champs={23: 667579}, schema_ok=True, 12.0s
+[14:45:25] data\time_dim\time_dim.dat: 86400 lignes, 10 col, champs={10: 86400}, schema_ok=True, 0.8s
+[14:45:25] data\warehouse\warehouse.dat: 5 lignes, 14 col, champs={14: 5}, schema_ok=True, 0.0s
+[14:45:49] data\web_clickstreams\web_clickstreams.dat: 6770550 lignes, 6 col, champs={6: 6770550}, schema_ok=True, 24.2s
+[14:45:49] data\web_page\web_page.dat: 60 lignes, 14 col, champs={14: 60}, schema_ok=True, 0.0s
+[14:45:50] data\web_returns\web_returns.dat: 38487 lignes, 24 col, champs={24: 38487}, schema_ok=True, 1.0s
+[14:46:10] data\web_sales\web_sales.dat: 668052 lignes, 34 col, champs={34: 668052}, schema_ok=True, 20.3s
+[14:46:11] data\web_site\web_site.dat: 30 lignes, 26 col, champs={26: 30}, schema_ok=True, 0.2s
+[14:46:11] data_refresh\customer\customer.dat: 1000 lignes, 18 col, champs={18: 1000}, schema_ok=True, 0.1s
+[14:46:11] data_refresh\customer_address\customer_address.dat: 500 lignes, 13 col, champs={13: 500}, schema_ok=True, 0.0s
+[14:46:11] data_refresh\inventory\inventory.dat: 234900 lignes, 4 col, champs={4: 234900}, schema_ok=True, 0.6s
+[14:46:11] data_refresh\item\item.dat: 180 lignes, 22 col, champs={22: 180}, schema_ok=True, 0.0s
+[14:46:11] data_refresh\item_marketprices\item_marketprices.dat: 900 lignes, 6 col, champs={6: 900}, schema_ok=True, 0.0s
+[14:46:11] data_refresh\product_reviews\product_reviews.dat: 909 lignes, 8 col, champs={8: 909}, schema_ok=True, 0.0s
+[14:46:12] data_refresh\store_returns\store_returns.dat: 426 lignes, 20 col, champs={20: 426}, schema_ok=True, 0.0s
+[14:46:12] data_refresh\store_sales\store_sales.dat: 6632 lignes, 23 col, champs={23: 6632}, schema_ok=True, 0.2s
+[14:46:12] data_refresh\web_clickstreams\web_clickstreams.dat: 68988 lignes, 6 col, champs={6: 68988}, schema_ok=True, 0.3s
+[14:46:12] data_refresh\web_returns\web_returns.dat: 400 lignes, 24 col, champs={24: 400}, schema_ok=True, 0.0s
+[14:46:12] data_refresh\web_sales\web_sales.dat: 6879 lignes, 34 col, champs={34: 6879}, schema_ok=True, 0.3s
+[14:46:14] cles des dimensions controlees
+[14:46:16] relations data/store_sales controlees (667579 lignes)
+[14:46:16] relations data_refresh/store_sales controlees (6632 lignes)
+[14:46:17] relations data/web_sales controlees (668052 lignes)
+[14:46:17] relations data_refresh/web_sales controlees (6879 lignes)
+[14:46:18] relations data/store_returns controlees (37902 lignes)
+[14:46:18] relations data_refresh/store_returns controlees (426 lignes)
+[14:46:18] relations data/web_returns controlees (38487 lignes)
+[14:46:18] relations data_refresh/web_returns controlees (400 lignes)
+[14:46:23] relations data/inventory controlees (23255100 lignes)
+[14:46:23] relations data_refresh/inventory controlees (234900 lignes)
+[14:46:26] relations data/web_clickstreams controlees (6770550 lignes)
+[14:46:26] relations data_refresh/web_clickstreams controlees (68988 lignes)
+[14:46:26] relations data/product_reviews controlees (89991 lignes)
+[14:46:26] relations data_refresh/product_reviews controlees (909 lignes)
+[14:46:26] relations data/item_marketprices controlees (89100 lignes)
+[14:46:26] relations data_refresh/item_marketprices controlees (900 lignes)
+[14:46:26] relations data/household_demographics controlees (7200 lignes)
+[14:46:26] relations data/promotion controlees (300 lignes)
+[14:46:30] termine
