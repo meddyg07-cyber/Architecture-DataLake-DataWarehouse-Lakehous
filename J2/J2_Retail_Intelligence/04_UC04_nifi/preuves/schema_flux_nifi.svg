@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 470" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1b3550"/></marker>
+    <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b03a3a"/></marker>
+  </defs>
+  <rect width="980" height="470" fill="#ffffff"/>
+  <text x="490" y="26" text-anchor="middle" font-size="17" font-weight="bold" fill="#1b3550">Flux NiFi UC04_ingestion_tpcxbb – GetFile → PutHDFS (+ gestion des échecs)</text>
+
+  <!-- Process group frame -->
+  <rect x="190" y="45" width="600" height="330" rx="10" fill="none" stroke="#1d8a8a" stroke-dasharray="6,4"/>
+  <text x="200" y="64" font-size="12" fill="#1d8a8a" font-weight="bold">Process Group « UC04_ingestion_tpcxbb »</text>
+
+  <!-- local source -->
+  <rect x="15" y="95" width="150" height="80" rx="8" fill="#eef2f5" stroke="#5a6b7b"/>
+  <text x="90" y="120" text-anchor="middle" font-weight="bold" fill="#1b3550">Disque local</text>
+  <text x="90" y="140" text-anchor="middle" font-size="12">/data/nifi/input</text>
+  <text x="90" y="158" text-anchor="middle" font-size="11" fill="#5a6b7b">copie de store.dat</text>
+
+  <!-- GetFile -->
+  <rect x="230" y="85" width="220" height="100" rx="8" fill="#e6f4f4" stroke="#1d8a8a" stroke-width="2"/>
+  <text x="340" y="108" text-anchor="middle" font-weight="bold" fill="#1d8a8a">GetFile</text>
+  <text x="242" y="128" font-size="11">Input Directory : /data/nifi/input</text>
+  <text x="242" y="144" font-size="11">Keep Source File : false</text>
+  <text x="242" y="160" font-size="11">Recurse : false · Run Schedule : 10 s</text>
+  <text x="242" y="176" font-size="11" fill="#5a6b7b">crée 1 FlowFile par fichier lu</text>
+
+  <!-- PutHDFS -->
+  <rect x="230" y="245" width="220" height="110" rx="8" fill="#e6f4f4" stroke="#1d8a8a" stroke-width="2"/>
+  <text x="340" y="268" text-anchor="middle" font-weight="bold" fill="#1d8a8a">PutHDFS</text>
+  <text x="242" y="288" font-size="11">Hadoop Conf. : core-site.xml, hdfs-site.xml</text>
+  <text x="242" y="304" font-size="11">Directory : /retail-lake/raw/nifi</text>
+  <text x="242" y="320" font-size="11">Conflict Resolution : fail</text>
+  <text x="242" y="336" font-size="11">success : auto-terminate</text>
+  <text x="242" y="350" font-size="11" fill="#5a6b7b">pénalité en cas d'échec : 30 s</text>
+
+  <!-- LogAttribute -->
+  <rect x="540" y="245" width="220" height="90" rx="8" fill="#fdecec" stroke="#b03a3a" stroke-width="2"/>
+  <text x="650" y="268" text-anchor="middle" font-weight="bold" fill="#b03a3a">LogAttribute (échecs)</text>
+  <text x="552" y="290" font-size="11">Log Level : warn</text>
+  <text x="552" y="306" font-size="11">écrit les attributs dans nifi-app.log</text>
+  <text x="552" y="322" font-size="11">success : auto-terminate</text>
+
+  <!-- HDFS -->
+  <rect x="820" y="245" width="150" height="90" rx="8" fill="#fff6e8" stroke="#b85c00"/>
+  <text x="895" y="270" text-anchor="middle" font-weight="bold" fill="#b85c00">HDFS</text>
+  <text x="895" y="290" text-anchor="middle" font-size="11">hdfs://localhost:9000</text>
+  <text x="895" y="306" text-anchor="middle" font-size="11">/retail-lake/raw/nifi/</text>
+  <text x="895" y="322" text-anchor="middle" font-size="11">store.dat ✔</text>
+
+  <!-- arrows -->
+  <line x1="165" y1="135" x2="228" y2="135" stroke="#1b3550" stroke-width="2" marker-end="url(#a)"/>
+  <text x="196" y="127" text-anchor="middle" font-size="10">lit</text>
+  <line x1="340" y1="185" x2="340" y2="243" stroke="#1b3550" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="350" y="200" width="150" height="30" rx="4" fill="#f3f6f8" stroke="#c9d3dc"/>
+  <text x="425" y="213" text-anchor="middle" font-size="11">connexion « success »</text>
+  <text x="425" y="226" text-anchor="middle" font-size="10" fill="#5a6b7b">file d'attente (queue)</text>
+  <line x1="450" y1="290" x2="538" y2="290" stroke="#b03a3a" stroke-width="2" marker-end="url(#r)"/>
+  <text x="494" y="282" text-anchor="middle" font-size="11" fill="#b03a3a">failure</text>
+  <path d="M450,345 C600,400 800,400 880,337" fill="none" stroke="#1b3550" stroke-width="2" marker-end="url(#a)"/>
+  <text x="670" y="395" text-anchor="middle" font-size="11">écriture HDFS (événement SEND)</text>
+
+  <text x="15" y="430" font-size="12" fill="#1b2733">Exécution du 17/11/2026 : 1er passage 16:03:35, RECEIVE puis SEND vers hdfs://localhost:9000/retail-lake/raw/nifi/store.dat (MD5 identique à la source).</text>
+  <text x="15" y="450" font-size="12" fill="#1b2733">Test d'erreur B, 16:04:58 : même nom déjà présent → failure → LogAttribute (16:05:28, après la pénalité de 30 s). HDFS : toujours 1 seul fichier.</text>
+</svg>

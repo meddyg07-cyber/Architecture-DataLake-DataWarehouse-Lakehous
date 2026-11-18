@@ -1,0 +1,230 @@
+### Étape 4 – Dépôt des données TPCx-BB – 2026-11-17 15:12:08 – utilisateur meddy@Meddy
+
+[2026-11-17 15:12:08] $ ls -la '/home/meddy/tpcxbb_kit' '/home/meddy/tpcxbb_kit/'
+lrwxrwxrwx 1 meddy meddy  89 Nov 17 15:12 /home/meddy/tpcxbb_kit -> /mnt/c/Users/meddy/Desktop/Data Lake Warehouse Lakehouse/J1/retail_project/retail_project
+
+/home/meddy/tpcxbb_kit/:
+total 0
+drwxrwxrwx 1 meddy meddy 512 Nov 16 14:36 .
+drwxrwxrwx 1 meddy meddy 512 Nov 16 14:36 ..
+drwxrwxrwx 1 meddy meddy 512 Nov 16 14:36 data
+drwxrwxrwx 1 meddy meddy 512 Nov 16 14:36 data_refresh
+→ code retour : 0
+
+[2026-11-17 15:12:08] $ du -sh '/home/meddy/tpcxbb_kit/data' '/home/meddy/tpcxbb_kit/data_refresh'
+960M	/home/meddy/tpcxbb_kit/data
+9.2M	/home/meddy/tpcxbb_kit/data_refresh
+→ code retour : 0
+
+[2026-11-17 15:12:08] $ find '/home/meddy/tpcxbb_kit/data' '/home/meddy/tpcxbb_kit/data_refresh' -type d -empty
+/home/meddy/tpcxbb_kit/data/customer
+/home/meddy/tpcxbb_kit/data/customer_address
+→ code retour : 0
+
+[2026-11-17 15:12:24] $ column -s';' -t '/mnt/c/Users/meddy/Desktop/Data Lake Warehouse Lakehouse/J2/J2_Retail_Intelligence/scripts/../03_UC03_hdfs/preuves/04_inventaire_avant_depot.csv'
+lot           table                   fichier                      format  taille_octets  lignes    colonnes  lisible
+data          customer_demographics   customer_demographics.dat    dat     77753083       1920800   9         oui
+data          date_dim                date_dim.dat                 dat     15395800       109573    28        oui
+data          household_demographics  household_demographics.dat   dat     155100         7200      5         oui
+data          income_band             income_band.dat              dat     327            20        3         oui
+data          inventory               inventory.dat                dat     424943678      23255100  4         oui
+data          item                    item.dat                     dat     6799286        17820     22        oui
+data          item_marketprices       item_marketprices.dat        dat     4201170        89100     6         oui
+data          item_marketprices       item_marketprices_audit.csv  csv     273            5         1         oui
+data          product_reviews         product_reviews.dat          dat     56355389       89991     8         oui
+data          promotion               promotion.dat                dat     46396          300       19        oui
+data          reason                  reason.dat                   dat     3105           35        3         oui
+data          ship_mode               ship_mode.dat                dat     1220           20        6         oui
+data          store                   store.dat                    dat     3386           12        29        oui
+data          store_returns           store_returns.dat            dat     4337400        37902     20        oui
+data          store_sales             store_sales.dat              dat     92764700       667579    23        oui
+data          time_dim                time_dim.dat                 dat     5107780        86400     10        oui
+data          warehouse               warehouse.dat                dat     584            5         14        oui
+data          web_clickstreams        web_clickstreams.dat         dat     178722140      6770550   6         oui
+data          web_page                web_page.dat                 dat     8040           60        14        oui
+data          web_returns             web_returns.dat              dat     5383513        38487     24        oui
+data          web_sales               web_sales.dat                dat     133790574      668052    34        oui
+data          web_site                web_site.dat                 dat     8838           30        26        oui
+data_refresh  customer                customer.dat                 dat     134360         1000      18        oui
+data_refresh  customer_address        customer_address.dat         dat     54587          500       13        oui
+data_refresh  inventory               inventory.dat                dat     4292915        234900    4         oui
+data_refresh  item                    item.dat                     dat     69173          180       22        oui
+data_refresh  item_marketprices       item_marketprices.dat        dat     42547          900       6         oui
+data_refresh  item_marketprices       item_marketprices_audit.csv  csv     151009         17986     1         oui
+data_refresh  product_reviews         product_reviews.dat          dat     573685         909       8         oui
+data_refresh  store_returns           store_returns.dat            dat     48825          426       20        oui
+data_refresh  store_sales             store_sales.dat              dat     922171         6632      23        oui
+data_refresh  web_clickstreams        web_clickstreams.dat         dat     1821864        68988     6         oui
+data_refresh  web_returns             web_returns.dat              dat     55952          400       24        oui
+data_refresh  web_sales               web_sales.dat                dat     1378425        6879      34        oui
+→ code retour : 0
+
+[2026-11-17 15:12:24] data/customer vide : non déposé
+[2026-11-17 15:12:24] data/customer_address vide : non déposé
+[2026-11-17 15:12:24] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/customer_demographics && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/customer_demographics/'* /retail-lake/raw/tpcxbb/initial/customer_demographics/
+→ code retour : 0
+
+[2026-11-17 15:12:36] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/date_dim && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/date_dim/'* /retail-lake/raw/tpcxbb/initial/date_dim/
+→ code retour : 0
+
+[2026-11-17 15:12:42] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/household_demographics && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/household_demographics/'* /retail-lake/raw/tpcxbb/initial/household_demographics/
+→ code retour : 0
+
+[2026-11-17 15:12:49] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/income_band && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/income_band/'* /retail-lake/raw/tpcxbb/initial/income_band/
+→ code retour : 0
+
+[2026-11-17 15:12:54] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/inventory && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/inventory/'* /retail-lake/raw/tpcxbb/initial/inventory/
+→ code retour : 0
+
+[2026-11-17 15:13:24] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/item && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/item/'* /retail-lake/raw/tpcxbb/initial/item/
+→ code retour : 0
+
+[2026-11-17 15:13:30] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/item_marketprices && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/item_marketprices/'* /retail-lake/raw/tpcxbb/initial/item_marketprices/
+→ code retour : 0
+
+[2026-11-17 15:13:36] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/product_reviews && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/product_reviews/'* /retail-lake/raw/tpcxbb/initial/product_reviews/
+→ code retour : 0
+
+[2026-11-17 15:13:47] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/promotion && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/promotion/'* /retail-lake/raw/tpcxbb/initial/promotion/
+→ code retour : 0
+
+[2026-11-17 15:13:53] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/reason && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/reason/'* /retail-lake/raw/tpcxbb/initial/reason/
+→ code retour : 0
+
+[2026-11-17 15:13:57] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/ship_mode && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/ship_mode/'* /retail-lake/raw/tpcxbb/initial/ship_mode/
+→ code retour : 0
+
+[2026-11-17 15:14:03] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/store && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/store/'* /retail-lake/raw/tpcxbb/initial/store/
+→ code retour : 0
+
+[2026-11-17 15:14:08] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/store_returns && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/store_returns/'* /retail-lake/raw/tpcxbb/initial/store_returns/
+→ code retour : 0
+
+[2026-11-17 15:14:14] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/store_sales && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/store_sales/'* /retail-lake/raw/tpcxbb/initial/store_sales/
+→ code retour : 0
+
+[2026-11-17 15:14:25] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/time_dim && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/time_dim/'* /retail-lake/raw/tpcxbb/initial/time_dim/
+→ code retour : 0
+
+[2026-11-17 15:14:29] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/warehouse && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/warehouse/'* /retail-lake/raw/tpcxbb/initial/warehouse/
+→ code retour : 0
+
+[2026-11-17 15:14:35] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/web_clickstreams && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/web_clickstreams/'* /retail-lake/raw/tpcxbb/initial/web_clickstreams/
+→ code retour : 0
+
+[2026-11-17 15:14:51] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/web_page && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/web_page/'* /retail-lake/raw/tpcxbb/initial/web_page/
+→ code retour : 0
+
+[2026-11-17 15:14:56] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/web_returns && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/web_returns/'* /retail-lake/raw/tpcxbb/initial/web_returns/
+→ code retour : 0
+
+[2026-11-17 15:15:00] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/web_sales && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/web_sales/'* /retail-lake/raw/tpcxbb/initial/web_sales/
+→ code retour : 0
+
+[2026-11-17 15:15:13] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial/web_site && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data/web_site/'* /retail-lake/raw/tpcxbb/initial/web_site/
+→ code retour : 0
+
+[2026-11-17 15:15:18] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/refresh/customer && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data_refresh/customer/'* /retail-lake/raw/tpcxbb/refresh/customer/
+→ code retour : 0
+
+[2026-11-17 15:15:24] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/refresh/customer_address && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data_refresh/customer_address/'* /retail-lake/raw/tpcxbb/refresh/customer_address/
+→ code retour : 0
+
+[2026-11-17 15:15:27] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/refresh/inventory && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data_refresh/inventory/'* /retail-lake/raw/tpcxbb/refresh/inventory/
+→ code retour : 0
+
+[2026-11-17 15:15:33] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/refresh/item && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data_refresh/item/'* /retail-lake/raw/tpcxbb/refresh/item/
+→ code retour : 0
+
+[2026-11-17 15:15:38] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/refresh/item_marketprices && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data_refresh/item_marketprices/'* /retail-lake/raw/tpcxbb/refresh/item_marketprices/
+→ code retour : 0
+
+[2026-11-17 15:15:43] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/refresh/product_reviews && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data_refresh/product_reviews/'* /retail-lake/raw/tpcxbb/refresh/product_reviews/
+→ code retour : 0
+
+[2026-11-17 15:15:49] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/refresh/store_returns && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data_refresh/store_returns/'* /retail-lake/raw/tpcxbb/refresh/store_returns/
+→ code retour : 0
+
+[2026-11-17 15:15:54] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/refresh/store_sales && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data_refresh/store_sales/'* /retail-lake/raw/tpcxbb/refresh/store_sales/
+→ code retour : 0
+
+[2026-11-17 15:15:59] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/refresh/web_clickstreams && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data_refresh/web_clickstreams/'* /retail-lake/raw/tpcxbb/refresh/web_clickstreams/
+→ code retour : 0
+
+[2026-11-17 15:16:03] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/refresh/web_returns && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data_refresh/web_returns/'* /retail-lake/raw/tpcxbb/refresh/web_returns/
+→ code retour : 0
+
+[2026-11-17 15:16:08] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/refresh/web_sales && hdfs dfs -put -p '/home/meddy/tpcxbb_kit/data_refresh/web_sales/'* /retail-lake/raw/tpcxbb/refresh/web_sales/
+→ code retour : 0
+
+[2026-11-17 15:16:13] $ hdfs dfs -ls -R -h /retail-lake/raw/tpcxbb
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:09 /retail-lake/raw/tpcxbb/initial
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:12 /retail-lake/raw/tpcxbb/initial/customer_demographics
+-rwxrwxrwx   1 meddy meddy          74.2 M 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/customer_demographics/customer_demographics.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:12 /retail-lake/raw/tpcxbb/initial/date_dim
+-rwxrwxrwx   1 meddy meddy          14.7 M 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/date_dim/date_dim.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:12 /retail-lake/raw/tpcxbb/initial/household_demographics
+-rwxrwxrwx   1 meddy meddy         151.5 K 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/household_demographics/household_demographics.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:12 /retail-lake/raw/tpcxbb/initial/income_band
+-rwxrwxrwx   1 meddy meddy             327 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/income_band/income_band.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:13 /retail-lake/raw/tpcxbb/initial/inventory
+-rwxrwxrwx   1 meddy meddy         405.3 M 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/inventory/inventory.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:13 /retail-lake/raw/tpcxbb/initial/item
+-rwxrwxrwx   1 meddy meddy           6.5 M 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/item/item.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:13 /retail-lake/raw/tpcxbb/initial/item_marketprices
+-rwxrwxrwx   1 meddy meddy           4.0 M 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/item_marketprices/item_marketprices.dat
+-rwxrwxrwx   1 meddy meddy             273 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/item_marketprices/item_marketprices_audit.csv
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:13 /retail-lake/raw/tpcxbb/initial/product_reviews
+-rwxrwxrwx   1 meddy meddy          53.7 M 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/product_reviews/product_reviews.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:13 /retail-lake/raw/tpcxbb/initial/promotion
+-rwxrwxrwx   1 meddy meddy          45.3 K 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/promotion/promotion.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:13 /retail-lake/raw/tpcxbb/initial/reason
+-rwxrwxrwx   1 meddy meddy           3.0 K 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/reason/reason.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:14 /retail-lake/raw/tpcxbb/initial/ship_mode
+-rwxrwxrwx   1 meddy meddy           1.2 K 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/ship_mode/ship_mode.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:14 /retail-lake/raw/tpcxbb/initial/store
+-rwxrwxrwx   1 meddy meddy           3.3 K 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/store/store.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:14 /retail-lake/raw/tpcxbb/initial/store_returns
+-rwxrwxrwx   1 meddy meddy           4.1 M 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/store_returns/store_returns.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:14 /retail-lake/raw/tpcxbb/initial/store_sales
+-rwxrwxrwx   1 meddy meddy          88.5 M 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/store_sales/store_sales.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:14 /retail-lake/raw/tpcxbb/initial/time_dim
+-rwxrwxrwx   1 meddy meddy           4.9 M 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/time_dim/time_dim.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:14 /retail-lake/raw/tpcxbb/initial/warehouse
+-rwxrwxrwx   1 meddy meddy             584 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/warehouse/warehouse.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:14 /retail-lake/raw/tpcxbb/initial/web_clickstreams
+-rwxrwxrwx   1 meddy meddy         170.4 M 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/web_clickstreams/web_clickstreams.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:14 /retail-lake/raw/tpcxbb/initial/web_page
+-rwxrwxrwx   1 meddy meddy           7.9 K 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/web_page/web_page.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:14 /retail-lake/raw/tpcxbb/initial/web_returns
+-rwxrwxrwx   1 meddy meddy           5.1 M 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/web_returns/web_returns.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:15 /retail-lake/raw/tpcxbb/initial/web_sales
+-rwxrwxrwx   1 meddy meddy         127.6 M 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/web_sales/web_sales.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:15 /retail-lake/raw/tpcxbb/initial/web_site
+-rwxrwxrwx   1 meddy meddy           8.6 K 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/web_site/web_site.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:11 /retail-lake/raw/tpcxbb/refresh
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:15 /retail-lake/raw/tpcxbb/refresh/customer
+-rwxrwxrwx   1 meddy meddy         131.2 K 2026-11-16 14:36 /retail-lake/raw/tpcxbb/refresh/customer/customer.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:15 /retail-lake/raw/tpcxbb/refresh/customer_address
+-rwxrwxrwx   1 meddy meddy          53.3 K 2026-11-16 14:36 /retail-lake/raw/tpcxbb/refresh/customer_address/customer_address.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:15 /retail-lake/raw/tpcxbb/refresh/inventory
+-rwxrwxrwx   1 meddy meddy           4.1 M 2026-11-16 14:36 /retail-lake/raw/tpcxbb/refresh/inventory/inventory.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:15 /retail-lake/raw/tpcxbb/refresh/item
+-rwxrwxrwx   1 meddy meddy          67.6 K 2026-11-16 14:36 /retail-lake/raw/tpcxbb/refresh/item/item.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:15 /retail-lake/raw/tpcxbb/refresh/item_marketprices
+-rwxrwxrwx   1 meddy meddy          41.5 K 2026-11-16 14:36 /retail-lake/raw/tpcxbb/refresh/item_marketprices/item_marketprices.dat
+-rwxrwxrwx   1 meddy meddy         147.5 K 2026-11-16 14:36 /retail-lake/raw/tpcxbb/refresh/item_marketprices/item_marketprices_audit.csv
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:15 /retail-lake/raw/tpcxbb/refresh/product_reviews
+-rwxrwxrwx   1 meddy meddy         560.2 K 2026-11-16 14:36 /retail-lake/raw/tpcxbb/refresh/product_reviews/product_reviews.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:15 /retail-lake/raw/tpcxbb/refresh/store_returns
+-rwxrwxrwx   1 meddy meddy          47.7 K 2026-11-16 14:36 /retail-lake/raw/tpcxbb/refresh/store_returns/store_returns.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:15 /retail-lake/raw/tpcxbb/refresh/store_sales
+-rwxrwxrwx   1 meddy meddy         900.6 K 2026-11-16 14:36 /retail-lake/raw/tpcxbb/refresh/store_sales/store_sales.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:16 /retail-lake/raw/tpcxbb/refresh/web_clickstreams
+-rwxrwxrwx   1 meddy meddy           1.7 M 2026-11-16 14:36 /retail-lake/raw/tpcxbb/refresh/web_clickstreams/web_clickstreams.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:16 /retail-lake/raw/tpcxbb/refresh/web_returns
+-rwxrwxrwx   1 meddy meddy          54.6 K 2026-11-16 14:36 /retail-lake/raw/tpcxbb/refresh/web_returns/web_returns.dat
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:16 /retail-lake/raw/tpcxbb/refresh/web_sales
+-rwxrwxrwx   1 meddy meddy           1.3 M 2026-11-16 14:36 /retail-lake/raw/tpcxbb/refresh/web_sales/web_sales.dat
+→ code retour : 0
+

@@ -1,0 +1,40 @@
+### Étape 3 – Création de l'arborescence du Data Lake – 2026-11-17 15:07:07 – utilisateur meddy@Meddy
+
+[2026-11-17 15:07:07] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/initial
+→ code retour : 0
+
+[2026-11-17 15:07:12] $ hdfs dfs -mkdir -p /retail-lake/raw/tpcxbb/refresh
+→ code retour : 0
+
+[2026-11-17 15:07:15] $ hdfs dfs -mkdir -p /retail-lake/raw/nifi
+→ code retour : 0
+
+[2026-11-17 15:07:19] $ hdfs dfs -mkdir -p /retail-lake/bronze/tpcxbb
+→ code retour : 0
+
+[2026-11-17 15:07:23] $ hdfs dfs -mkdir -p /retail-lake/silver
+→ code retour : 0
+
+[2026-11-17 15:07:26] $ hdfs dfs -mkdir -p /retail-lake/gold
+→ code retour : 0
+
+[2026-11-17 15:07:30] $ hdfs dfs -mkdir -p /retail-lake/quality
+→ code retour : 0
+
+[2026-11-17 15:07:33] $ hdfs dfs -mkdir -p /retail-lake/logs
+→ code retour : 0
+
+[2026-11-17 15:07:36] $ hdfs dfs -ls -R /retail-lake
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/bronze
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/bronze/tpcxbb
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/gold
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/logs
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/quality
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/raw
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/raw/nifi
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/raw/tpcxbb
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/raw/tpcxbb/initial
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/raw/tpcxbb/refresh
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/silver
+→ code retour : 0
+

@@ -1,0 +1,44 @@
+### UC-04 – recréation de GetFile – 2026-11-17 17:37:29 – NiFi 2.12.0
+
+Incident : vers 17:33, pendant la prise automatisée des captures (Playwright), un clic sur la dernière icône
+du panneau Operation – la corbeille – alors que GetFile était sélectionné a SUPPRIMÉ GetFile et sa connexion success.
+Conséquences : PutHDFS INVALID (plus de connexion entrante) ; les événements RECEIVE de l'ancien GetFile
+(id ea08c71e-…) ne sont plus consultables dans l'interface (404 « component … no longer part of the data flow »).
+Ils restent dans preuves/provenance_evenements.json, exporté le jour même avant l'incident.
+
+État avant recréation :
+--- LogAttribute (échecs) (LogAttribute) id=ea08c96f-01a1-1000-b36e-4662cf1f869b
+    état=STOPPED  validation=VALID  planification=0 sec  auto-terminate=['success']
+    Log Level = warn
+    compteurs (5 min) : in=0 out=0 lus=0 o, écrits=0 o, tâches=0
+--- PutHDFS (PutHDFS) id=ea08c7ab-01a1-1000-c540-76ce0b9214f9
+    état=STOPPED  validation=INVALID  planification=0 sec  auto-terminate=['success']
+    Hadoop Configuration Resources = /opt/hadoop/etc/hadoop/core-site.xml,/opt/hadoop/etc/hadoop/hdfs-site.xml
+    Directory = /retail-lake/raw/nifi
+    Conflict Resolution Strategy = fail
+    ERREUR DE VALIDATION : 'Upstream Connections' is invalid because Processor requires an upstream connection but currently has none
+    compteurs (5 min) : in=0 out=0 lus=0 o, écrits=0 o, tâches=0
+Connexions existantes : ['PutHDFS-[failure]->LogAttribute (échecs)']
+
+[2026-11-17 17:37:29] Processeur recréé : GetFile (ea5ee43b-01a1-1000-7423-111c6278dcfa) – mêmes propriétés et planification qu'à l'origine
+[2026-11-17 17:37:29] Connexion recréée : GetFile -[success]-> PutHDFS
+
+État après recréation :
+--- LogAttribute (échecs) (LogAttribute) id=ea08c96f-01a1-1000-b36e-4662cf1f869b
+    état=STOPPED  validation=VALID  planification=0 sec  auto-terminate=['success']
+    Log Level = warn
+    compteurs (5 min) : in=0 out=0 lus=0 o, écrits=0 o, tâches=0
+--- GetFile (GetFile) id=ea5ee43b-01a1-1000-7423-111c6278dcfa
+    état=STOPPED  validation=VALID  planification=10 sec  auto-terminate=[]
+    Input Directory = /data/nifi/input
+    Keep Source File = false
+    Recurse Subdirectories = false
+    compteurs (5 min) : in=0 out=0 lus=0 o, écrits=0 o, tâches=0
+--- PutHDFS (PutHDFS) id=ea08c7ab-01a1-1000-c540-76ce0b9214f9
+    état=STOPPED  validation=VALID  planification=0 sec  auto-terminate=['success']
+    Hadoop Configuration Resources = /opt/hadoop/etc/hadoop/core-site.xml,/opt/hadoop/etc/hadoop/hdfs-site.xml
+    Directory = /retail-lake/raw/nifi
+    Conflict Resolution Strategy = fail
+    compteurs (5 min) : in=0 out=0 lus=0 o, écrits=0 o, tâches=0
+    file GetFile -[success]-> PutHDFS : 0 (0 bytes)
+    file PutHDFS -[failure]-> LogAttribute (échecs) : 0 (0 bytes)

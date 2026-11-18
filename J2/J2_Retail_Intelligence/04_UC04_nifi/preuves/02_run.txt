@@ -1,0 +1,59 @@
+### UC-04 – phase « run » – 2026-11-17 16:03:32 – NiFi 2.12.0
+
+[2026-11-17 16:03:32] $ ls -l /data/nifi/input; md5sum /data/nifi/input/* /home/meddy/tpcxbb_kit/data/store/store.dat
+total 4
+-rwxrwxrwx 1 meddy meddy 3386 Nov 16 14:36 store.dat
+426235bbcc3e6ed3c8a8f788102927b6  /data/nifi/input/store.dat
+426235bbcc3e6ed3c8a8f788102927b6  /home/meddy/tpcxbb_kit/data/store/store.dat
+→ code retour : 0
+
+[2026-11-17 16:03:34] $ hdfs dfs -ls /retail-lake/raw/nifi
+
+→ code retour : 0
+
+[2026-11-17 16:03:35] PutHDFS → RUNNING
+[2026-11-17 16:03:35] LogAttribute (échecs) → RUNNING
+[2026-11-17 16:03:35] GetFile → RUNNING
+[2026-11-17 16:03:41] Fichier présent dans HDFS : True
+[2026-11-17 16:03:41] GetFile → STOPPED
+--- GetFile (GetFile) id=ea08c71e-01a1-1000-a6a2-62f9393e5ebb
+    état=STOPPED  validation=VALID  planification=10 sec  auto-terminate=[]
+    Input Directory = /data/nifi/input
+    Keep Source File = false
+    Recurse Subdirectories = false
+    compteurs (5 min) : in=0 out=1 lus=3386 o, écrits=3386 o, tâches=1
+--- LogAttribute (échecs) (LogAttribute) id=ea08c96f-01a1-1000-b36e-4662cf1f869b
+    état=RUNNING  validation=VALID  planification=0 sec  auto-terminate=['success']
+    Log Level = warn
+    compteurs (5 min) : in=0 out=0 lus=0 o, écrits=0 o, tâches=0
+--- PutHDFS (PutHDFS) id=ea08c7ab-01a1-1000-c540-76ce0b9214f9
+    état=RUNNING  validation=VALID  planification=0 sec  auto-terminate=['success']
+    Hadoop Configuration Resources = /opt/hadoop/etc/hadoop/core-site.xml,/opt/hadoop/etc/hadoop/hdfs-site.xml
+    Directory = /retail-lake/raw/nifi
+    Conflict Resolution Strategy = fail
+    compteurs (5 min) : in=1 out=0 lus=3386 o, écrits=0 o, tâches=1
+    file PutHDFS -[failure]-> LogAttribute (échecs) : 0 (0 bytes)
+    file GetFile -[success]-> PutHDFS : 0 (0 bytes)
+[2026-11-17 16:03:46] $ hdfs dfs -ls -h /retail-lake/raw/nifi
+Found 1 items
+-rw-r--r--   1 meddy supergroup      3.3 K 2026-11-17 16:03 /retail-lake/raw/nifi/store.dat
+→ code retour : 0
+
+[2026-11-17 16:03:48] $ hdfs dfs -du -h /retail-lake/raw/nifi
+3.3 K  3.3 K  /retail-lake/raw/nifi/store.dat
+→ code retour : 0
+
+[2026-11-17 16:03:50] $ hdfs dfs -cat /retail-lake/raw/nifi/store.dat | md5sum; md5sum /home/meddy/tpcxbb_kit/data/store/store.dat
+426235bbcc3e6ed3c8a8f788102927b6  -
+426235bbcc3e6ed3c8a8f788102927b6  /home/meddy/tpcxbb_kit/data/store/store.dat
+→ code retour : 0
+
+[2026-11-17 16:03:50] $ ls -l /data/nifi/input   # vide : GetFile a consommé la copie de travail
+total 0
+→ code retour : 0
+
+[2026-11-17 16:03:52] $ hdfs dfs -ls /retail-lake/raw/tpcxbb/initial/store   # dépôt UC-03 conservé
+Found 1 items
+-r--r--r--   1 meddy supergroup       3386 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/store/store.dat
+→ code retour : 0
+

@@ -1,0 +1,43 @@
+### Correction des permissions de la zone Raw – meddy@Meddy
+
+## AVANT
+[2026-11-17 16:01:37] $ hdfs dfs -ls /retail-lake/raw/tpcxbb/initial/store_sales /retail-lake/raw/tpcxbb/refresh/store_sales
+Found 1 items
+-rwxrwxrwx   1 meddy meddy   92764700 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/store_sales/store_sales.dat
+Found 1 items
+-rwxrwxrwx   1 meddy meddy     922171 2026-11-16 14:36 /retail-lake/raw/tpcxbb/refresh/store_sales/store_sales.dat
+→ code retour : 0
+
+[2026-11-17 16:01:39] $ hdfs dfs -ls -R /retail-lake/raw/tpcxbb | grep -c '^-rwxrwxrwx'
+34
+→ code retour : 0
+
+## CORRECTION
+[2026-11-17 16:01:41] $ hdfs dfs -chgrp -R supergroup /retail-lake/raw/tpcxbb
+→ code retour : 0
+
+[2026-11-17 16:01:43] $ hdfs dfs -chmod -R 755 /retail-lake/raw/tpcxbb
+→ code retour : 0
+
+[2026-11-17 16:01:45] $ hdfs dfs -chmod 444 '/retail-lake/raw/tpcxbb/*/*/*'
+→ code retour : 0
+
+## APRÈS
+[2026-11-17 16:01:47] $ hdfs dfs -ls /retail-lake/raw/tpcxbb/initial/store_sales /retail-lake/raw/tpcxbb/refresh/store_sales
+Found 1 items
+-r--r--r--   1 meddy supergroup   92764700 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/store_sales/store_sales.dat
+Found 1 items
+-r--r--r--   1 meddy supergroup     922171 2026-11-16 14:36 /retail-lake/raw/tpcxbb/refresh/store_sales/store_sales.dat
+→ code retour : 0
+
+[2026-11-17 16:01:48] $ hdfs dfs -ls -R /retail-lake/raw/tpcxbb | awk '{print substr($1,1,1), $1, $4}' | sort | uniq -c
+     34 - -r--r--r-- supergroup
+     34 d drwxr-xr-x supergroup
+→ code retour : 0
+
+[2026-11-17 16:01:50] $ hdfs dfs -ls -d /retail-lake/raw/tpcxbb /retail-lake/raw/tpcxbb/initial /retail-lake/raw/tpcxbb/initial/store_sales
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/raw/tpcxbb
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:09 /retail-lake/raw/tpcxbb/initial
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:14 /retail-lake/raw/tpcxbb/initial/store_sales
+→ code retour : 0
+

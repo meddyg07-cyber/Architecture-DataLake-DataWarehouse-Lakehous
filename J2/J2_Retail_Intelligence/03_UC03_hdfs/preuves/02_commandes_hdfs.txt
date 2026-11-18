@@ -1,0 +1,52 @@
+### Étape 2 – Découverte des commandes HDFS – 2026-11-17 15:06:46 – utilisateur meddy@Meddy
+
+[2026-11-17 15:06:46] $ hdfs dfsadmin -safemode get
+Safe mode is OFF
+→ code retour : 0
+
+[2026-11-17 15:06:49] $ hdfs dfsadmin -report -live | head -25
+Configured Capacity: 1081101176832 (1006.85 GB)
+Present Capacity: 1018171662336 (948.25 GB)
+DFS Remaining: 1018171633664 (948.25 GB)
+DFS Used: 28672 (28 KB)
+DFS Used%: 0.00%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Badly Distributed Blocks: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Badly Distributed Blocks: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (1):
+
+Name: 127.0.0.1:9866 (localhost)
+→ code retour : 0
+
+[2026-11-17 15:06:52] $ hdfs dfs -ls /
+→ code retour : 0
+
+[2026-11-17 15:06:55] $ hdfs dfs -mkdir -p /retail-lake
+→ code retour : 0
+
+[2026-11-17 15:06:58] $ hdfs dfs -ls -d /retail-lake
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:06 /retail-lake
+→ code retour : 0
+
+[2026-11-17 15:07:02] $ hdfs dfs -du -h -s /retail-lake
+0  0  /retail-lake
+→ code retour : 0
+
+[2026-11-17 15:07:05] $ hdfs dfs -ls /repertoire-inexistant
+ls: `/repertoire-inexistant': No such file or directory
+→ code retour : 1
+

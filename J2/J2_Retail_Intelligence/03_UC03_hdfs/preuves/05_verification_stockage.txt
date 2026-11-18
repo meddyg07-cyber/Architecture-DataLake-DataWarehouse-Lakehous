@@ -1,0 +1,174 @@
+### Étape 5 – Vérification du stockage – 2026-11-17 15:16:16 – utilisateur meddy@Meddy
+
+[2026-11-17 15:16:16] $ hdfs dfs -ls /retail-lake /retail-lake/raw /retail-lake/raw/tpcxbb
+Found 6 items
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/bronze
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/gold
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/logs
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/quality
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/raw
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/silver
+Found 2 items
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/raw/nifi
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/raw/tpcxbb
+Found 2 items
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:09 /retail-lake/raw/tpcxbb/initial
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:11 /retail-lake/raw/tpcxbb/refresh
+→ code retour : 0
+
+[2026-11-17 15:16:18] $ hdfs dfs -count -h /retail-lake/raw/tpcxbb/initial /retail-lake/raw/tpcxbb/refresh
+          22           22            959.2 M /retail-lake/raw/tpcxbb/initial
+          12           12              9.1 M /retail-lake/raw/tpcxbb/refresh
+→ code retour : 0
+
+[2026-11-17 15:16:21] $ hdfs dfs -du -h /retail-lake/raw/tpcxbb/initial /retail-lake/raw/tpcxbb/refresh
+74.2 M   74.2 M   /retail-lake/raw/tpcxbb/initial/customer_demographics
+14.7 M   14.7 M   /retail-lake/raw/tpcxbb/initial/date_dim
+151.5 K  151.5 K  /retail-lake/raw/tpcxbb/initial/household_demographics
+327      327      /retail-lake/raw/tpcxbb/initial/income_band
+405.3 M  405.3 M  /retail-lake/raw/tpcxbb/initial/inventory
+6.5 M    6.5 M    /retail-lake/raw/tpcxbb/initial/item
+4.0 M    4.0 M    /retail-lake/raw/tpcxbb/initial/item_marketprices
+53.7 M   53.7 M   /retail-lake/raw/tpcxbb/initial/product_reviews
+45.3 K   45.3 K   /retail-lake/raw/tpcxbb/initial/promotion
+3.0 K    3.0 K    /retail-lake/raw/tpcxbb/initial/reason
+1.2 K    1.2 K    /retail-lake/raw/tpcxbb/initial/ship_mode
+3.3 K    3.3 K    /retail-lake/raw/tpcxbb/initial/store
+4.1 M    4.1 M    /retail-lake/raw/tpcxbb/initial/store_returns
+88.5 M   88.5 M   /retail-lake/raw/tpcxbb/initial/store_sales
+4.9 M    4.9 M    /retail-lake/raw/tpcxbb/initial/time_dim
+584      584      /retail-lake/raw/tpcxbb/initial/warehouse
+170.4 M  170.4 M  /retail-lake/raw/tpcxbb/initial/web_clickstreams
+7.9 K    7.9 K    /retail-lake/raw/tpcxbb/initial/web_page
+5.1 M    5.1 M    /retail-lake/raw/tpcxbb/initial/web_returns
+127.6 M  127.6 M  /retail-lake/raw/tpcxbb/initial/web_sales
+8.6 K    8.6 K    /retail-lake/raw/tpcxbb/initial/web_site
+131.2 K  131.2 K  /retail-lake/raw/tpcxbb/refresh/customer
+53.3 K   53.3 K   /retail-lake/raw/tpcxbb/refresh/customer_address
+4.1 M    4.1 M    /retail-lake/raw/tpcxbb/refresh/inventory
+67.6 K   67.6 K   /retail-lake/raw/tpcxbb/refresh/item
+189.0 K  189.0 K  /retail-lake/raw/tpcxbb/refresh/item_marketprices
+560.2 K  560.2 K  /retail-lake/raw/tpcxbb/refresh/product_reviews
+47.7 K   47.7 K   /retail-lake/raw/tpcxbb/refresh/store_returns
+900.6 K  900.6 K  /retail-lake/raw/tpcxbb/refresh/store_sales
+1.7 M    1.7 M    /retail-lake/raw/tpcxbb/refresh/web_clickstreams
+54.6 K   54.6 K   /retail-lake/raw/tpcxbb/refresh/web_returns
+1.3 M    1.3 M    /retail-lake/raw/tpcxbb/refresh/web_sales
+→ code retour : 0
+
+[2026-11-17 15:16:23] $ hdfs dfs -ls /retail-lake/raw/tpcxbb/initial/store
+Found 1 items
+-rwxrwxrwx   1 meddy meddy       3386 2026-11-16 14:36 /retail-lake/raw/tpcxbb/initial/store/store.dat
+→ code retour : 0
+
+[2026-11-17 15:16:26] $ hdfs dfs -cat /retail-lake/raw/tpcxbb/initial/store/store.dat | head -3
+0|AAAAAAAAAAAAAAAA|2000-08-02||71238|Forest|217|8891512|8AM-12AM|Joshua Watson|6|Unknown|realms sublate quickly outside the epitaphs; evenly silent patterns boost! th|Randy King|1|Unknown|1|Unknown|916|1st|Boulevard|XF|Post Oak|Hinsdale County|CO|47562|United States|-7|0.06
+1|AAAAAAAAAAAAAAAB|2000-07-03||18994|Hillside|244|8751339|8AM-4PM|Gary Gold|3|Unknown|close escapades across the carefully ironic grouches shall have to lose into the sauternes: sl|John Green|1|Unknown|1|Unknown|696|3rd 4th|Blvd|gcg5eGNxs|Jerusalem|Union County|TN|80145|United States|-6|0.03
+2|AAAAAAAAAAAAAAAC|2000-09-01||8900|Sherwood|266|5913334|8AM-4PM|James Anderson|6|Unknown|frays may kindle over the bold ironic epitaphs! slow quick multipliers maintain among t|Raymond Kitchens|1|Unknown|1|Unknown|293|Main Fourteenth|Ct.|8pCGst|Mount Vernon|Sierra County|CA|97832|United States|-8|0.07
+→ code retour : 0
+
+[2026-11-17 15:16:29] $ hdfs dfs -get /retail-lake/raw/tpcxbb/initial/store/store.dat /tmp/store_recupere.dat && cmp /tmp/store_recupere.dat '/home/meddy/tpcxbb_kit/data/store/store.dat' && echo 'Fichier récupéré identique à la source'
+Fichier récupéré identique à la source
+→ code retour : 0
+
+[2026-11-17 15:16:30] $ hdfs fsck /retail-lake/raw/tpcxbb -files -blocks | grep -E 'store_sales.dat|Total|Status|replicated'
+Connecting to namenode via http://localhost:9870/fsck?ugi=meddy&files=1&blocks=1&path=%2Fretail-lake%2Fraw%2Ftpcxbb
+/retail-lake/raw/tpcxbb/initial/customer_demographics/customer_demographics.dat 77753083 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/date_dim/date_dim.dat 15395800 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/household_demographics/household_demographics.dat 155100 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/income_band/income_band.dat 327 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/inventory/inventory.dat 424943678 bytes, replicated: replication=1, 4 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/item/item.dat 6799286 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/item_marketprices/item_marketprices.dat 4201170 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/item_marketprices/item_marketprices_audit.csv 273 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/product_reviews/product_reviews.dat 56355389 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/promotion/promotion.dat 46396 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/reason/reason.dat 3105 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/ship_mode/ship_mode.dat 1220 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/store/store.dat 3386 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/store_returns/store_returns.dat 4337400 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/store_sales/store_sales.dat 92764700 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/time_dim/time_dim.dat 5107780 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/warehouse/warehouse.dat 584 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/web_clickstreams/web_clickstreams.dat 178722140 bytes, replicated: replication=1, 2 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/web_page/web_page.dat 8040 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/web_returns/web_returns.dat 5383513 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/web_sales/web_sales.dat 133790574 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/initial/web_site/web_site.dat 8838 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/refresh/customer/customer.dat 134360 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/refresh/customer_address/customer_address.dat 54587 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/refresh/inventory/inventory.dat 4292915 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/refresh/item/item.dat 69173 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/refresh/item_marketprices/item_marketprices.dat 42547 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/refresh/item_marketprices/item_marketprices_audit.csv 151009 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/refresh/product_reviews/product_reviews.dat 573685 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/refresh/store_returns/store_returns.dat 48825 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/refresh/store_sales/store_sales.dat 922171 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/refresh/web_clickstreams/web_clickstreams.dat 1821864 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/refresh/web_returns/web_returns.dat 55952 bytes, replicated: replication=1, 1 block(s):  OK
+/retail-lake/raw/tpcxbb/refresh/web_sales/web_sales.dat 1378425 bytes, replicated: replication=1, 1 block(s):  OK
+Status: HEALTHY
+ Total dirs:			35
+ Total symlinks:		0
+ Total size:	1015327295 B
+ Total files:	34
+ Total blocks (validated):	38 (avg. block size 26719139 B)
+ Minimally replicated blocks:	38 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Total size:	0 B
+ Total files:	0
+ Total block groups (validated):	0
+→ code retour : 0
+
+[2026-11-17 15:19:27] $ column -s';' -t '/mnt/c/Users/meddy/Desktop/Data Lake Warehouse Lakehouse/J2/J2_Retail_Intelligence/scripts/../03_UC03_hdfs/preuves/05_controle_integrite_md5.csv'
+fichier_hdfs                                                                       taille_locale  taille_hdfs  md5_local                         md5_hdfs                          resultat
+/retail-lake/raw/tpcxbb/initial/customer_demographics/customer_demographics.dat    77753083       77753083     cdef2781b2ccb2e0ffa5b49ca5862ca2  cdef2781b2ccb2e0ffa5b49ca5862ca2  OK
+/retail-lake/raw/tpcxbb/initial/date_dim/date_dim.dat                              15395800       15395800     f5195dbdf450373ac9c9742064f9aa43  f5195dbdf450373ac9c9742064f9aa43  OK
+/retail-lake/raw/tpcxbb/initial/household_demographics/household_demographics.dat  155100         155100       26c1d8bc98bd276805bf8d3660d84572  26c1d8bc98bd276805bf8d3660d84572  OK
+/retail-lake/raw/tpcxbb/initial/income_band/income_band.dat                        327            327          bbeb4bce4124d70ef1b927929a1027fc  bbeb4bce4124d70ef1b927929a1027fc  OK
+/retail-lake/raw/tpcxbb/initial/inventory/inventory.dat                            424943678      424943678    50bbd4b2ee3b617e0a2ff979ad97f5b6  50bbd4b2ee3b617e0a2ff979ad97f5b6  OK
+/retail-lake/raw/tpcxbb/initial/item/item.dat                                      6799286        6799286      3f27165d6ff4bb71e88c72616d4657df  3f27165d6ff4bb71e88c72616d4657df  OK
+/retail-lake/raw/tpcxbb/initial/item_marketprices/item_marketprices.dat            4201170        4201170      6bdcbb62b323c95c19fc814d0e732d7c  6bdcbb62b323c95c19fc814d0e732d7c  OK
+/retail-lake/raw/tpcxbb/initial/item_marketprices/item_marketprices_audit.csv      273            273          4aa95ab6f01590199806565a343ebf2f  4aa95ab6f01590199806565a343ebf2f  OK
+/retail-lake/raw/tpcxbb/initial/product_reviews/product_reviews.dat                56355389       56355389     5fc1a8903d37d5d53dfe59de4e515cd4  5fc1a8903d37d5d53dfe59de4e515cd4  OK
+/retail-lake/raw/tpcxbb/initial/promotion/promotion.dat                            46396          46396        ea95fe92ab89e495f95354000fc5c111  ea95fe92ab89e495f95354000fc5c111  OK
+/retail-lake/raw/tpcxbb/initial/reason/reason.dat                                  3105           3105         efc95a311ac53719cf1cb1e240bd97b5  efc95a311ac53719cf1cb1e240bd97b5  OK
+/retail-lake/raw/tpcxbb/initial/ship_mode/ship_mode.dat                            1220           1220         d1d73ecfd78d440596defde90d46c405  d1d73ecfd78d440596defde90d46c405  OK
+/retail-lake/raw/tpcxbb/initial/store/store.dat                                    3386           3386         426235bbcc3e6ed3c8a8f788102927b6  426235bbcc3e6ed3c8a8f788102927b6  OK
+/retail-lake/raw/tpcxbb/initial/store_returns/store_returns.dat                    4337400        4337400      dced0be7a8bc4958a303c56f6b009f8f  dced0be7a8bc4958a303c56f6b009f8f  OK
+/retail-lake/raw/tpcxbb/initial/store_sales/store_sales.dat                        92764700       92764700     d57080160fa6a31671d1274e2c53f9e7  d57080160fa6a31671d1274e2c53f9e7  OK
+/retail-lake/raw/tpcxbb/initial/time_dim/time_dim.dat                              5107780        5107780      b97c9ee69a80974507ee294c8d0de160  b97c9ee69a80974507ee294c8d0de160  OK
+/retail-lake/raw/tpcxbb/initial/warehouse/warehouse.dat                            584            584          d13dc463989ec203b7664a948b017f90  d13dc463989ec203b7664a948b017f90  OK
+/retail-lake/raw/tpcxbb/initial/web_clickstreams/web_clickstreams.dat              178722140      178722140    466115b04f8fddf144654cbd41480107  466115b04f8fddf144654cbd41480107  OK
+/retail-lake/raw/tpcxbb/initial/web_page/web_page.dat                              8040           8040         b2baac9c89d355f50c0c4e1b68731640  b2baac9c89d355f50c0c4e1b68731640  OK
+/retail-lake/raw/tpcxbb/initial/web_returns/web_returns.dat                        5383513        5383513      e37fd84cb8fa8c837852554e268ec0ce  e37fd84cb8fa8c837852554e268ec0ce  OK
+/retail-lake/raw/tpcxbb/initial/web_sales/web_sales.dat                            133790574      133790574    8de8887eebeaa0745f58aa76792f2324  8de8887eebeaa0745f58aa76792f2324  OK
+/retail-lake/raw/tpcxbb/initial/web_site/web_site.dat                              8838           8838         5c059c34534f8c3defab3728e745be7c  5c059c34534f8c3defab3728e745be7c  OK
+/retail-lake/raw/tpcxbb/refresh/customer/customer.dat                              134360         134360       164ab164959235ee7ddf2051e6f71d82  164ab164959235ee7ddf2051e6f71d82  OK
+/retail-lake/raw/tpcxbb/refresh/customer_address/customer_address.dat              54587          54587        43d55cc4f58bff29adfda722d50a121e  43d55cc4f58bff29adfda722d50a121e  OK
+/retail-lake/raw/tpcxbb/refresh/inventory/inventory.dat                            4292915        4292915      5d3225e3368da0636639a7b3768ba6ca  5d3225e3368da0636639a7b3768ba6ca  OK
+/retail-lake/raw/tpcxbb/refresh/item/item.dat                                      69173          69173        4473de5abb75dcf8ab5351272c4e8308  4473de5abb75dcf8ab5351272c4e8308  OK
+/retail-lake/raw/tpcxbb/refresh/item_marketprices/item_marketprices.dat            42547          42547        83fe171cb2d8c468afd1308491a02f9b  83fe171cb2d8c468afd1308491a02f9b  OK
+/retail-lake/raw/tpcxbb/refresh/item_marketprices/item_marketprices_audit.csv      151009         151009       b97b96cade41f645af0a9908369fd0ae  b97b96cade41f645af0a9908369fd0ae  OK
+/retail-lake/raw/tpcxbb/refresh/product_reviews/product_reviews.dat                573685         573685       7f3e914f96983ae6d11698af3a8d65db  7f3e914f96983ae6d11698af3a8d65db  OK
+/retail-lake/raw/tpcxbb/refresh/store_returns/store_returns.dat                    48825          48825        4fd3c7e663143c7689f5d8c517b2965a  4fd3c7e663143c7689f5d8c517b2965a  OK
+/retail-lake/raw/tpcxbb/refresh/store_sales/store_sales.dat                        922171         922171       6c53ed7c51e97c7f78eed7ba502d10c3  6c53ed7c51e97c7f78eed7ba502d10c3  OK
+/retail-lake/raw/tpcxbb/refresh/web_clickstreams/web_clickstreams.dat              1821864        1821864      051b22ca9bafb4031e2b9637c7ae66b3  051b22ca9bafb4031e2b9637c7ae66b3  OK
+/retail-lake/raw/tpcxbb/refresh/web_returns/web_returns.dat                        55952          55952        211fafb15d11fc14b85801e91f25d725  211fafb15d11fc14b85801e91f25d725  OK
+/retail-lake/raw/tpcxbb/refresh/web_sales/web_sales.dat                            1378425        1378425      e5185bf0fa1e6c7732cede2d7adccb1d  e5185bf0fa1e6c7732cede2d7adccb1d  OK
+→ code retour : 0
+
+[2026-11-17 15:19:27] $ grep -c ';OK$' '/mnt/c/Users/meddy/Desktop/Data Lake Warehouse Lakehouse/J2/J2_Retail_Intelligence/scripts/../03_UC03_hdfs/preuves/05_controle_integrite_md5.csv'; grep ';KO$' '/mnt/c/Users/meddy/Desktop/Data Lake Warehouse Lakehouse/J2/J2_Retail_Intelligence/scripts/../03_UC03_hdfs/preuves/05_controle_integrite_md5.csv' || echo 'Aucun écart'
+34
+Aucun écart
+→ code retour : 0
+
+[2026-11-17 15:19:27] $ ls -la '/home/meddy/tpcxbb_kit/data/store_sales/'
+total 90592
+drwxrwxrwx 1 meddy meddy      512 Nov 16 14:36 .
+drwxrwxrwx 1 meddy meddy      512 Nov 16 14:36 ..
+-rwxrwxrwx 1 meddy meddy 92764700 Nov 16 14:36 store_sales.dat
+→ code retour : 0
+

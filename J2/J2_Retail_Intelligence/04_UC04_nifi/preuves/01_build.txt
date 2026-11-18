@@ -1,0 +1,24 @@
+### UC-04 – phase « build » – 2026-11-17 16:03:25 – NiFi 2.12.0
+
+[2026-11-17 16:03:26] Process Group créé : UC04_ingestion_tpcxbb (ea08c648-01a1-1000-4341-4bd48aa51554)
+[2026-11-17 16:03:26] Processeur créé : GetFile (ea08c71e-01a1-1000-a6a2-62f9393e5ebb)
+[2026-11-17 16:03:26] Processeur créé : PutHDFS (ea08c7ab-01a1-1000-c540-76ce0b9214f9)
+[2026-11-17 16:03:26] Processeur créé : LogAttribute (échecs) (ea08c96f-01a1-1000-b36e-4662cf1f869b)
+[2026-11-17 16:03:26] Connexion : GetFile -[success]-> PutHDFS
+[2026-11-17 16:03:27] Connexion : PutHDFS -[failure]-> LogAttribute (échecs)
+--- GetFile (GetFile) id=ea08c71e-01a1-1000-a6a2-62f9393e5ebb
+    état=STOPPED  validation=VALID  planification=10 sec  auto-terminate=[]
+    Input Directory = /data/nifi/input
+    Keep Source File = false
+    Recurse Subdirectories = false
+    compteurs (5 min) : in=0 out=0 lus=0 o, écrits=0 o, tâches=0
+--- LogAttribute (échecs) (LogAttribute) id=ea08c96f-01a1-1000-b36e-4662cf1f869b
+    état=STOPPED  validation=VALID  planification=0 sec  auto-terminate=['success']
+    Log Level = warn
+    compteurs (5 min) : in=0 out=0 lus=0 o, écrits=0 o, tâches=0
+--- PutHDFS (PutHDFS) id=ea08c7ab-01a1-1000-c540-76ce0b9214f9
+    état=STOPPED  validation=VALID  planification=0 sec  auto-terminate=['success']
+    Hadoop Configuration Resources = /opt/hadoop/etc/hadoop/core-site.xml,/opt/hadoop/etc/hadoop/hdfs-site.xml
+    Directory = /retail-lake/raw/nifi
+    Conflict Resolution Strategy = fail
+    compteurs (5 min) : in=0 out=0 lus=0 o, écrits=0 o, tâches=0

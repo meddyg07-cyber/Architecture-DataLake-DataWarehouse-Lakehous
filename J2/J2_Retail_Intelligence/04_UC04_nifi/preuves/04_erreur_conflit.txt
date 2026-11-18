@@ -1,0 +1,54 @@
+### UC-04 – phase « erreur_conflit » – 2026-11-17 16:04:18 – NiFi 2.12.0
+
+Test B – conflit de nom dans HDFS (Conflict Resolution Strategy = fail)
+[2026-11-17 16:04:18] $ cp -p /home/meddy/tpcxbb_kit/data/store/store.dat /data/nifi/input/ && ls -l /data/nifi/input
+total 4
+-rwxrwxrwx 1 meddy meddy 3386 Nov 16 14:36 store.dat
+→ code retour : 0
+
+[2026-11-17 16:04:19] $ hdfs dfs -ls /retail-lake/raw/nifi
+Found 1 items
+-rw-r--r--   1 meddy supergroup       3386 2026-11-17 16:03 /retail-lake/raw/nifi/store.dat
+→ code retour : 0
+
+[2026-11-17 16:04:19] GetFile → RUNNING
+[2026-11-17 16:05:22] GetFile → STOPPED
+--- GetFile (GetFile) id=ea08c71e-01a1-1000-a6a2-62f9393e5ebb
+    état=STOPPED  validation=VALID  planification=10 sec  auto-terminate=[]
+    Input Directory = /data/nifi/input
+    Keep Source File = false
+    Recurse Subdirectories = false
+    compteurs (5 min) : in=0 out=2 lus=6772 o, écrits=6772 o, tâches=8
+--- LogAttribute (échecs) (LogAttribute) id=ea08c96f-01a1-1000-b36e-4662cf1f869b
+    état=RUNNING  validation=VALID  planification=0 sec  auto-terminate=['success']
+    Log Level = warn
+    compteurs (5 min) : in=0 out=0 lus=0 o, écrits=0 o, tâches=0
+--- PutHDFS (PutHDFS) id=ea08c7ab-01a1-1000-c540-76ce0b9214f9
+    état=RUNNING  validation=VALID  planification=0 sec  auto-terminate=['success']
+    Hadoop Configuration Resources = /opt/hadoop/etc/hadoop/core-site.xml,/opt/hadoop/etc/hadoop/hdfs-site.xml
+    Directory = /retail-lake/raw/nifi
+    Conflict Resolution Strategy = fail
+    compteurs (5 min) : in=2 out=1 lus=3386 o, écrits=0 o, tâches=2
+    file PutHDFS -[failure]-> LogAttribute (échecs) : 1 (3.31 KB)
+    file GetFile -[success]-> PutHDFS : 0 (0 bytes)
+[2026-11-17 16:05:25] $ grep -n -A14 'LogAttribute' /opt/nifi/logs/nifi-app.log | grep -E 'filename|absolute.path|uuid|Standard FlowFile|WARN' | tail -8
+37-2026-11-17 16:03:35,414 WARN [Timer-Driven Process Thread-6] org.apache.hadoop.util.NativeCodeLoader Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+→ code retour : 0
+
+[2026-11-17 16:05:27] $ hdfs dfs -ls /retail-lake/raw/nifi   # toujours 1 seul fichier : pas d'écrasement ni de doublon
+Found 1 items
+-rw-r--r--   1 meddy supergroup       3386 2026-11-17 16:03 /retail-lake/raw/nifi/store.dat
+→ code retour : 0
+
+
+### Vérification après la pénalité de 30 s (penaltyDuration de PutHDFS)
+LogAttribute (échecs) 0 (0 bytes)
+PutHDFS 0 (0 bytes)
+LogAttribute in: 1
+PutHDFS penaltyDuration: 30 sec bulletinLevel: WARN
+BULLETIN WARNING 16:04:58 CET PutHDFS PutHDFS[id=ea08c7ab-01a1-1000-c540-76ce0b9214f9] penalizing FlowFile[filename=store.dat] and routing to failure because file with same name already exists
+BULLETIN WARNING 16:05:28 CET LogAttribute (échecs) LogAttribute[id=ea08c96f-01a1-1000-b36e-4662cf1f869b] logging for FlowFile StandardFlowFileRecord[uuid=8d3236ae-09ca-4561-bbae-db3db07c3958,claim=StandardContentClaim [resourceClaim=StandardResourceClaim[id=1794927815440-1, container=default, section=1], offset=3386, length=3386],offset=0,name=store
+
+### Journal NiFi (nifi-app.log)
+2026-11-17 16:04:58,280 WARN [Timer-Driven Process Thread-9] o.apache.nifi.processors.hadoop.PutHDFS PutHDFS[id=ea08c7ab-01a1-1000-c540-76ce0b9214f9] penalizing StandardFlowFileRecord[uuid=8d3236ae-09ca-4561-bbae-db3db07c3958,claim=StandardContentClaim [resour
+2026-11-17 16:05:28,295 WARN [Timer-Driven Process Thread-7] o.a.n.processors.standard.LogAttribute LogAttribute[id=ea08c96f-01a1-1000-b36e-4662cf1f869b] logging for FlowFile StandardFlowFileRecord[uuid=8d3236ae-09ca-4561-bbae-db3db07c3958,claim=StandardConten

@@ -1,0 +1,4 @@
+### UC-04 – phase « export » – 2026-11-17 17:44:25 – NiFi 2.12.0
+
+Flow definition exportée : UC04_ingestion_tpcxbb.json (12638 octets)
+Recherche de secrets dans l'export : aucun

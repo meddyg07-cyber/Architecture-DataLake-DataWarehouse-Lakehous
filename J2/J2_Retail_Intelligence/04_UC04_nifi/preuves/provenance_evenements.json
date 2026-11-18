@@ -1,0 +1,535 @@
+[
+  {
+    "id": "0",
+    "eventId": 0,
+    "eventTime": "11/17/2026 16:03:35.458 CET",
+    "eventTimestamp": "2026-11-17T15:03:35.458Z",
+    "eventDuration": 7,
+    "lineageDuration": 23,
+    "eventType": "RECEIVE",
+    "flowFileUuid": "6ed4829e-19ff-4e01-ba71-e7e33ab98f36",
+    "fileSize": "3.31 KB",
+    "fileSizeBytes": 3386,
+    "groupId": "ea08c648-01a1-1000-4341-4bd48aa51554",
+    "componentId": "ea08c71e-01a1-1000-a6a2-62f9393e5ebb",
+    "componentType": "GetFile",
+    "componentName": "GetFile",
+    "attributes": [
+      {
+        "name": "absolute.path",
+        "value": "/data/nifi/input/"
+      },
+      {
+        "name": "file.creationTime",
+        "value": "2026-11-17T15:19:47+0100"
+      },
+      {
+        "name": "file.group",
+        "value": "meddy"
+      },
+      {
+        "name": "file.lastAccessTime",
+        "value": "2026-11-17T15:19:47+0100"
+      },
+      {
+        "name": "file.lastModifiedTime",
+        "value": "2026-11-16T14:36:04+0100"
+      },
+      {
+        "name": "file.owner",
+        "value": "meddy"
+      },
+      {
+        "name": "file.permissions",
+        "value": "rwxrwxrwx"
+      },
+      {
+        "name": "filename",
+        "value": "store.dat"
+      },
+      {
+        "name": "path",
+        "value": "/"
+      },
+      {
+        "name": "uuid",
+        "value": "6ed4829e-19ff-4e01-ba71-e7e33ab98f36"
+      }
+    ],
+    "parentUuids": [],
+    "childUuids": [],
+    "transitUri": "file:/data/nifi/input/store.dat",
+    "contentEqual": false,
+    "inputContentAvailable": false,
+    "outputContentAvailable": true,
+    "outputContentClaimSection": "1",
+    "outputContentClaimContainer": "default",
+    "outputContentClaimIdentifier": "1794927815440-1",
+    "outputContentClaimOffset": 0,
+    "outputContentClaimFileSize": "3.31 KB",
+    "outputContentClaimFileSizeBytes": 3386,
+    "replayAvailable": false,
+    "replayExplanation": "Cannot replay data from Provenance Event because the Source FlowFile Queue with ID No Value no longer exists",
+    "sourceConnectionIdentifier": "No Value"
+  },
+  {
+    "id": "1",
+    "eventId": 1,
+    "eventTime": "11/17/2026 16:03:36.883 CET",
+    "eventTimestamp": "2026-11-17T15:03:36.883Z",
+    "eventDuration": 553,
+    "lineageDuration": 1448,
+    "eventType": "SEND",
+    "flowFileUuid": "6ed4829e-19ff-4e01-ba71-e7e33ab98f36",
+    "fileSize": "3.31 KB",
+    "fileSizeBytes": 3386,
+    "groupId": "ea08c648-01a1-1000-4341-4bd48aa51554",
+    "componentId": "ea08c7ab-01a1-1000-c540-76ce0b9214f9",
+    "componentType": "PutHDFS",
+    "componentName": "PutHDFS",
+    "attributes": [
+      {
+        "name": "absolute.hdfs.path",
+        "value": "/retail-lake/raw/nifi"
+      },
+      {
+        "name": "absolute.path",
+        "value": "/data/nifi/input/",
+        "previousValue": "/data/nifi/input/"
+      },
+      {
+        "name": "file.creationTime",
+        "value": "2026-11-17T15:19:47+0100",
+        "previousValue": "2026-11-17T15:19:47+0100"
+      },
+      {
+        "name": "file.group",
+        "value": "meddy",
+        "previousValue": "meddy"
+      },
+      {
+        "name": "file.lastAccessTime",
+        "value": "2026-11-17T15:19:47+0100",
+        "previousValue": "2026-11-17T15:19:47+0100"
+      },
+      {
+        "name": "file.lastModifiedTime",
+        "value": "2026-11-16T14:36:04+0100",
+        "previousValue": "2026-11-16T14:36:04+0100"
+      },
+      {
+        "name": "file.owner",
+        "value": "meddy",
+        "previousValue": "meddy"
+      },
+      {
+        "name": "file.permissions",
+        "value": "rwxrwxrwx",
+        "previousValue": "rwxrwxrwx"
+      },
+      {
+        "name": "filename",
+        "value": "store.dat",
+        "previousValue": "store.dat"
+      },
+      {
+        "name": "hadoop.file.url",
+        "value": "hdfs://localhost:9000/retail-lake/raw/nifi/store.dat"
+      },
+      {
+        "name": "path",
+        "value": "/",
+        "previousValue": "/"
+      },
+      {
+        "name": "target.dir.created",
+        "value": "false"
+      },
+      {
+        "name": "uuid",
+        "value": "6ed4829e-19ff-4e01-ba71-e7e33ab98f36",
+        "previousValue": "6ed4829e-19ff-4e01-ba71-e7e33ab98f36"
+      }
+    ],
+    "parentUuids": [],
+    "childUuids": [],
+    "transitUri": "hdfs://localhost:9000/retail-lake/raw/nifi/store.dat",
+    "contentEqual": true,
+    "inputContentAvailable": true,
+    "inputContentClaimSection": "1",
+    "inputContentClaimContainer": "default",
+    "inputContentClaimIdentifier": "1794927815440-1",
+    "inputContentClaimOffset": 0,
+    "inputContentClaimFileSize": "3.31 KB",
+    "inputContentClaimFileSizeBytes": 3386,
+    "outputContentAvailable": true,
+    "outputContentClaimSection": "1",
+    "outputContentClaimContainer": "default",
+    "outputContentClaimIdentifier": "1794927815440-1",
+    "outputContentClaimOffset": 0,
+    "outputContentClaimFileSize": "3.31 KB",
+    "outputContentClaimFileSizeBytes": 3386,
+    "replayAvailable": true,
+    "sourceConnectionIdentifier": "ea08c9ac-01a1-1000-e1e2-03c732d34526"
+  },
+  {
+    "id": "2",
+    "eventId": 2,
+    "eventTime": "11/17/2026 16:03:36.884 CET",
+    "eventTimestamp": "2026-11-17T15:03:36.884Z",
+    "eventDuration": 555,
+    "lineageDuration": 1449,
+    "eventType": "ATTRIBUTES_MODIFIED",
+    "flowFileUuid": "6ed4829e-19ff-4e01-ba71-e7e33ab98f36",
+    "fileSize": "3.31 KB",
+    "fileSizeBytes": 3386,
+    "groupId": "ea08c648-01a1-1000-4341-4bd48aa51554",
+    "componentId": "ea08c7ab-01a1-1000-c540-76ce0b9214f9",
+    "componentType": "PutHDFS",
+    "componentName": "PutHDFS",
+    "attributes": [
+      {
+        "name": "absolute.hdfs.path",
+        "value": "/retail-lake/raw/nifi"
+      },
+      {
+        "name": "absolute.path",
+        "value": "/data/nifi/input/",
+        "previousValue": "/data/nifi/input/"
+      },
+      {
+        "name": "file.creationTime",
+        "value": "2026-11-17T15:19:47+0100",
+        "previousValue": "2026-11-17T15:19:47+0100"
+      },
+      {
+        "name": "file.group",
+        "value": "meddy",
+        "previousValue": "meddy"
+      },
+      {
+        "name": "file.lastAccessTime",
+        "value": "2026-11-17T15:19:47+0100",
+        "previousValue": "2026-11-17T15:19:47+0100"
+      },
+      {
+        "name": "file.lastModifiedTime",
+        "value": "2026-11-16T14:36:04+0100",
+        "previousValue": "2026-11-16T14:36:04+0100"
+      },
+      {
+        "name": "file.owner",
+        "value": "meddy",
+        "previousValue": "meddy"
+      },
+      {
+        "name": "file.permissions",
+        "value": "rwxrwxrwx",
+        "previousValue": "rwxrwxrwx"
+      },
+      {
+        "name": "filename",
+        "value": "store.dat",
+        "previousValue": "store.dat"
+      },
+      {
+        "name": "hadoop.file.url",
+        "value": "hdfs://localhost:9000/retail-lake/raw/nifi/store.dat"
+      },
+      {
+        "name": "path",
+        "value": "/",
+        "previousValue": "/"
+      },
+      {
+        "name": "target.dir.created",
+        "value": "false"
+      },
+      {
+        "name": "uuid",
+        "value": "6ed4829e-19ff-4e01-ba71-e7e33ab98f36",
+        "previousValue": "6ed4829e-19ff-4e01-ba71-e7e33ab98f36"
+      }
+    ],
+    "parentUuids": [],
+    "childUuids": [],
+    "contentEqual": true,
+    "inputContentAvailable": true,
+    "inputContentClaimSection": "1",
+    "inputContentClaimContainer": "default",
+    "inputContentClaimIdentifier": "1794927815440-1",
+    "inputContentClaimOffset": 0,
+    "inputContentClaimFileSize": "3.31 KB",
+    "inputContentClaimFileSizeBytes": 3386,
+    "outputContentAvailable": true,
+    "outputContentClaimSection": "1",
+    "outputContentClaimContainer": "default",
+    "outputContentClaimIdentifier": "1794927815440-1",
+    "outputContentClaimOffset": 0,
+    "outputContentClaimFileSize": "3.31 KB",
+    "outputContentClaimFileSizeBytes": 3386,
+    "replayAvailable": true,
+    "sourceConnectionIdentifier": "ea08c9ac-01a1-1000-e1e2-03c732d34526"
+  },
+  {
+    "id": "3",
+    "eventId": 3,
+    "eventTime": "11/17/2026 16:03:36.884 CET",
+    "eventTimestamp": "2026-11-17T15:03:36.884Z",
+    "eventDuration": 555,
+    "lineageDuration": 1449,
+    "eventType": "DROP",
+    "flowFileUuid": "6ed4829e-19ff-4e01-ba71-e7e33ab98f36",
+    "fileSize": "3.31 KB",
+    "fileSizeBytes": 3386,
+    "groupId": "ea08c648-01a1-1000-4341-4bd48aa51554",
+    "componentId": "ea08c7ab-01a1-1000-c540-76ce0b9214f9",
+    "componentType": "PutHDFS",
+    "componentName": "PutHDFS",
+    "attributes": [
+      {
+        "name": "absolute.hdfs.path",
+        "value": "/retail-lake/raw/nifi"
+      },
+      {
+        "name": "absolute.path",
+        "value": "/data/nifi/input/",
+        "previousValue": "/data/nifi/input/"
+      },
+      {
+        "name": "file.creationTime",
+        "value": "2026-11-17T15:19:47+0100",
+        "previousValue": "2026-11-17T15:19:47+0100"
+      },
+      {
+        "name": "file.group",
+        "value": "meddy",
+        "previousValue": "meddy"
+      },
+      {
+        "name": "file.lastAccessTime",
+        "value": "2026-11-17T15:19:47+0100",
+        "previousValue": "2026-11-17T15:19:47+0100"
+      },
+      {
+        "name": "file.lastModifiedTime",
+        "value": "2026-11-16T14:36:04+0100",
+        "previousValue": "2026-11-16T14:36:04+0100"
+      },
+      {
+        "name": "file.owner",
+        "value": "meddy",
+        "previousValue": "meddy"
+      },
+      {
+        "name": "file.permissions",
+        "value": "rwxrwxrwx",
+        "previousValue": "rwxrwxrwx"
+      },
+      {
+        "name": "filename",
+        "value": "store.dat",
+        "previousValue": "store.dat"
+      },
+      {
+        "name": "hadoop.file.url",
+        "value": "hdfs://localhost:9000/retail-lake/raw/nifi/store.dat"
+      },
+      {
+        "name": "path",
+        "value": "/",
+        "previousValue": "/"
+      },
+      {
+        "name": "target.dir.created",
+        "value": "false"
+      },
+      {
+        "name": "uuid",
+        "value": "6ed4829e-19ff-4e01-ba71-e7e33ab98f36",
+        "previousValue": "6ed4829e-19ff-4e01-ba71-e7e33ab98f36"
+      }
+    ],
+    "parentUuids": [],
+    "childUuids": [],
+    "details": "Auto-Terminated by success Relationship",
+    "contentEqual": true,
+    "inputContentAvailable": true,
+    "inputContentClaimSection": "1",
+    "inputContentClaimContainer": "default",
+    "inputContentClaimIdentifier": "1794927815440-1",
+    "inputContentClaimOffset": 0,
+    "inputContentClaimFileSize": "3.31 KB",
+    "inputContentClaimFileSizeBytes": 3386,
+    "outputContentAvailable": true,
+    "outputContentClaimSection": "1",
+    "outputContentClaimContainer": "default",
+    "outputContentClaimIdentifier": "1794927815440-1",
+    "outputContentClaimOffset": 0,
+    "outputContentClaimFileSize": "3.31 KB",
+    "outputContentClaimFileSizeBytes": 3386,
+    "replayAvailable": true,
+    "sourceConnectionIdentifier": "ea08c9ac-01a1-1000-e1e2-03c732d34526"
+  },
+  {
+    "id": "4",
+    "eventId": 4,
+    "eventTime": "11/17/2026 16:04:58.257 CET",
+    "eventTimestamp": "2026-11-17T15:04:58.257Z",
+    "eventDuration": 0,
+    "lineageDuration": 1,
+    "eventType": "RECEIVE",
+    "flowFileUuid": "8d3236ae-09ca-4561-bbae-db3db07c3958",
+    "fileSize": "3.31 KB",
+    "fileSizeBytes": 3386,
+    "groupId": "ea08c648-01a1-1000-4341-4bd48aa51554",
+    "componentId": "ea08c71e-01a1-1000-a6a2-62f9393e5ebb",
+    "componentType": "GetFile",
+    "componentName": "GetFile",
+    "attributes": [
+      {
+        "name": "absolute.path",
+        "value": "/data/nifi/input/"
+      },
+      {
+        "name": "file.creationTime",
+        "value": "2026-11-17T16:04:18+0100"
+      },
+      {
+        "name": "file.group",
+        "value": "meddy"
+      },
+      {
+        "name": "file.lastAccessTime",
+        "value": "2026-11-17T16:04:58+0100"
+      },
+      {
+        "name": "file.lastModifiedTime",
+        "value": "2026-11-16T14:36:04+0100"
+      },
+      {
+        "name": "file.owner",
+        "value": "meddy"
+      },
+      {
+        "name": "file.permissions",
+        "value": "rwxrwxrwx"
+      },
+      {
+        "name": "filename",
+        "value": "store.dat"
+      },
+      {
+        "name": "path",
+        "value": "/"
+      },
+      {
+        "name": "uuid",
+        "value": "8d3236ae-09ca-4561-bbae-db3db07c3958"
+      }
+    ],
+    "parentUuids": [],
+    "childUuids": [],
+    "transitUri": "file:/data/nifi/input/store.dat",
+    "contentEqual": false,
+    "inputContentAvailable": false,
+    "outputContentAvailable": true,
+    "outputContentClaimSection": "1",
+    "outputContentClaimContainer": "default",
+    "outputContentClaimIdentifier": "1794927815440-1",
+    "outputContentClaimOffset": 3386,
+    "outputContentClaimFileSize": "3.31 KB",
+    "outputContentClaimFileSizeBytes": 3386,
+    "replayAvailable": false,
+    "replayExplanation": "Cannot replay data from Provenance Event because the Source FlowFile Queue with ID No Value no longer exists",
+    "sourceConnectionIdentifier": "No Value"
+  },
+  {
+    "id": "5",
+    "eventId": 5,
+    "eventTime": "11/17/2026 16:05:28.296 CET",
+    "eventTimestamp": "2026-11-17T15:05:28.296Z",
+    "eventDuration": 12,
+    "lineageDuration": 30040,
+    "eventType": "DROP",
+    "flowFileUuid": "8d3236ae-09ca-4561-bbae-db3db07c3958",
+    "fileSize": "3.31 KB",
+    "fileSizeBytes": 3386,
+    "groupId": "ea08c648-01a1-1000-4341-4bd48aa51554",
+    "componentId": "ea08c96f-01a1-1000-b36e-4662cf1f869b",
+    "componentType": "LogAttribute",
+    "componentName": "LogAttribute (échecs)",
+    "attributes": [
+      {
+        "name": "absolute.path",
+        "value": "/data/nifi/input/",
+        "previousValue": "/data/nifi/input/"
+      },
+      {
+        "name": "file.creationTime",
+        "value": "2026-11-17T16:04:18+0100",
+        "previousValue": "2026-11-17T16:04:18+0100"
+      },
+      {
+        "name": "file.group",
+        "value": "meddy",
+        "previousValue": "meddy"
+      },
+      {
+        "name": "file.lastAccessTime",
+        "value": "2026-11-17T16:04:58+0100",
+        "previousValue": "2026-11-17T16:04:58+0100"
+      },
+      {
+        "name": "file.lastModifiedTime",
+        "value": "2026-11-16T14:36:04+0100",
+        "previousValue": "2026-11-16T14:36:04+0100"
+      },
+      {
+        "name": "file.owner",
+        "value": "meddy",
+        "previousValue": "meddy"
+      },
+      {
+        "name": "file.permissions",
+        "value": "rwxrwxrwx",
+        "previousValue": "rwxrwxrwx"
+      },
+      {
+        "name": "filename",
+        "value": "store.dat",
+        "previousValue": "store.dat"
+      },
+      {
+        "name": "path",
+        "value": "/",
+        "previousValue": "/"
+      },
+      {
+        "name": "uuid",
+        "value": "8d3236ae-09ca-4561-bbae-db3db07c3958",
+        "previousValue": "8d3236ae-09ca-4561-bbae-db3db07c3958"
+      }
+    ],
+    "parentUuids": [],
+    "childUuids": [],
+    "details": "Auto-Terminated by success Relationship",
+    "contentEqual": true,
+    "inputContentAvailable": true,
+    "inputContentClaimSection": "1",
+    "inputContentClaimContainer": "default",
+    "inputContentClaimIdentifier": "1794927815440-1",
+    "inputContentClaimOffset": 3386,
+    "inputContentClaimFileSize": "3.31 KB",
+    "inputContentClaimFileSizeBytes": 3386,
+    "outputContentAvailable": true,
+    "outputContentClaimSection": "1",
+    "outputContentClaimContainer": "default",
+    "outputContentClaimIdentifier": "1794927815440-1",
+    "outputContentClaimOffset": 3386,
+    "outputContentClaimFileSize": "3.31 KB",
+    "outputContentClaimFileSizeBytes": 3386,
+    "replayAvailable": true,
+    "sourceConnectionIdentifier": "ea08ca11-01a1-1000-609d-8e79532ff1f6"
+  }
+]

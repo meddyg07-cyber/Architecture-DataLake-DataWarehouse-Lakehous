@@ -1,0 +1,23 @@
+### UC-04 – phase « provenance » – 2026-11-17 16:05:54 – NiFi 2.12.0
+
+6 événements de provenance pour filename=store.dat
+
+eventId | date | type | composant | FlowFile UUID | taille | détail
+0 | 11/17/2026 16:03:35.458 CET | RECEIVE | GetFile | 6ed4829e-19ff-4e01-ba71-e7e33ab98f36 | 3.31 KB | file:/data/nifi/input/store.dat
+1 | 11/17/2026 16:03:36.883 CET | SEND | PutHDFS | 6ed4829e-19ff-4e01-ba71-e7e33ab98f36 | 3.31 KB | hdfs://localhost:9000/retail-lake/raw/nifi/store.dat
+2 | 11/17/2026 16:03:36.884 CET | ATTRIBUTES_MODIFIED | PutHDFS | 6ed4829e-19ff-4e01-ba71-e7e33ab98f36 | 3.31 KB | 
+3 | 11/17/2026 16:03:36.884 CET | DROP | PutHDFS | 6ed4829e-19ff-4e01-ba71-e7e33ab98f36 | 3.31 KB | Auto-Terminated by success Relationship
+4 | 11/17/2026 16:04:58.257 CET | RECEIVE | GetFile | 8d3236ae-09ca-4561-bbae-db3db07c3958 | 3.31 KB | file:/data/nifi/input/store.dat
+5 | 11/17/2026 16:05:28.296 CET | DROP | LogAttribute (échecs) | 8d3236ae-09ca-4561-bbae-db3db07c3958 | 3.31 KB | Auto-Terminated by success Relationship
+
+Attributs du FlowFile (1er événement) :
+    absolute.path = /data/nifi/input/
+    file.creationTime = 2026-11-17T15:19:47+0100
+    file.group = meddy
+    file.lastAccessTime = 2026-11-17T15:19:47+0100
+    file.lastModifiedTime = 2026-11-16T14:36:04+0100
+    file.owner = meddy
+    file.permissions = rwxrwxrwx
+    filename = store.dat
+    path = /
+    uuid = 6ed4829e-19ff-4e01-ba71-e7e33ab98f36

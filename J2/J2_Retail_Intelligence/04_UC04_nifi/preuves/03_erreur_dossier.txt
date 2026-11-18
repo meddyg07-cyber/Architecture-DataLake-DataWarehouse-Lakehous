@@ -1,0 +1,29 @@
+### UC-04 – phase « erreur_dossier » – 2026-11-17 16:03:57 – NiFi 2.12.0
+
+Test A – dossier source inexistant dans GetFile
+[2026-11-17 16:03:58] GetFile : propriétés modifiées {'Input Directory': '/data/nifi/input_inexistant'}
+--- GetFile (GetFile) id=ea08c71e-01a1-1000-a6a2-62f9393e5ebb
+    état=STOPPED  validation=INVALID  planification=10 sec  auto-terminate=[]
+    Input Directory = /data/nifi/input_inexistant
+    Keep Source File = false
+    Recurse Subdirectories = false
+    ERREUR DE VALIDATION : 'Input Directory' validated against '/data/nifi/input_inexistant' is invalid because Directory does not exist
+    compteurs (5 min) : in=0 out=1 lus=3386 o, écrits=3386 o, tâches=1
+[2026-11-17 16:04:01] GetFile → RUNNING
+[2026-11-17 16:04:14] GetFile → STOPPED
+Rétablissement de la configuration :
+[2026-11-17 16:04:14] GetFile : propriétés modifiées {'Input Directory': '/data/nifi/input'}
+--- GetFile (GetFile) id=ea08c71e-01a1-1000-a6a2-62f9393e5ebb
+    état=STOPPED  validation=VALID  planification=10 sec  auto-terminate=[]
+    Input Directory = /data/nifi/input
+    Keep Source File = false
+    Recurse Subdirectories = false
+    compteurs (5 min) : in=0 out=1 lus=3386 o, écrits=3386 o, tâches=1
+
+### Journal NiFi (nifi-app.log) pendant le test A
+2026-11-17 16:04:01,268 INFO [NiFi Web Server-128] o.a.n.c.s.StandardProcessScheduler Starting GetFile[id=ea08c71e-01a1-1000-a6a2-62f9393e5ebb]
+2026-11-17 16:04:01,268 INFO [NiFi Web Server-128] o.a.n.controller.StandardProcessorNode Desired State for GetFile[id=ea08c71e-01a1-1000-a6a2-62f9393e5ebb] now set to RUNNING
+2026-11-17 16:04:01,268 INFO [Timer-Driven Process Thread-6] o.a.n.controller.StandardProcessorNode Cannot start GetFile[id=ea08c71e-01a1-1000-a6a2-62f9393e5ebb] because Processor is currently not valid (Validation State is INVALID: ['Input Directory' validated against '/data/nifi/input_inexistant' is invalid because Directory d
+2026-11-17 16:04:14,586 INFO [NiFi Web Server-44] o.a.n.c.s.StandardProcessScheduler Stopping GetFile[id=ea08c71e-01a1-1000-a6a2-62f9393e5ebb]
+2026-11-17 16:04:14,586 INFO [NiFi Web Server-44] o.a.n.controller.StandardProcessorNode Desired State for GetFile[id=ea08c71e-01a1-1000-a6a2-62f9393e5ebb] now set to STOPPED
+2026-11-17 16:04:14,587 INFO [NiFi Web Server-44] o.a.n.controller.StandardProcessorNode GetFile[id=ea08c71e-01a1-1000-a6a2-62f9393e5ebb] has completely stopped. Completing any associated Futures.
