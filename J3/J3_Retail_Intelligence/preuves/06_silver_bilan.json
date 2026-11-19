@@ -1,0 +1,252 @@
+{
+  "run_id": "20261118_152733",
+  "etape": "silver",
+  "tables": {
+    "store_sales": {
+      "silver": "hdfs://localhost:9000/retail-lake/silver/tpcxbb/store_sales",
+      "partition": "sold_year",
+      "lignes_bronze": 667579,
+      "lignes_silver": 667579,
+      "lignes_quarantaine": 0,
+      "motifs_quarantaine": {},
+      "volume_reconcilie": true,
+      "octets_silver": 49301265,
+      "schema": [
+        "ss_sold_date_sk:int",
+        "ss_ticket_number:bigint",
+        "ss_item_sk:int",
+        "ss_sold_time_sk:int",
+        "ss_customer_sk:int",
+        "ss_cdemo_sk:int",
+        "ss_hdemo_sk:int",
+        "ss_addr_sk:int",
+        "ss_store_sk:int",
+        "ss_promo_sk:int",
+        "ss_quantity:int",
+        "ss_wholesale_cost:decimal(7,2)",
+        "ss_list_price:decimal(7,2)",
+        "ss_sales_price:decimal(7,2)",
+        "ss_ext_discount_amt:decimal(7,2)",
+        "ss_ext_sales_price:decimal(7,2)",
+        "ss_ext_wholesale_cost:decimal(7,2)",
+        "ss_ext_list_price:decimal(7,2)",
+        "ss_ext_tax:decimal(7,2)",
+        "ss_coupon_amt:decimal(7,2)",
+        "ss_net_paid:decimal(7,2)",
+        "ss_net_paid_inc_tax:decimal(7,2)",
+        "ss_net_profit:decimal(7,2)",
+        "_source_file:string",
+        "_lot:string",
+        "_run_id_bronze:string",
+        "_flag_cle_partagee:boolean",
+        "_flag_marge_negative:boolean",
+        "_flag_montant_atypique:boolean",
+        "sold_date:date",
+        "sold_month:int",
+        "_run_id_silver:string",
+        "sold_year:int"
+      ]
+    },
+    "item": {
+      "silver": "hdfs://localhost:9000/retail-lake/silver/tpcxbb/item",
+      "partition": null,
+      "lignes_bronze": 17820,
+      "lignes_silver": 17820,
+      "lignes_quarantaine": 0,
+      "motifs_quarantaine": {},
+      "volume_reconcilie": true,
+      "octets_silver": 3578394,
+      "schema": [
+        "i_item_sk:int",
+        "i_item_id:string",
+        "i_rec_start_date:date",
+        "i_rec_end_date:date",
+        "i_item_desc:string",
+        "i_current_price:decimal(7,2)",
+        "i_wholesale_cost:decimal(7,2)",
+        "i_brand_id:int",
+        "i_brand:string",
+        "i_class_id:int",
+        "i_class:string",
+        "i_category_id:int",
+        "i_category:string",
+        "i_manufact_id:int",
+        "i_manufact:string",
+        "i_size:string",
+        "i_formulation:string",
+        "i_color:string",
+        "i_units:string",
+        "i_container:string",
+        "i_manager_id:int",
+        "i_product_name:string",
+        "_source_file:string",
+        "_lot:string",
+        "_run_id_bronze:string",
+        "i_version_courante:boolean",
+        "_run_id_silver:string"
+      ]
+    },
+    "date_dim": {
+      "silver": "hdfs://localhost:9000/retail-lake/silver/tpcxbb/date_dim",
+      "partition": null,
+      "lignes_bronze": 109573,
+      "lignes_silver": 109573,
+      "lignes_quarantaine": 0,
+      "motifs_quarantaine": {},
+      "volume_reconcilie": true,
+      "octets_silver": 3648373,
+      "schema": [
+        "d_date_sk:int",
+        "d_date_id:string",
+        "d_date:date",
+        "d_month_seq:int",
+        "d_week_seq:int",
+        "d_quarter_seq:int",
+        "d_year:int",
+        "d_dow:int",
+        "d_moy:int",
+        "d_dom:int",
+        "d_qoy:int",
+        "d_fy_year:int",
+        "d_fy_quarter_seq:int",
+        "d_fy_week_seq:int",
+        "d_day_name:string",
+        "d_quarter_name:string",
+        "d_holiday:string",
+        "d_weekend:string",
+        "d_following_holiday:string",
+        "d_first_dom:int",
+        "d_last_dom:int",
+        "d_same_day_ly:int",
+        "d_same_day_lq:int",
+        "d_current_day:string",
+        "d_current_week:string",
+        "d_current_month:string",
+        "d_current_quarter:string",
+        "d_current_year:string",
+        "_source_file:string",
+        "_lot:string",
+        "_run_id_bronze:string",
+        "_run_id_silver:string"
+      ]
+    },
+    "store": {
+      "silver": "hdfs://localhost:9000/retail-lake/silver/tpcxbb/store",
+      "partition": null,
+      "lignes_bronze": 12,
+      "lignes_silver": 12,
+      "lignes_quarantaine": 0,
+      "motifs_quarantaine": {},
+      "volume_reconcilie": true,
+      "octets_silver": 13890,
+      "schema": [
+        "s_store_sk:int",
+        "s_store_id:string",
+        "s_rec_start_date:date",
+        "s_rec_end_date:date",
+        "s_closed_date_sk:int",
+        "s_store_name:string",
+        "s_number_employees:int",
+        "s_floor_space:int",
+        "s_hours:string",
+        "s_manager:string",
+        "s_market_id:int",
+        "s_geography_class:string",
+        "s_market_desc:string",
+        "s_market_manager:string",
+        "s_division_id:int",
+        "s_division_name:string",
+        "s_company_id:int",
+        "s_company_name:string",
+        "s_street_number:string",
+        "s_street_name:string",
+        "s_street_type:string",
+        "s_suite_number:string",
+        "s_city:string",
+        "s_county:string",
+        "s_state:string",
+        "s_zip:string",
+        "s_country:string",
+        "s_gmt_offset:decimal(5,2)",
+        "s_tax_precentage:decimal(5,2)",
+        "_source_file:string",
+        "_lot:string",
+        "_run_id_bronze:string",
+        "s_closed_date:date",
+        "s_closed_date_statut:string",
+        "s_closed_date_fiable:boolean",
+        "_run_id_silver:string"
+      ]
+    }
+  },
+  "store_sales_details": {
+    "doublons_exacts_retires": 0,
+    "seuil_tukey_net_paid": 8700.67,
+    "q1": 245.35,
+    "q3": 2359.18,
+    "lignes_avant_jointure_date": 667579,
+    "lignes_apres_jointure_date": 667579,
+    "indicateurs": {
+      "_flag_cle_partagee": 8174,
+      "_flag_marge_negative": 495971,
+      "_flag_montant_atypique": 11910
+    },
+    "partitions": [
+      2001,
+      2002,
+      2003,
+      2004,
+      2005
+    ]
+  },
+  "store_statut_fermeture": {
+    "AAAAAAAAAAAAAAAG": [
+      "1943-02-26",
+      "incoherente_avant_ventes"
+    ],
+    "AAAAAAAAAAAAAAAA": [
+      "2095-01-16",
+      "non_verifiable_apres_ventes"
+    ],
+    "AAAAAAAAAAAAAAAD": [
+      "2091-05-21",
+      "non_verifiable_apres_ventes"
+    ],
+    "AAAAAAAAAAAAAAAH": [
+      "2095-08-12",
+      "non_verifiable_apres_ventes"
+    ],
+    "AAAAAAAAAAAAAAAI": [
+      "2038-10-13",
+      "non_verifiable_apres_ventes"
+    ],
+    "AAAAAAAAAAAAAAAC": [
+      "1924-05-15",
+      "incoherente_avant_ventes"
+    ],
+    "AAAAAAAAAAAAAAAE": [
+      "2117-12-26",
+      "non_verifiable_apres_ventes"
+    ],
+    "AAAAAAAAAAAAAAAF": [
+      "2141-04-26",
+      "non_verifiable_apres_ventes"
+    ],
+    "AAAAAAAAAAAAAAAK": [
+      "1917-01-27",
+      "incoherente_avant_ventes"
+    ],
+    "AAAAAAAAAAAAAAAB": [
+      "1952-01-03",
+      "incoherente_avant_ventes"
+    ],
+    "AAAAAAAAAAAAAAAJ": [
+      "1968-10-22",
+      "incoherente_avant_ventes"
+    ],
+    "AAAAAAAAAAAAAAAL": [
+      "2019-06-20",
+      "non_verifiable_apres_ventes"
+    ]
+  }
+}

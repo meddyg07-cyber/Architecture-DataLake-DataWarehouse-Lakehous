@@ -1,0 +1,7 @@
+=== 18/11/2026 15:26:49 | python transformations/01_bronze.py ===
+[15:27:15] store_sales  raw=  667,579 bronze=  667,579 OK -> hdfs://localhost:9000/retail-lake/bronze/tpcxbb/store_sales
+[15:27:17] item         raw=   17,820 bronze=   17,820 OK -> hdfs://localhost:9000/retail-lake/bronze/tpcxbb/item
+[15:27:19] date_dim     raw=  109,573 bronze=  109,573 OK -> hdfs://localhost:9000/retail-lake/bronze/tpcxbb/date_dim
+[15:27:21] store        raw=       12 bronze=       12 OK -> hdfs://localhost:9000/retail-lake/bronze/tpcxbb/store
+/mnt/c/Users/meddy/Desktop/Data Lake Warehouse Lakehouse/J3/J3_Retail_Intelligence/preuves/05_bronze_bilan.json
+=== fin 15:27:22 ===

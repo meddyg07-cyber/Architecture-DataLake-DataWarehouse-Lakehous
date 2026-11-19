@@ -1,0 +1,9 @@
+=== 18/11/2026 15:27:22 | python transformations/02_silver.py ===
+[15:29:44] store_sales  bronze=  667,579 silver=  667,579 quarantaine=     0 -> hdfs://localhost:9000/retail-lake/silver/tpcxbb/store_sales
+[15:29:46] item         bronze=   17,820 silver=   17,820 quarantaine=     0 -> hdfs://localhost:9000/retail-lake/silver/tpcxbb/item
+[15:29:50] date_dim     bronze=  109,573 silver=  109,573 quarantaine=     0 -> hdfs://localhost:9000/retail-lake/silver/tpcxbb/date_dim
+[15:30:07] store        bronze=       12 silver=       12 quarantaine=     0 -> hdfs://localhost:9000/retail-lake/silver/tpcxbb/store
+[15:30:08] store_sales : doublons exacts retirés=0, seuil Tukey=8700.67, indicateurs={'_flag_cle_partagee': 8174, '_flag_marge_negative': 495971, '_flag_montant_atypique': 11910}
+[15:30:08] jointure date : avant=667,579 après=667,579
+/mnt/c/Users/meddy/Desktop/Data Lake Warehouse Lakehouse/J3/J3_Retail_Intelligence/preuves/06_silver_bilan.json
+=== fin 15:30:09 ===

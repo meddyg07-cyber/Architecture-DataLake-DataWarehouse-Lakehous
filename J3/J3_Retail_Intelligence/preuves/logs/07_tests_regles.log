@@ -1,0 +1,12 @@
+=== 18/11/2026 15:32:38 | python tests/test_regles_silver.py ===
+[OK   ] ligne valide                       attendu=Silver -> conservée en Silver
+[OK   ] marge négative = conservée (R08)   attendu=Silver -> conservée en Silver
+[OK   ] quantité non numérique             attendu=R01_type_invalide:ss_quantity -> quarantaine ['R01_type_invalide:ss_quantity', 'R03_obligatoire_nul:ss_quantity']
+[OK   ] montant non numérique              attendu=R01_type_invalide:ss_net_paid -> quarantaine ['R01_type_invalide:ss_net_paid', 'R03_obligatoire_nul:ss_net_paid']
+[OK   ] ticket absent                      attendu=R03_obligatoire_nul:ss_ticket_number -> quarantaine ['R03_obligatoire_nul:ss_ticket_number']
+[OK   ] quantité nulle                     attendu=R04_quantite_non_positive -> quarantaine ['R04_quantite_non_positive']
+[OK   ] montant négatif                    attendu=R04_montant_negatif:ss_coupon_amt -> quarantaine ['R04_montant_negatif:ss_coupon_amt']
+[OK   ] calcul incohérent                  attendu=R05_incoherence:ext_sales_price -> quarantaine ['R05_incoherence:ext_sales_price', 'R05_incoherence:net_paid']
+
+8/8 cas conformes
+=== fin 15:33:02 ===

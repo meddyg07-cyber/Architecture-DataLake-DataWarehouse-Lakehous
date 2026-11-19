@@ -1,0 +1,840 @@
+{
+  "date": "2026-11-18 15:35:16.574230",
+  "spark": "4.3.0",
+  "source": "hdfs://localhost:9000/retail-lake/raw/tpcxbb/initial",
+  "profils": {
+    "store_sales": {
+      "table": "store_sales",
+      "lignes": 667579,
+      "colonnes": 23,
+      "cle": [
+        "ss_ticket_number",
+        "ss_item_sk"
+      ],
+      "cle_distinctes": 663443,
+      "doublons_cle": 4136,
+      "cle_nulle": 0,
+      "detail": [
+        {
+          "colonne": "ss_sold_date_sk",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_sold_time_sk",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_item_sk",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_customer_sk",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_cdemo_sk",
+          "type_cible": "int",
+          "nulls": 238,
+          "pct_null": 0.036,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_hdemo_sk",
+          "type_cible": "int",
+          "nulls": 295,
+          "pct_null": 0.044,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_addr_sk",
+          "type_cible": "int",
+          "nulls": 448,
+          "pct_null": 0.067,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_store_sk",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_promo_sk",
+          "type_cible": "int",
+          "nulls": 158,
+          "pct_null": 0.024,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_ticket_number",
+          "type_cible": "bigint",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_quantity",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_wholesale_cost",
+          "type_cible": "decimal(7,2)",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_list_price",
+          "type_cible": "decimal(7,2)",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_sales_price",
+          "type_cible": "decimal(7,2)",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_ext_discount_amt",
+          "type_cible": "decimal(7,2)",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_ext_sales_price",
+          "type_cible": "decimal(7,2)",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_ext_wholesale_cost",
+          "type_cible": "decimal(7,2)",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_ext_list_price",
+          "type_cible": "decimal(7,2)",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_ext_tax",
+          "type_cible": "decimal(7,2)",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_coupon_amt",
+          "type_cible": "decimal(7,2)",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_net_paid",
+          "type_cible": "decimal(7,2)",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_net_paid_inc_tax",
+          "type_cible": "decimal(7,2)",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "ss_net_profit",
+          "type_cible": "decimal(7,2)",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        }
+      ]
+    },
+    "item": {
+      "table": "item",
+      "lignes": 17820,
+      "colonnes": 22,
+      "cle": [
+        "i_item_sk"
+      ],
+      "cle_distinctes": 17820,
+      "doublons_cle": 0,
+      "cle_nulle": 0,
+      "detail": [
+        {
+          "colonne": "i_item_sk",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_item_id",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_rec_start_date",
+          "type_cible": "date",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_rec_end_date",
+          "type_cible": "date",
+          "nulls": 17820,
+          "pct_null": 100.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_item_desc",
+          "type_cible": "string",
+          "nulls": 4,
+          "pct_null": 0.022,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_current_price",
+          "type_cible": "decimal(7,2)",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_wholesale_cost",
+          "type_cible": "decimal(7,2)",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_brand_id",
+          "type_cible": "int",
+          "nulls": 8,
+          "pct_null": 0.045,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_brand",
+          "type_cible": "string",
+          "nulls": 6,
+          "pct_null": 0.034,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_class_id",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_class",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_category_id",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_category",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_manufact_id",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_manufact",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_size",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_formulation",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_color",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_units",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_container",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_manager_id",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "i_product_name",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        }
+      ]
+    },
+    "date_dim": {
+      "table": "date_dim",
+      "lignes": 109573,
+      "colonnes": 28,
+      "cle": [
+        "d_date_sk"
+      ],
+      "cle_distinctes": 109573,
+      "doublons_cle": 0,
+      "cle_nulle": 0,
+      "detail": [
+        {
+          "colonne": "d_date_sk",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_date_id",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_date",
+          "type_cible": "date",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_month_seq",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_week_seq",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_quarter_seq",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_year",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_dow",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_moy",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_dom",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_qoy",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_fy_year",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_fy_quarter_seq",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_fy_week_seq",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_day_name",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_quarter_name",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_holiday",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_weekend",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_following_holiday",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_first_dom",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_last_dom",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_same_day_ly",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_same_day_lq",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_current_day",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_current_week",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_current_month",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_current_quarter",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "d_current_year",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        }
+      ]
+    },
+    "store": {
+      "table": "store",
+      "lignes": 12,
+      "colonnes": 29,
+      "cle": [
+        "s_store_sk"
+      ],
+      "cle_distinctes": 12,
+      "doublons_cle": 0,
+      "cle_nulle": 0,
+      "detail": [
+        {
+          "colonne": "s_store_sk",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_store_id",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_rec_start_date",
+          "type_cible": "date",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_rec_end_date",
+          "type_cible": "date",
+          "nulls": 12,
+          "pct_null": 100.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_closed_date_sk",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_store_name",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_number_employees",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_floor_space",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_hours",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_manager",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_market_id",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_geography_class",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_market_desc",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_market_manager",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_division_id",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_division_name",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_company_id",
+          "type_cible": "int",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_company_name",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_street_number",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_street_name",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_street_type",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_suite_number",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_city",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_county",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_state",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_zip",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_country",
+          "type_cible": "string",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_gmt_offset",
+          "type_cible": "decimal(5,2)",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        },
+        {
+          "colonne": "s_tax_precentage",
+          "type_cible": "decimal(5,2)",
+          "nulls": 0,
+          "pct_null": 0.0,
+          "non_convertibles": 0
+        }
+      ]
+    }
+  },
+  "controles_store_sales": {
+    "quantite_nulle": {
+      "lignes": 0,
+      "pct": 0.0
+    },
+    "quantite_<=0": {
+      "lignes": 0,
+      "pct": 0.0
+    },
+    "date_vente_nulle": {
+      "lignes": 0,
+      "pct": 0.0
+    },
+    "magasin_nul": {
+      "lignes": 0,
+      "pct": 0.0
+    },
+    "article_nul": {
+      "lignes": 0,
+      "pct": 0.0
+    },
+    "net_paid_nul": {
+      "lignes": 0,
+      "pct": 0.0
+    },
+    "net_paid_<0": {
+      "lignes": 0,
+      "pct": 0.0
+    },
+    "sales_price_<0": {
+      "lignes": 0,
+      "pct": 0.0
+    },
+    "net_profit_<0 (marge)": {
+      "lignes": 495971,
+      "pct": 74.294
+    },
+    "sales_price>list_price": {
+      "lignes": 0,
+      "pct": 0.0
+    },
+    "ext_sales!=price*qty": {
+      "lignes": 0,
+      "pct": 0.0
+    },
+    "net_paid!=ext-coupon": {
+      "lignes": 0,
+      "pct": 0.0
+    }
+  },
+  "integrite": {
+    "ss_item_sk -> item.i_item_sk": 0,
+    "ss_sold_date_sk -> date_dim.d_date_sk": 0,
+    "ss_store_sk -> store.s_store_sk": 0
+  },
+  "doublons_cle_store_sales": {
+    "groupes": 4038,
+    "lignes": 8174,
+    "doublons_exacts": 0
+  },
+  "tukey_net_paid": {
+    "q1": 245.27,
+    "q3": 2359.41,
+    "seuil": 8701.83,
+    "lignes": 11902
+  }
+}

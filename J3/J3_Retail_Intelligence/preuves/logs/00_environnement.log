@@ -1,0 +1,12 @@
+=== 18/11/2026 15:33:24 | bash -c python --version; java -version 2>&1 | head -1; python -m pip show pyspark jupyterlab 2>/dev/null | grep -E "^(Name|Version)"; hdfs version | head -1; nproc; free -h | head -2 ===
+Python 3.12.3
+openjdk version "17.0.21.0.3" 2026-10-24
+Name: pyspark
+Version: 4.3.0
+Name: jupyterlab
+Version: 4.6.6
+Hadoop 3.5.0
+12
+               total        used        free      shared  buff/cache   available
+Mem:           7.6Gi       3.0Gi       2.1Gi       3.4Mi       2.8Gi       4.6Gi
+=== fin 15:33:25 ===

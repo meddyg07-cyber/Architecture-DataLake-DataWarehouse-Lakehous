@@ -1,0 +1,66 @@
+{
+  "volumes_octets": {
+    "dat_raw (CSV |, sans en-tete)": 92764700,
+    "csv (en-tete, ,)": 92101237,
+    "json (1 objet par ligne)": 353103873,
+    "parquet bronze (texte + provenance)": 48549753,
+    "parquet silver (typé, partitionné, + indicateurs)": 49301265,
+    "parquet 23 colonnes typées (snappy)": 43316175
+  },
+  "types_relus_sans_schema": {
+    "csv (header, sans inferSchema)": {
+      "ss_quantity": "string",
+      "ss_net_paid": "string",
+      "ss_ticket_number": "string"
+    },
+    "csv (header + inferSchema)": {
+      "ss_quantity": "int",
+      "ss_net_paid": "double",
+      "ss_ticket_number": "int"
+    },
+    "json": {
+      "ss_quantity": "bigint",
+      "ss_net_paid": "double",
+      "ss_ticket_number": "bigint"
+    },
+    "parquet": {
+      "ss_quantity": "int",
+      "ss_net_paid": "decimal(7,2)",
+      "ss_ticket_number": "bigint"
+    }
+  },
+  "agregation_2_colonnes_s": {
+    "csv": {
+      "mediane": 1.061,
+      "essais": [
+        1.303,
+        1.061,
+        1.055,
+        0.965,
+        1.08
+      ]
+    },
+    "json": {
+      "mediane": 2.751,
+      "essais": [
+        3.056,
+        2.644,
+        2.63,
+        2.804,
+        2.751
+      ]
+    },
+    "parquet": {
+      "mediane": 0.349,
+      "essais": [
+        0.412,
+        0.381,
+        0.316,
+        0.349,
+        0.348
+      ]
+    }
+  },
+  "lignes": 667579,
+  "essais": 5
+}

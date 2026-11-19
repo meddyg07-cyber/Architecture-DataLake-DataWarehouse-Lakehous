@@ -1,0 +1,42 @@
+{
+  "run_id": "20261118_152700",
+  "etape": "bronze",
+  "tables": {
+    "store_sales": {
+      "raw": "hdfs://localhost:9000/retail-lake/raw/tpcxbb/initial/store_sales/store_sales.dat",
+      "bronze": "hdfs://localhost:9000/retail-lake/bronze/tpcxbb/store_sales",
+      "lignes_raw": 667579,
+      "lignes_bronze": 667579,
+      "volume_conserve": true,
+      "octets_raw": 92764700,
+      "octets_bronze": 48549753
+    },
+    "item": {
+      "raw": "hdfs://localhost:9000/retail-lake/raw/tpcxbb/initial/item/item.dat",
+      "bronze": "hdfs://localhost:9000/retail-lake/bronze/tpcxbb/item",
+      "lignes_raw": 17820,
+      "lignes_bronze": 17820,
+      "volume_conserve": true,
+      "octets_raw": 6799286,
+      "octets_bronze": 3663046
+    },
+    "date_dim": {
+      "raw": "hdfs://localhost:9000/retail-lake/raw/tpcxbb/initial/date_dim/date_dim.dat",
+      "bronze": "hdfs://localhost:9000/retail-lake/bronze/tpcxbb/date_dim",
+      "lignes_raw": 109573,
+      "lignes_bronze": 109573,
+      "volume_conserve": true,
+      "octets_raw": 15395800,
+      "octets_bronze": 4344521
+    },
+    "store": {
+      "raw": "hdfs://localhost:9000/retail-lake/raw/tpcxbb/initial/store/store.dat",
+      "bronze": "hdfs://localhost:9000/retail-lake/bronze/tpcxbb/store",
+      "lignes_raw": 12,
+      "lignes_bronze": 12,
+      "volume_conserve": true,
+      "octets_raw": 3386,
+      "octets_bronze": 13206
+    }
+  }
+}

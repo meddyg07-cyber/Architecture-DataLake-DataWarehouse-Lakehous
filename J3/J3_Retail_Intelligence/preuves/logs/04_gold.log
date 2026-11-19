@@ -1,0 +1,36 @@
+=== 18/11/2026 15:30:09 | python transformations/03_gold.py ===
+[15:30:29] jointure ventes->item : avant=667,579 après=667,579 non rapprochées=0
+[15:30:42] ventes_mensuelles_categorie: 540 lignes, grain unique=True -> hdfs://localhost:9000/retail-lake/gold/retail/ventes_mensuelles_categorie
+[15:30:43] performance_magasin_annuelle: 60 lignes, grain unique=True -> hdfs://localhost:9000/retail-lake/gold/retail/performance_magasin_annuelle
+
+G1 – CA annuel par catégorie (M$) :
++-----+-----+----------------------+-----------+--------------+-----------+------+-----------------+------------------------+------------+
+|annee|Books|Clothing & Accessories|Electronics|Home & Kitchen|Movies & TV|Music |Sports & Outdoors|Tools & Home Improvement|Toys & Games|
++-----+-----+----------------------+-----------+--------------+-----------+------+-----------------+------------------------+------------+
+|2001 |62.23|11.43                 |11.11      |8.3           |15.13      |105.34|8.08             |5.41                    |5.47        |
+|2002 |61.05|11.35                 |11.29      |8.35          |15.18      |104.25|8.26             |5.52                    |5.7         |
+|2003 |62.18|11.65                 |11.42      |8.25          |15.49      |105.22|8.32             |5.39                    |5.65        |
+|2004 |62.72|11.31                 |11.07      |8.46          |15.03      |106.45|8.41             |5.43                    |5.48        |
+|2005 |58.97|11.02                 |10.83      |7.9           |13.9       |98.41 |7.85             |5.14                    |5.15        |
++-----+-----+----------------------+-----------+--------------+-----------+------+-----------------+------------------------+------------+
+
+G2 – classement 2004 (dernière année complète) :
++-------------+----------------+------------+-------+-----------+----------+------------+-----------------+-----------------+
+|rang_ca_annee|s_store_id      |s_store_name|s_state|ca_net_paid|nb_tickets|panier_moyen|part_ca_annee_pct|ecart_moyenne_pct|
++-------------+----------------+------------+-------+-----------+----------+------------+-----------------+-----------------+
+|1            |AAAAAAAAAAAAAAAH|Buffalo     |KS     |20748576.85|1569      |13224.08    |8.85             |6.25             |
+|2            |AAAAAAAAAAAAAAAI|Williamstown|TX     |20717130.74|1530      |13540.61    |8.84             |6.09             |
+|3            |AAAAAAAAAAAAAAAD|Pioneer     |TX     |20282799.41|1564      |12968.54    |8.66             |3.86             |
+|4            |AAAAAAAAAAAAAAAL|Bedford     |KY     |19813076.58|1508      |13138.64    |8.45             |1.46             |
+|5            |AAAAAAAAAAAAAAAJ|Germantown  |WV     |19732578.43|1520      |12981.96    |8.42             |1.04             |
+|6            |AAAAAAAAAAAAAAAB|Hillside    |TN     |19568501.11|1491      |13124.41    |8.35             |0.20             |
+|7            |AAAAAAAAAAAAAAAE|Elmwood     |KY     |19558543.23|1489      |13135.35    |8.35             |0.15             |
+|8            |AAAAAAAAAAAAAAAF|Egypt       |KY     |19394109.42|1499      |12938.03    |8.28             |-0.69            |
+|9            |AAAAAAAAAAAAAAAA|Forest      |CO     |19070384.35|1509      |12637.76    |8.14             |-2.35            |
+|10           |AAAAAAAAAAAAAAAG|Bloomfield  |IN     |18797559.67|1469      |12796.16    |8.02             |-3.74            |
+|11           |AAAAAAAAAAAAAAAC|Sherwood    |CA     |18477526.46|1438      |12849.46    |7.88             |-5.38            |
+|12           |AAAAAAAAAAAAAAAK|Avalon      |TN     |18184148.04|1453      |12514.90    |7.76             |-6.89            |
++-------------+----------------+------------+-------+-----------+----------+------------+-----------------+-----------------+
+
+/mnt/c/Users/meddy/Desktop/Data Lake Warehouse Lakehouse/J3/J3_Retail_Intelligence/preuves/07_gold_bilan.json
+=== fin 15:30:46 ===

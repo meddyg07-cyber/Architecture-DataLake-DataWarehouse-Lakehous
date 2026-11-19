@@ -1,0 +1,258 @@
+{
+  "run_id": "20261118_153056",
+  "bilan": {
+    "OK": 24,
+    "ALERTE": 7,
+    "ECHEC": 0
+  },
+  "controles": [
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Volume",
+      "jeu": "silver/store_sales",
+      "regle": "raw = bronze = silver + quarantaine",
+      "resultat": "667579 = 667579 = 667579 + 0",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Volume",
+      "jeu": "silver/item",
+      "regle": "raw = bronze = silver + quarantaine",
+      "resultat": "17820 = 17820 = 17820 + 0",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Volume",
+      "jeu": "silver/date_dim",
+      "regle": "raw = bronze = silver + quarantaine",
+      "resultat": "109573 = 109573 = 109573 + 0",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Volume",
+      "jeu": "silver/store",
+      "regle": "raw = bronze = silver + quarantaine",
+      "resultat": "12 = 12 = 12 + 0",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Validite",
+      "jeu": "silver/store_sales",
+      "regle": "23 colonnes au type cible (int, bigint, decimal(7,2))",
+      "resultat": "conformes",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Completude",
+      "jeu": "silver/store_sales",
+      "regle": "champs obligatoires non nuls",
+      "resultat": "{'ss_ticket_number': 0, 'ss_item_sk': 0, 'ss_sold_date_sk': 0, 'ss_store_sk': 0, 'ss_quantity': 0, 'ss_net_paid': 0, 'sold_date': 0}",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Completude",
+      "jeu": "silver/store_sales",
+      "regle": "clés facultatives : % de nuls (< 1 % toléré)",
+      "resultat": "{'ss_cdemo_sk': 0.036, 'ss_hdemo_sk': 0.044, 'ss_addr_sk': 0.067, 'ss_promo_sk': 0.024}",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Completude",
+      "jeu": "silver/item",
+      "regle": "catégorie renseignée",
+      "resultat": "0 nulle(s)",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Completude",
+      "jeu": "silver/item",
+      "regle": "marque renseignée (non utilisée en Gold)",
+      "resultat": "6 nulle(s) sur 17820",
+      "statut": "ALERTE"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Unicite",
+      "jeu": "silver/item",
+      "regle": "clé ['i_item_sk'] unique",
+      "resultat": "0 doublon(s)",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Unicite",
+      "jeu": "silver/store",
+      "regle": "clé ['s_store_sk'] unique",
+      "resultat": "0 doublon(s)",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Unicite",
+      "jeu": "silver/date_dim",
+      "regle": "clé ['d_date_sk'] unique",
+      "resultat": "0 doublon(s)",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Unicite",
+      "jeu": "silver/date_dim",
+      "regle": "clé ['d_date'] unique",
+      "resultat": "0 doublon(s)",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Unicite",
+      "jeu": "silver/store_sales",
+      "regle": "aucun doublon exact (23 colonnes)",
+      "resultat": "0",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Unicite",
+      "jeu": "silver/store_sales",
+      "regle": "clé candidate (ticket, article)",
+      "resultat": "non unique : 4136 ligne(s) en surplus, 8174 lignes signalées (_flag_cle_partagee), conservées",
+      "statut": "ALERTE"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Coherence",
+      "jeu": "silver/store_sales",
+      "regle": "quantités > 0, montants >= 0, calculs cohérents",
+      "resultat": "{'quantite<=0': 0, 'net_paid<0': 0, 'ext_sales!=prix*qte': 0, 'net_paid!=ext-coupon': 0, 'annee!=date': 0}",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Coherence",
+      "jeu": "silver/store_sales",
+      "regle": "marge nette négative (conservée, signalée)",
+      "resultat": "495971 lignes (74.3 %)",
+      "statut": "ALERTE"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Coherence",
+      "jeu": "silver/store_sales",
+      "regle": "montants atypiques Tukey (conservés, signalés)",
+      "resultat": "11910 lignes (1.78 %)",
+      "statut": "ALERTE"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Coherence",
+      "jeu": "silver/store_sales",
+      "regle": "ventes à 0 (remise totale ?)",
+      "resultat": "3954 lignes",
+      "statut": "ALERTE"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Coherence",
+      "jeu": "silver/store",
+      "regle": "date de fermeture exploitable",
+      "resultat": "0/12 fiable(s) ; {'incoherente_avant_ventes': 5, 'non_verifiable_apres_ventes': 7}",
+      "statut": "ALERTE"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Integrite",
+      "jeu": "silver/store_sales",
+      "regle": "ss_item_sk -> item.i_item_sk",
+      "resultat": "0 orphelin(s)",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Integrite",
+      "jeu": "silver/store_sales",
+      "regle": "ss_store_sk -> store.s_store_sk",
+      "resultat": "0 orphelin(s)",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Integrite",
+      "jeu": "silver/store_sales",
+      "regle": "ss_sold_date_sk -> date_dim.d_date_sk",
+      "resultat": "0 orphelin(s)",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Fraicheur",
+      "jeu": "silver/store_sales",
+      "regle": "période couverte",
+      "resultat": "2001-01-01 -> 2005-12-13 (2005 incomplète)",
+      "statut": "ALERTE"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Volume",
+      "jeu": "silver/store_sales",
+      "regle": "lignes par année : écart à la moyenne 2001-2004 (%)",
+      "resultat": "{2001: -0.2, 2002: -0.1, 2003: -0.3, 2004: 0.6, 2005: -6.2}",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Unicite",
+      "jeu": "gold/ventes_mensuelles_categorie",
+      "regle": "grain ['annee', 'mois', 'categorie'] unique",
+      "resultat": "0 doublon(s), 540 lignes",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Unicite",
+      "jeu": "gold/performance_magasin_annuelle",
+      "regle": "grain ['annee', 'ss_store_sk'] unique",
+      "resultat": "0 doublon(s), 60 lignes",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Coherence",
+      "jeu": "gold (2 jeux)",
+      "regle": "réconciliation : somme CA Gold = somme CA Silver",
+      "resultat": "silver=1150529586.37 | G1=1150529586.37 | G2=1150529586.37",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Coherence",
+      "jeu": "gold/ventes_mensuelles_categorie",
+      "regle": "réconciliation des quantités",
+      "resultat": "silver=33755474 | G1=33755474",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Coherence",
+      "jeu": "gold/performance_magasin_annuelle",
+      "regle": "parts de CA = 100 % par année",
+      "resultat": "0 année(s) en écart",
+      "statut": "OK"
+    },
+    {
+      "run_id": "20261118_153056",
+      "dimension": "Completude",
+      "jeu": "gold/performance_magasin_annuelle",
+      "regle": "12 magasins présents chaque année",
+      "resultat": "0 année(s) incomplète(s)",
+      "statut": "OK"
+    }
+  ]
+}

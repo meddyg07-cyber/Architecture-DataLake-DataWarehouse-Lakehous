@@ -1,0 +1,75 @@
+{
+  "run_id": "20261118_153018",
+  "etape": "gold",
+  "jeux": {
+    "ventes_mensuelles_categorie": {
+      "chemin": "hdfs://localhost:9000/retail-lake/gold/retail/ventes_mensuelles_categorie",
+      "grain": [
+        "annee",
+        "mois",
+        "categorie"
+      ],
+      "lignes": 540,
+      "grain_unique": true,
+      "ca_total": 1150529586.37,
+      "octets": 50186,
+      "schema": [
+        "mois:int",
+        "categorie:string",
+        "ca_net_paid:decimal(17,2)",
+        "montant_prix_catalogue:decimal(17,2)",
+        "remise:decimal(17,2)",
+        "coupons:decimal(17,2)",
+        "marge_nette:decimal(17,2)",
+        "quantite:bigint",
+        "nb_lignes:bigint",
+        "nb_tickets:bigint",
+        "taux_remise_pct:decimal(24,2)",
+        "mois_complet:boolean",
+        "_source:string",
+        "_run_id_gold:string",
+        "annee:int"
+      ]
+    },
+    "performance_magasin_annuelle": {
+      "chemin": "hdfs://localhost:9000/retail-lake/gold/retail/performance_magasin_annuelle",
+      "grain": [
+        "annee",
+        "ss_store_sk"
+      ],
+      "lignes": 60,
+      "grain_unique": true,
+      "ca_total": 1150529586.37,
+      "octets": 8715,
+      "schema": [
+        "annee:int",
+        "ss_store_sk:int",
+        "ca_net_paid:decimal(17,2)",
+        "nb_tickets:bigint",
+        "quantite:bigint",
+        "nb_lignes:bigint",
+        "marge_nette:decimal(17,2)",
+        "s_store_id:string",
+        "s_store_name:string",
+        "s_city:string",
+        "s_state:string",
+        "panier_moyen:decimal(18,2)",
+        "part_ca_annee_pct:decimal(24,2)",
+        "ecart_moyenne_pct:decimal(29,2)",
+        "rang_ca_annee:int",
+        "annee_complete:boolean",
+        "_source:string",
+        "_run_id_gold:string"
+      ]
+    }
+  },
+  "jointure_ventes_item": {
+    "cle": "ss_item_sk = i_item_sk",
+    "relation": "N-1",
+    "type": "left",
+    "lignes_avant": 667579,
+    "lignes_apres": 667579,
+    "non_rapprochees": 0
+  },
+  "ca_total_silver": 1150529586.37
+}

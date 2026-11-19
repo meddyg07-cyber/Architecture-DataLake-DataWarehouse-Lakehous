@@ -1,0 +1,17 @@
+=== 18/11/2026 15:31:38 | python transformations/05_formats.py ===
+[15:32:06] volume dat_raw (CSV |, sans en-tete)                         92.76 Mo  (100.0 % du .dat)
+[15:32:06] volume csv (en-tete, ,)                                      92.10 Mo  ( 99.3 % du .dat)
+[15:32:06] volume json (1 objet par ligne)                             353.10 Mo  (380.6 % du .dat)
+[15:32:06] volume parquet bronze (texte + provenance)                   48.55 Mo  ( 52.3 % du .dat)
+[15:32:06] volume parquet silver (typé, partitionné, + indicateurs)     49.30 Mo  ( 53.1 % du .dat)
+[15:32:06] volume parquet 23 colonnes typées (snappy)                   43.32 Mo  ( 46.7 % du .dat)
+[15:32:10] types relus csv (header, sans inferSchema)   {'ss_quantity': 'string', 'ss_net_paid': 'string', 'ss_ticket_number': 'string'}
+[15:32:10] types relus csv (header + inferSchema)       {'ss_quantity': 'int', 'ss_net_paid': 'double', 'ss_ticket_number': 'int'}
+[15:32:10] types relus json                             {'ss_quantity': 'bigint', 'ss_net_paid': 'double', 'ss_ticket_number': 'bigint'}
+[15:32:10] types relus parquet                          {'ss_quantity': 'int', 'ss_net_paid': 'decimal(7,2)', 'ss_ticket_number': 'bigint'}
+[15:32:18] agrégation CA par magasin, csv      médiane=1.061 s  essais=[1.303, 1.061, 1.055, 0.965, 1.08]
+[15:32:36] agrégation CA par magasin, json     médiane=2.751 s  essais=[3.056, 2.644, 2.63, 2.804, 2.751]
+[15:32:39] agrégation CA par magasin, parquet  médiane=0.349 s  essais=[0.412, 0.381, 0.316, 0.349, 0.348]
+[15:32:39] plan Parquet (extrait) : +- FileScan parquet [ss_store_sk#1289,ss_net_paid#1302] Batched: true, DataFilters: [], Format: Parquet, Location: InMemoryFileIndex(1 paths)[hdfs://localhost:9000/retail-lake/logs/tp3/formats/store_s
+/mnt/c/Users/meddy/Desktop/Data Lake Warehouse Lakehouse/J3/J3_Retail_Intelligence/preuves/09_comparaison_formats.json
+=== fin 15:32:38 ===
