@@ -1,0 +1,18 @@
+=== 19/11/2026 14:23:07 | bash -c python --version; java -version 2>&1 | head -1; python -m pip list 2>/dev/null | grep -iE "^(pyspark|pandas|matplotlib|pyarrow|openpyxl|jupyterlab|ipykernel) "; jupyter kernelspec list; hdfs version | head -1; nproc; free -h | head -2 ===
+Python 3.12.3
+openjdk version "17.0.21.0.3" 2026-10-24
+ipykernel                 7.4.0
+jupyterlab                4.6.6
+matplotlib                3.11.2
+openpyxl                  3.1.5
+pandas                    2.3.3
+pyarrow                   26.0.1
+pyspark                   4.3.0
+Available kernels:
+  python3       /home/meddy/retail-intelligence/tp3/.venv/share/jupyter/kernels/python3
+  retail-tp4    /home/meddy/.local/share/jupyter/kernels/retail-tp4
+Hadoop 3.5.0
+12
+               total        used        free      shared  buff/cache   available
+Mem:           7.6Gi       3.0Gi       4.5Gi       3.7Mi       395Mi       4.6Gi
+=== fin 14:23:08 ===

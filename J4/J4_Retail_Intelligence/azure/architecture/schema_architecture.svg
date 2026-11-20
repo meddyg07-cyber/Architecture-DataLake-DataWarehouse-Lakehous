@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="860" viewBox="0 0 1320 860" font-family="Segoe UI, Arial, sans-serif">
+<defs><marker id="m_deploye" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d32"/></marker><marker id="m_etudie" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c26a12"/></marker><marker id="m_propose" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8a8a8a"/></marker></defs>
+<style>
+.t { font-size: 14px; font-weight: 700; fill: #1f2937; }
+.l { font-size: 12.5px; fill: #374151; }
+.col { font-size: 14px; font-weight: 700; fill: #111827; }
+.lane { font-size: 13px; font-weight: 700; letter-spacing: .3px; }
+.eq { font-size: 12px; fill: #6b7280; font-style: italic; }
+.src { font-size: 11.5px; fill: #6b7280; }
+</style>
+<rect width="1320" height="860" fill="#ffffff"/>
+<text x="30" y="32" font-size="19" font-weight="700" fill="#111827">Architecture Retail Intelligence : cible Azure et équivalent local / open source</text>
+<text x="125.0" y="62" class="col" text-anchor="middle">Sources</text>
+<text x="343.0" y="62" class="col" text-anchor="middle">Ingestion / orchestration</text>
+<text x="561.0" y="62" class="col" text-anchor="middle">Stockage Data Lake</text>
+<text x="779.0" y="62" class="col" text-anchor="middle">Traitement</text>
+<text x="997.0" y="62" class="col" text-anchor="middle">Requêtes / analyse</text>
+<text x="1215.0" y="62" class="col" text-anchor="middle">Restitution</text>
+<text x="30" y="96" class="lane" fill="#c26a12">CIBLE AZURE : étudiée et simulée, AUCUNE ressource créée (parcours B)</text>
+<rect x="30" y="110" width="190" height="150" rx="8" fill="#fff4e6" stroke="#c26a12" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="40" y="132" class="t">Sources TPCx-BB</text>
+<text x="40" y="152" class="l">lot initial (.dat, sep |)</text>
+<text x="40" y="169" class="l">lot data_refresh</text>
+<text x="40" y="186" class="l">Données complémentaires :</text>
+<text x="40" y="203" class="l">aucune</text>
+<rect x="248" y="110" width="190" height="150" rx="8" fill="#fff4e6" stroke="#c26a12" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="258" y="132" class="t">Azure Data Factory</text>
+<text x="258" y="152" class="l">pipeline Copy (dépôt Raw)</text>
+<text x="258" y="169" class="l">déclencheur planifié</text>
+<text x="258" y="186" class="l">Managed Identity</text>
+<text x="258" y="203" class="l">suivi des exécutions</text>
+<rect x="466" y="110" width="190" height="150" rx="8" fill="#fff4e6" stroke="#c26a12" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="476" y="132" class="t">ADLS Gen2 (HNS activé)</text>
+<text x="476" y="152" class="l">conteneur retail-intelligence</text>
+<text x="476" y="169" class="l">raw / bronze / silver / gold</text>
+<text x="476" y="186" class="l">quality / documentation</text>
+<text x="476" y="203" class="l">abfss://…dfs.core.windows.net</text>
+<rect x="684" y="110" width="190" height="150" rx="8" fill="#fff4e6" stroke="#c26a12" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="694" y="132" class="t">Synapse Spark pool</text>
+<text x="694" y="152" class="l">mêmes scripts PySpark</text>
+<text x="694" y="169" class="l">chemins hdfs:// → abfss://</text>
+<text x="694" y="186" class="l">pool à arrêt auto</text>
+<text x="694" y="203" class="l">(coût à l&#x27;usage)</text>
+<rect x="902" y="110" width="190" height="150" rx="8" fill="#fff4e6" stroke="#c26a12" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="912" y="132" class="t">Synapse SQL serverless</text>
+<text x="912" y="152" class="l">vues SQL sur le Gold</text>
+<text x="912" y="169" class="l">OPENROWSET (Parquet)</text>
+<text x="912" y="186" class="l">facturé au volume lu</text>
+<rect x="1120" y="110" width="190" height="150" rx="8" fill="#fff4e6" stroke="#c26a12" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="1130" y="132" class="t">Power BI</text>
+<text x="1130" y="152" class="l">rapports KPI</text>
+<text x="1130" y="169" class="l">lecture du Gold</text>
+<text x="1130" y="186" class="l">(non installé)</text>
+<line x1="220" y1="185.0" x2="244" y2="185.0" stroke="#c26a12" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#m_etudie)"/>
+<line x1="438" y1="185.0" x2="462" y2="185.0" stroke="#c26a12" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#m_etudie)"/>
+<line x1="656" y1="185.0" x2="680" y2="185.0" stroke="#c26a12" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#m_etudie)"/>
+<line x1="874" y1="185.0" x2="898" y2="185.0" stroke="#c26a12" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#m_etudie)"/>
+<line x1="1092" y1="185.0" x2="1116" y2="185.0" stroke="#c26a12" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#m_etudie)"/>
+<rect x="30" y="276" width="1280" height="66" rx="8" fill="#fff4e6" stroke="#c26a12" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="40" y="298" class="t">Sécurité Azure (étudiée)</text>
+<text x="40" y="318" class="l">Entra ID (groupes) · RBAC (rôles sur le compte) · ACL ADLS (répertoires) · Key Vault (secrets) · budget et alertes de coût</text>
+<line x1="125.0" y1="350" x2="125.0" y2="392" stroke="#9aa4b2" stroke-width="1.5" stroke-dasharray="2 4"/>
+<line x1="343.0" y1="350" x2="343.0" y2="392" stroke="#9aa4b2" stroke-width="1.5" stroke-dasharray="2 4"/>
+<line x1="561.0" y1="350" x2="561.0" y2="392" stroke="#9aa4b2" stroke-width="1.5" stroke-dasharray="2 4"/>
+<line x1="779.0" y1="350" x2="779.0" y2="392" stroke="#9aa4b2" stroke-width="1.5" stroke-dasharray="2 4"/>
+<line x1="997.0" y1="350" x2="997.0" y2="392" stroke="#9aa4b2" stroke-width="1.5" stroke-dasharray="2 4"/>
+<line x1="1215.0" y1="350" x2="1215.0" y2="392" stroke="#9aa4b2" stroke-width="1.5" stroke-dasharray="2 4"/>
+<text x="569.0" y="376" class="eq">≈ équivalent fonctionnel</text>
+<text x="30" y="414" class="lane" fill="#2e7d32">PLATEFORME LOCALE (parcours B) : DÉPLOYÉE ET EXÉCUTÉE, preuves J2 à J4</text>
+<rect x="30" y="428" width="190" height="150" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" stroke-dasharray=""/>
+<text x="40" y="450" class="t">Sources TPCx-BB</text>
+<text x="40" y="470" class="l">fichiers .dat locaux</text>
+<text x="40" y="487" class="l">lot initial traité</text>
+<text x="40" y="504" class="l">data_refresh : non intégré</text>
+<text x="40" y="521" class="l">aucune donnée ajoutée</text>
+<rect x="248" y="428" width="190" height="150" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" stroke-dasharray=""/>
+<text x="258" y="450" class="t">Apache NiFi 2.12 (J2)</text>
+<text x="258" y="470" class="l">GetFile → PutHDFS</text>
+<text x="258" y="487" class="l">provenance, erreurs</text>
+<text x="258" y="504" class="l">+ scripts run_all.sh</text>
+<text x="258" y="521" class="l">(enchaînement J3-J4)</text>
+<rect x="466" y="428" width="190" height="150" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" stroke-dasharray=""/>
+<text x="476" y="450" class="t">HDFS 3.5 (J2)</text>
+<text x="476" y="470" class="l">/retail-lake : raw (555),</text>
+<text x="476" y="487" class="l">bronze, silver, gold,</text>
+<text x="476" y="504" class="l">quality, logs</text>
+<text x="476" y="521" class="l">+ démo ACL (J4)</text>
+<rect x="684" y="428" width="190" height="150" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" stroke-dasharray=""/>
+<text x="694" y="450" class="t">PySpark 4.3 local[*] (J3)</text>
+<text x="694" y="470" class="l">Bronze → Silver → Gold</text>
+<text x="694" y="487" class="l">règles R01-R13</text>
+<text x="694" y="504" class="l">31 contrôles qualité</text>
+<text x="694" y="521" class="l">Parquet snappy</text>
+<rect x="902" y="428" width="190" height="150" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" stroke-dasharray=""/>
+<text x="912" y="450" class="t">Spark SQL / DataFrame</text>
+<text x="912" y="470" class="l">KPI (kpi_retail.py)</text>
+<text x="912" y="487" class="l">statistiques, analyses</text>
+<text x="912" y="504" class="l">notebook UC-08 (J4)</text>
+<rect x="1120" y="428" width="190" height="150" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" stroke-dasharray=""/>
+<text x="1130" y="450" class="t">Jupyter + Matplotlib</text>
+<text x="1130" y="470" class="l">4 visualisations PNG</text>
+<text x="1130" y="487" class="l">exports CSV</text>
+<text x="1130" y="504" class="l">notebook exécuté (J4)</text>
+<line x1="220" y1="503.0" x2="244" y2="503.0" stroke="#2e7d32" stroke-width="2" stroke-dasharray="" marker-end="url(#m_deploye)"/>
+<line x1="438" y1="503.0" x2="462" y2="503.0" stroke="#2e7d32" stroke-width="2" stroke-dasharray="" marker-end="url(#m_deploye)"/>
+<line x1="656" y1="503.0" x2="680" y2="503.0" stroke="#2e7d32" stroke-width="2" stroke-dasharray="" marker-end="url(#m_deploye)"/>
+<line x1="874" y1="503.0" x2="898" y2="503.0" stroke="#2e7d32" stroke-width="2" stroke-dasharray="" marker-end="url(#m_deploye)"/>
+<line x1="1092" y1="503.0" x2="1116" y2="503.0" stroke="#2e7d32" stroke-width="2" stroke-dasharray="" marker-end="url(#m_deploye)"/>
+<rect x="30" y="594" width="1280" height="66" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" stroke-dasharray=""/>
+<text x="40" y="616" class="t">Sécurité locale (démontrée au J4)</text>
+<text x="40" y="636" class="l">permissions POSIX + ACL HDFS par zone (13 tests sur 13) · identifiants NiFi hors Git · limite : authentification « simple », sans Kerberos</text>
+<text x="30" y="694" class="lane" fill="#6b6b6b">BRIQUES OPEN SOURCE PROPOSÉES : étudiées, non installées (le socle obligatoire ne les exige pas)</text>
+<rect x="248" y="708" width="190" height="58" rx="8" fill="#f4f4f4" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="3 4"/>
+<text x="258" y="730" class="t">Apache Airflow</text>
+<text x="258" y="750" class="l">orchestration planifiée</text>
+<rect x="466" y="708" width="190" height="58" rx="8" fill="#f4f4f4" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="3 4"/>
+<text x="476" y="730" class="t">MinIO (API S3)</text>
+<text x="476" y="750" class="l">stockage objet local</text>
+<rect x="684" y="708" width="190" height="58" rx="8" fill="#f4f4f4" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="3 4"/>
+<text x="694" y="730" class="t">Apache Iceberg</text>
+<text x="694" y="750" class="l">format de table ACID</text>
+<rect x="902" y="708" width="190" height="58" rx="8" fill="#f4f4f4" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="3 4"/>
+<text x="912" y="730" class="t">Trino + catalogue</text>
+<text x="912" y="750" class="l">SQL distribué, Nessie / HMS</text>
+<rect x="1120" y="708" width="190" height="58" rx="8" fill="#f4f4f4" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="3 4"/>
+<text x="1130" y="730" class="t">Apache Superset</text>
+<text x="1130" y="750" class="l">tableaux de bord SQL</text>
+<rect x="30" y="800" width="34" height="18" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" stroke-dasharray=""/>
+<text x="74" y="814" class="l">Déployé et exécuté (captures, journaux)</text>
+<rect x="450" y="800" width="34" height="18" rx="4" fill="#fff4e6" stroke="#c26a12" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="494" y="814" class="l">Étudié / simulé : aucune ressource Azure créée</text>
+<rect x="870" y="800" width="34" height="18" rx="4" fill="#f4f4f4" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="3 4"/>
+<text x="914" y="814" class="l">Proposé : composant open source non installé</text>
+<text x="30" y="844" class="src">Retail Intelligence Platform · TP J4 · UC-07 · 19/11/2026 · Données TPCx-BB synthétiques. Usages analytiques : KPI et analyses UC-08 sur le Gold.</text>
+</svg>

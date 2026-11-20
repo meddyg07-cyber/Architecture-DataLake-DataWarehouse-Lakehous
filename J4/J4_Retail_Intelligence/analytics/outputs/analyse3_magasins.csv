@@ -1,0 +1,13 @@
+ss_store_sk;s_store_name;s_city;s_state;ca_net_paye;nb_transactions;quantites;panier_moyen_net;ecart_moyenne_pct;ecart_transactions_pct;magasin;s_floor_space;s_number_employees;rang_2001;rang_2002;rang_2003;rang_2004
+7;Buffalo;Lewisburg;KS;80797199,0;6248;2383295;12931,69;4,1;4,12;Buffalo (KS);8564004;225;3;1;1;1
+8;Williamstown;State Line;TX;78642088,75;6016;2296385;13072,16;1,32;0,25;Williamstown (TX);8871354;298;6;12;3;2
+4;Elmwood;Lakeside;KY;78377409,29;6010;2289478;13041,17;0,98;0,15;Elmwood (KY);7508523;254;4;5;4;7
+0;Forest;Post Oak;CO;77966594,03;6014;2291744;12964,18;0,45;0,22;Forest (CO);8891512;217;5;6;2;9
+3;Pioneer;Austin;TX;77919308,95;5989;2261969;13010,4;0,39;-0,2;Pioneer (TX);5777026;221;8;11;5;3
+1;Hillside;Jerusalem;TN;77366456,69;5973;2272269;12952,7;-0,32;-0,46;Hillside (TN);8751339;244;1;9;11;6
+9;Germantown;Pierce;WV;77333072,69;5955;2272967;12986,24;-0,36;-0,76;Germantown (WV);6288915;213;11;8;6;5
+5;Egypt;Redland;KY;77060201,51;5972;2280752;12903,58;-0,71;-0,48;Egypt (KY);6942447;215;7;10;7;8
+11;Bedford;Lyons;KY;77021626,01;5999;2260934;12839,08;-0,76;-0,03;Bedford (KY);7039717;221;10;7;9;4
+6;Bloomfield;Union Hill;IN;76825614,39;5915;2258807;12988,27;-1,02;-1,43;Bloomfield (IN);8416754;225;2;3;12;10
+2;Sherwood;Mount Vernon;CA;76109137,14;5960;2233065;12769,99;-1,94;-0,68;Sherwood (CA);5913334;266;9;4;10;11
+10;Avalon;Cold Springs;TN;75947337,12;5959;2245303;12744,98;-2,15;-0,7;Avalon (TN);6468537;254;12;2;8;12

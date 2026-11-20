@@ -1,0 +1,4 @@
+=== 19/11/2026 14:31:39 | jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=retail-tp4 --ExecutePreprocessor.timeout=1800 analytics/notebooks/TP4_Retail_Intelligence.ipynb ===
+[NbConvertApp] Converting notebook analytics/notebooks/TP4_Retail_Intelligence.ipynb to notebook
+[NbConvertApp] Writing 441503 bytes to analytics/notebooks/TP4_Retail_Intelligence.ipynb
+=== fin 14:32:18 ===

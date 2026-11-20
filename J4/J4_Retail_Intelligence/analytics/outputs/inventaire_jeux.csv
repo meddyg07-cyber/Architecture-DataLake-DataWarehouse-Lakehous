@@ -1,0 +1,6 @@
+jeu;zone;chemin_hdfs;format;lignes;colonnes;granularite;cle_du_grain;grain_unique;usage
+store_sales;Silver;/retail-lake/silver/tpcxbb/store_sales;Parquet (snappy);667579;33;1 ligne d'article d'un ticket de caisse (pas de clé unique);ss_ticket_number + ss_item_sk;False;KPI, statistiques, distribution des tickets
+item;Silver;/retail-lake/silver/tpcxbb/item;Parquet (snappy);17820;27;1 produit (version courante);i_item_sk;True;catégorie du produit (Q3)
+store;Silver;/retail-lake/silver/tpcxbb/store;Parquet (snappy);12;36;1 magasin;s_store_sk;True;nom et État du magasin (Q5)
+ventes_mensuelles_categorie;Gold;/retail-lake/gold/retail/ventes_mensuelles_categorie;Parquet (snappy);540;15;1 mois x 1 catégorie;annee + mois + categorie;True;Analyse 1 (Q1, évolution) et Analyse 2 (Q3, catégories)
+performance_magasin_annuelle;Gold;/retail-lake/gold/retail/performance_magasin_annuelle;Parquet (snappy);60;18;1 année x 1 magasin;annee + ss_store_sk;True;Analyse 3 (Q5, magasins)

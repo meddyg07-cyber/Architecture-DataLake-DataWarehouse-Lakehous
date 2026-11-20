@@ -1,0 +1,7 @@
+# Paramètres Azure réels : jamais versionnés
+azure/configuration/parametres.env
+*.env
+!*.exemple.env
+
+# Fichiers techniques de Jupyter
+.ipynb_checkpoints/

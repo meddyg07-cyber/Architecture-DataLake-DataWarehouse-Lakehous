@@ -1,0 +1,158 @@
+=== 19/11/2026 14:24:40 | bash scripts/uc07_demo_hdfs.sh ===
+
+================ 0. Contexte (14:24:40) ================
+Date : 19/11/2026 14:24:40 | administrateur HDFS : meddy
+hadoop.security.authentication = simple
+dfs.permissions.enabled        = true
+dfs.namenode.acls.enabled      = true
+ancien bac à sable supprimé
+
+================ 1. Organisation des zones (équivalent du conteneur ADLS Gen2, mêmes chemins que /retail-lake) (14:24:46) ================
+drwxr-xr-x meddy /retail-intelligence-demo/bronze
+drwxr-xr-x meddy /retail-intelligence-demo/bronze/tpcxbb
+drwxr-xr-x meddy /retail-intelligence-demo/bronze/tpcxbb/store
+-rw-r--r-- meddy /retail-intelligence-demo/bronze/tpcxbb/store/part-00000-286ebbcb-8d83-4d17-8ce2-e5a2c00f2aa6-c000.snappy.parquet
+drwxr-xr-x meddy /retail-intelligence-demo/documentation
+-rw-r--r-- meddy /retail-intelligence-demo/documentation/LISEZMOI.txt
+drwxr-xr-x meddy /retail-intelligence-demo/gold
+drwxr-xr-x meddy /retail-intelligence-demo/gold/analyses
+-rw-r--r-- meddy /retail-intelligence-demo/gold/analyses/kpi_annuels.csv
+drwxr-xr-x meddy /retail-intelligence-demo/gold/retail
+drwxr-xr-x meddy /retail-intelligence-demo/gold/retail/performance_magasin_annuelle
+-rw-r--r-- meddy /retail-intelligence-demo/gold/retail/performance_magasin_annuelle/part-00000-d2b4413c-f304-4703-b74b-b2a29eac6a9f-c000.snappy.parquet
+drwxr-xr-x meddy /retail-intelligence-demo/quality
+drwxr-xr-x meddy /retail-intelligence-demo/quality/tpcxbb
+drwxr-xr-x meddy /retail-intelligence-demo/quality/tpcxbb/rapport_controles
+-rw-r--r-- meddy /retail-intelligence-demo/quality/tpcxbb/rapport_controles/08_rapport_qualite.csv
+drwxr-xr-x meddy /retail-intelligence-demo/raw
+drwxr-xr-x meddy /retail-intelligence-demo/raw/tpcxbb
+drwxr-xr-x meddy /retail-intelligence-demo/raw/tpcxbb/initial
+drwxr-xr-x meddy /retail-intelligence-demo/raw/tpcxbb/initial/store
+-rw-r--r-- meddy /retail-intelligence-demo/raw/tpcxbb/initial/store/store.dat
+drwxr-xr-x meddy /retail-intelligence-demo/silver
+drwxr-xr-x meddy /retail-intelligence-demo/silver/tpcxbb
+drwxr-xr-x meddy /retail-intelligence-demo/silver/tpcxbb/store
+-rw-r--r-- meddy /retail-intelligence-demo/silver/tpcxbb/store/part-00000-d0b2c3a9-75df-4ae9-a6fd-cfa3445268d3-c000.snappy.parquet
+Vérification du fichier déposé (lecture) :
+annee;ca_brut;ca_net_paye;nb_transactions;nb_lignes;quantites;panier_moyen_net;panier_moyen_brut;lignes_par_tr
+2001;258159395,33;232498659,83;17991;134873;6814234;12923,05;14349,36;7,5;49,97;;;221384812,28;;True
+2002;256977671,52;230947265,82;17990;135084;6825340;12837,54;14284,47;7,51;50,16;-0,67;-0,46;219729044,56;-0,7
+
+================ 2. Espace de noms hiérarchique : opérations sur les répertoires (14:25:02) ================
+Avant : 5 fichier(s) dans /retail-intelligence-demo/gold/_publication_en_cours
+Renommage du répertoire entier en UNE opération de métadonnées : 1566 ms (lancement du client compris)
+Après : 5 fichier(s) dans /retail-intelligence-demo/gold/analyses_v2
+L'ancien chemin n'existe plus : aucun état intermédiaire visible.
+Taille par zone (opération sur un répertoire) :
+12.9 K  12.9 K  /retail-intelligence-demo/bronze
+110     110     /retail-intelligence-demo/documentation
+9.3 K   9.3 K   /retail-intelligence-demo/gold
+3.7 K   3.7 K   /retail-intelligence-demo/quality
+3.3 K   3.3 K   /retail-intelligence-demo/raw
+13.6 K  13.6 K  /retail-intelligence-demo/silver
+
+================ 3. Droits : POSIX + ACL (moindre privilège, matrice docs/cloud/security-matrix.md) (14:25:20) ================
+--- raw
+# file: /retail-intelligence-demo/raw
+user::rwx
+user:data_eng:r-x
+user:svc_ingestion:rwx
+group::r-x
+mask::rwx
+other::---
+default:user::rwx
+default:user:data_eng:r-x
+default:user:svc_ingestion:rwx
+default:group::r-x
+default:mask::rwx
+default:other::---
+--- bronze
+# file: /retail-intelligence-demo/bronze
+user::rwx
+user:data_eng:rwx
+group::r-x
+mask::rwx
+other::---
+default:user::rwx
+default:user:data_eng:rwx
+default:group::r-x
+default:mask::rwx
+default:other::---
+--- silver
+# file: /retail-intelligence-demo/silver
+user::rwx
+user:data_eng:rwx
+group::r-x
+mask::rwx
+other::---
+default:user::rwx
+default:user:data_eng:rwx
+default:group::r-x
+default:mask::rwx
+default:other::---
+--- gold
+# file: /retail-intelligence-demo/gold
+user::rwx
+user:analyste:r-x
+user:data_eng:rwx
+group::r-x
+mask::rwx
+other::---
+default:user::rwx
+default:user:analyste:r-x
+default:user:data_eng:rwx
+default:group::r-x
+default:mask::rwx
+default:other::---
+
+================ 4. Tests de la matrice de droits (identités simulées par HADOOP_USER_NAME) (14:26:14) ================
+identité      | action                                           | attendu           | obtenu          | verdict
+svc_ingestion  | déposer un nouveau fichier en raw               | attendu AUTORISE | obtenu AUTORISE | CONFORME
+svc_ingestion  | lire bronze                                      | attendu REFUSE   | obtenu REFUSE   | CONFORME
+               -> Permission denied: user=svc_ingestion
+svc_ingestion  | lire gold                                        | attendu REFUSE   | obtenu REFUSE   | CONFORME
+               -> Permission denied: user=svc_ingestion
+data_eng       | lire raw                                         | attendu AUTORISE | obtenu AUTORISE | CONFORME
+data_eng       | écrire en raw (zone d'ingestion)                | attendu REFUSE   | obtenu REFUSE   | CONFORME
+               -> Permission denied: user=data_eng
+data_eng       | écrire en bronze                                | attendu AUTORISE | obtenu AUTORISE | CONFORME
+data_eng       | écrire en silver                                | attendu AUTORISE | obtenu AUTORISE | CONFORME
+data_eng       | publier en gold                                  | attendu AUTORISE | obtenu AUTORISE | CONFORME
+analyste       | lire gold/analyses/kpi_annuels.csv               | attendu AUTORISE | obtenu AUTORISE | CONFORME
+analyste       | lire un fichier publié ensuite (ACL héritée)  | attendu AUTORISE | obtenu AUTORISE | CONFORME
+analyste       | lire le rapport qualité                         | attendu AUTORISE | obtenu AUTORISE | CONFORME
+analyste       | écrire en gold                                  | attendu REFUSE   | obtenu REFUSE   | CONFORME
+               -> Permission denied: user=analyste
+analyste       | lire raw                                         | attendu REFUSE   | obtenu REFUSE   | CONFORME
+               -> Permission denied: user=analyste
+analyste       | lire bronze                                      | attendu REFUSE   | obtenu REFUSE   | CONFORME
+               -> Permission denied: user=analyste
+analyste       | lire silver                                      | attendu REFUSE   | obtenu REFUSE   | CONFORME
+               -> Permission denied: user=analyste
+inconnu        | lire gold sans aucun droit                       | attendu REFUSE   | obtenu REFUSE   | CONFORME
+               -> Permission denied: user=inconnu
+Bilan : 16 conforme(s), 0 non conforme(s)
+ACL héritée par le fichier publié par data_eng :
+# file: /retail-intelligence-demo/gold/analyses/analyse2_categories.csv
+# owner: data_eng
+# group: supergroup
+user::rw-
+user:analyste:r-x	#effective:r--
+user:data_eng:rwx	#effective:rw-
+group::r-x	#effective:r--
+mask::rw-
+other::---
+
+================ 5. Limite de sécurité du mode local (14:26:41) ================
+En mode 'simple', l'identité est DÉCLARÉE par le client, pas prouvée :
+meddy          | n'importe qui se déclarant 'meddy' lit raw      | attendu AUTORISE | obtenu AUTORISE | CONFORME
+=> les ACL organisent les droits, mais sans authentification forte (Kerberos en local, Entra ID dans Azure),
+   elles ne protègent pas contre un utilisateur malveillant. Limite documentée dans security-matrix.md.
+
+================ 6. Correspondance des chemins local -> ADLS Gen2 (cible, non déployée) (14:26:43) ================
+  hdfs://localhost:9000/retail-intelligence-demo/raw/tpcxbb/initial/store/store.dat   -> abfss://retail-intelligence@<compte>.dfs.core.windows.net/raw/tpcxbb/initial/store/store.dat
+  hdfs://localhost:9000/retail-intelligence-demo/bronze/tpcxbb/store                  -> abfss://retail-intelligence@<compte>.dfs.core.windows.net/bronze/tpcxbb/store
+  hdfs://localhost:9000/retail-intelligence-demo/silver/tpcxbb/store                  -> abfss://retail-intelligence@<compte>.dfs.core.windows.net/silver/tpcxbb/store
+  hdfs://localhost:9000/retail-intelligence-demo/gold/retail/performance_magasin_annuelle -> abfss://retail-intelligence@<compte>.dfs.core.windows.net/gold/retail/performance_magasin_annuelle
+  hdfs://localhost:9000/retail-intelligence-demo/gold/analyses/kpi_annuels.csv        -> abfss://retail-intelligence@<compte>.dfs.core.windows.net/gold/analyses/kpi_annuels.csv
+=== fin 14:26:43 ===

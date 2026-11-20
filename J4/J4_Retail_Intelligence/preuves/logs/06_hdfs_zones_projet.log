@@ -1,0 +1,22 @@
+=== 19/11/2026 14:26:43 | bash -c hdfs dfs -ls /retail-lake /retail-lake/*/ | grep -v "^Found"; hdfs dfs -du -s -h "/retail-lake/*" ===
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/bronze
+drwxr-xr-x   - meddy supergroup          0 2026-11-18 15:21 /retail-lake/gold
+drwxr-xr-x   - meddy supergroup          0 2026-11-18 15:26 /retail-lake/logs
+drwxr-xr-x   - meddy supergroup          0 2026-11-18 15:23 /retail-lake/quality
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/raw
+drwxr-xr-x   - meddy supergroup          0 2026-11-18 15:19 /retail-lake/silver
+drwxr-xr-x   - meddy supergroup          0 2026-11-18 15:27 /retail-lake/bronze/tpcxbb
+drwxr-xr-x   - meddy supergroup          0 2026-11-18 15:30 /retail-lake/gold/retail
+drwxr-xr-x   - meddy supergroup          0 2026-11-18 15:23 /retail-lake/logs/tp3
+drwxr-xr-x   - meddy supergroup          0 2026-11-18 15:26 /retail-lake/logs/tp3_test_spark
+drwxr-xr-x   - meddy supergroup          0 2026-11-18 15:23 /retail-lake/quality/tpcxbb
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 16:03 /retail-lake/raw/nifi
+drwxr-xr-x   - meddy supergroup          0 2026-11-17 15:07 /retail-lake/raw/tpcxbb
+drwxr-xr-x   - meddy supergroup          0 2026-11-18 15:30 /retail-lake/silver/tpcxbb
+53.9 M   53.9 M   /retail-lake/bronze
+57.5 K   57.5 K   /retail-lake/gold
+465.9 M  465.9 M  /retail-lake/logs
+63.2 K   63.2 K   /retail-lake/quality
+968.3 M  968.3 M  /retail-lake/raw
+53.9 M   53.9 M   /retail-lake/silver
+=== fin 14:26:46 ===

@@ -1,0 +1,12 @@
+=== 19/11/2026 14:24:18 | python tests/test_kpi_cli.py ===
+Notebook (kpi.csv) contre ligne de commande (kpi_cli.csv), écart absolu par KPI et par année :
+       ca_brut  ca_net_paye  nb_transactions  nb_lignes  quantites  panier_moyen_net  panier_moyen_brut  taux_remise_pct
+annee                                                                                                                   
+2001       0.0          0.0                0          0          0               0.0                0.0              0.0
+2002       0.0          0.0                0          0          0               0.0                0.0              0.0
+2003       0.0          0.0                0          0          0               0.0                0.0              0.0
+2004       0.0          0.0                0          0          0               0.0                0.0              0.0
+2005       0.0          0.0                0          0          0               0.0                0.0              0.0
+40 valeurs comparées, somme des écarts = 0.0
+OK : calcul reproductible, résultats identiques
+=== fin 14:24:18 ===
